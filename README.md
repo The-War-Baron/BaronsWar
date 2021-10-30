@@ -1,6 +1,12 @@
 Barons' War
 ==================
 
+WarHost's Barons' War.  
+
+All copyright remains with Andy Hobday and WarHost (www.warhost.online)
+Figure available from Footsore Miniatures and Games (https://footsoreminiatures.co.uk/)
+
+
 [![Latest release](https://img.shields.io/github/release/BSData/BaronsWar.svg?style=flat-square)](https://github.com/BSData/BaronsWar/releases/latest)
 [![Commits (since latest release)](https://img.shields.io/github/commits-since/BSData/BaronsWar/latest.svg?style=flat-square)](https://github.com/BSData/BaronsWar/releases)
 [![Open bugs](https://img.shields.io/github/issues/BSData/BaronsWar/bug.svg?style=flat-square&label=bugs)](https://github.com/BSData/BaronsWar/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
