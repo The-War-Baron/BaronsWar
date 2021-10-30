@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataIndex battleScribeVersion="2.03" name="BaronsWar" indexUrl="https://github.com/The-War-Baron/BaronsWar" xmlns="http://www.battlescribe.net/schema/dataIndexSchema">
+  <dataIndexEntries>
+    <dataIndexEntry filePath="Barons&apos; War.gstz" dataType="gamesystem" dataId="64c6-5bda-e428-c44b" dataName="Barons&apos; War" dataBattleScribeVersion="2.03" dataRevision="1"/>
+    <dataIndexEntry filePath="Custom profiles.catz" dataType="catalogue" dataId="fabd-b04b-0132-308a" dataName="Custom profiles" dataBattleScribeVersion="2.03" dataRevision="1"/>
+    <dataIndexEntry filePath="Troops.catz" dataType="catalogue" dataId="6022-99dd-88dd-d5a0" dataName="Troops" dataBattleScribeVersion="2.03" dataRevision="1"/>
+    <dataIndexEntry filePath="Kings Army 1215-1217.catz" dataType="catalogue" dataId="02f8-fbdd-bb83-6f13" dataName="Kings Army 1215-1217" dataBattleScribeVersion="2.03" dataRevision="1"/>
+    <dataIndexEntry filePath="Command.catz" dataType="catalogue" dataId="de04-24ed-2b94-b426" dataName="Command" dataBattleScribeVersion="2.03" dataRevision="1"/>
+    <dataIndexEntry filePath="Independent Outlaw and Mercenary Army 1215-1217.catz" dataType="catalogue" dataId="ba09-667f-37c8-784b" dataName="Independent Outlaw and Mercenary Army 1215-1217" dataBattleScribeVersion="2.03" dataRevision="1"/>
+    <dataIndexEntry filePath="Barons&apos; Forces 1215-1217.catz" dataType="catalogue" dataId="c755-c195-fe2b-4404" dataName="Barons&apos; Forces 1215-1217" dataBattleScribeVersion="2.03" dataRevision="1"/>
+  </dataIndexEntries>
+</dataIndex>
