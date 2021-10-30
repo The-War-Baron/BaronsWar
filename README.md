@@ -4,6 +4,7 @@ Barons' War
 WarHost's Barons' War.  
 
 All copyright remains with Andy Hobday and WarHost (www.warhost.online)
+
 Figure available from Footsore Miniatures and Games (https://footsoreminiatures.co.uk/)
 
 
