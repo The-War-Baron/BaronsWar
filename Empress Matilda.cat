@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="a20d-0083-8992-33a9" name="Empress Matilda" revision="1" battleScribeVersion="2.03" authorName="Stephen Trenholme" library="false" gameSystemId="64c6-5bda-e428-c44b" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <readme>First initial version of Barons&apos; War by Andy Hobday
+
+Anarchy files are NOT WarHost based</readme>
+  <selectionEntries>
+    <selectionEntry id="e713-e000-07a6-aa41" name="Hentry of Anjou" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="512d-37b2-abb0-f7af" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="1657-d6ba-a7ff-9445" name="Regent" hidden="false" targetId="ffe4-ae66-6677-d900" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="34ff-8cd1-d9e4-34d8" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
+        <categoryLink id="47e4-3a24-3f8f-a61d" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="efa1-7330-2a8d-3111" name="Royal" hidden="false" targetId="6467-f866-66fc-61b2" primary="false"/>
+        <categoryLink id="40b1-ee1b-da19-4243" name="Knight" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="bdbe-0dd4-22fd-c36a" name="Mode of convayance" hidden="false" collective="false" import="true" defaultSelectionEntryId="f0fe-bbfd-20ef-0323">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec37-54a0-3648-7e28" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a99-74ae-8732-a2d5" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f0fe-bbfd-20ef-0323" name="Foot" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="329e-9733-2269-d33c" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="68ba-e8b1-b66e-e15c" name="Barded Horse" hidden="false" collective="false" import="true" targetId="311c-db8c-6fde-0a7e" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5e2-ccbb-ce4b-124f" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="d387-2cfb-b195-c675" name="Barder War Horse" hidden="false" collective="false" import="true" targetId="0b71-8857-d20d-9825" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5bb1-b743-5d58-7ce1" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="d136-4d0f-7090-68d8" name="Horse" hidden="false" collective="false" import="true" targetId="03ea-19e6-c1ac-a767" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15de-6cca-30d9-7d2e" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="88c6-9db7-7f92-fe16" name="Command Group" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f0a-a6a0-944b-c2e7" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="362a-2593-9bf0-894b" name="Bowmen" hidden="false" collective="false" import="true" targetId="27b1-1abe-e2ac-bcb8" type="selectionEntry"/>
+            <entryLink id="9bd8-f439-5683-355d" name="Crossbowmen" hidden="false" collective="false" import="true" targetId="0fe6-1765-7891-c0ca" type="selectionEntry"/>
+            <entryLink id="1a17-6844-7d70-48ec" name="Knights" hidden="false" collective="false" import="true" targetId="50b9-e9ce-6be2-fa7f" type="selectionEntry"/>
+            <entryLink id="907a-cd84-5819-fa50" name="Militant Monks" hidden="false" collective="false" import="true" targetId="8f13-a227-32d5-9148" type="selectionEntry"/>
+            <entryLink id="acee-a36a-1ef8-4a16" name="Sergeant" hidden="false" collective="false" import="true" targetId="74f9-193f-b750-0df4" type="selectionEntry"/>
+            <entryLink id="3568-68a2-4414-4295" name="Spearmen" hidden="false" collective="false" import="true" targetId="e2fd-9732-ab29-d878" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="f3e4-98f3-8700-ebe9" name="Abilities" hidden="false" collective="false" import="true" targetId="5cf3-406c-e5d4-da92" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="bdda-6eec-dc7f-dcde" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="35.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1c5b-67e1-a9a1-0081" name="Geoffrey de Mandeville" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="59a9-dd21-dd9d-dc9f" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="28b2-b092-7035-754d" name="Geoffrey de Mandeville" hidden="false" typeId="cb3d-4828-04fa-4f44" typeName="Unit Profile">
+          <characteristics>
+            <characteristic name="Movement" typeId="d448-b12a-6a0a-db0d">6</characteristic>
+            <characteristic name="Attack" typeId="18fc-193a-b9ef-d0fe">6</characteristic>
+            <characteristic name="Defence" typeId="f6e4-e58a-9136-4796">5</characteristic>
+            <characteristic name="Morale" typeId="c910-b97c-59a5-0e72">7</characteristic>
+            <characteristic name="Actions" typeId="0300-e2b3-1ee3-608b">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="5f60-7150-426a-5ffe" name="Dishonourable" hidden="false" targetId="1a58-066e-9868-8422" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="19dd-1fb3-8247-ee0a" name="Baron" hidden="false" targetId="6b00-32e9-def7-2472" primary="false"/>
+        <categoryLink id="2d38-6cfa-5017-40d5" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
+        <categoryLink id="a33d-c61d-b225-414e" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="6d69-b194-2326-c8f8" name="Knight" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="0b7c-6709-dac2-86d8" name="Command Group" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ecf-96b1-07ce-5d6d" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="4722-6a0c-27b4-f00a" name="Bowmen" hidden="false" collective="false" import="true" targetId="27b1-1abe-e2ac-bcb8" type="selectionEntry"/>
+            <entryLink id="cd11-eb5a-85a8-4514" name="Crossbowmen" hidden="false" collective="false" import="true" targetId="0fe6-1765-7891-c0ca" type="selectionEntry"/>
+            <entryLink id="345e-3b77-25e9-9565" name="Knights" hidden="false" collective="false" import="true" targetId="50b9-e9ce-6be2-fa7f" type="selectionEntry"/>
+            <entryLink id="6ee9-b629-8bc6-9c1b" name="Militant Monks" hidden="false" collective="false" import="true" targetId="8f13-a227-32d5-9148" type="selectionEntry"/>
+            <entryLink id="3880-a4d8-f41e-acec" name="Sergeant" hidden="false" collective="false" import="true" targetId="74f9-193f-b750-0df4" type="selectionEntry"/>
+            <entryLink id="90d5-746f-d760-09ff" name="Spearmen" hidden="false" collective="false" import="true" targetId="e2fd-9732-ab29-d878" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="5c61-eaa3-a444-73a0" name="Mode of convayance" hidden="false" collective="false" import="true" defaultSelectionEntryId="cbbb-fdc3-f8a3-3f01">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a57-b00b-dd9c-51ab" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbee-a56b-72c6-a09a" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="cbbb-fdc3-f8a3-3f01" name="Foot" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29b6-7a52-9a49-9bfc" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="ad17-8bc9-413a-a862" name="Barded Horse" hidden="false" collective="false" import="true" targetId="311c-db8c-6fde-0a7e" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77bb-8b33-bf38-5b00" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="5a7b-df1b-2bcc-e896" name="Barder War Horse" hidden="false" collective="false" import="true" targetId="0b71-8857-d20d-9825" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f620-454b-3fba-daca" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="3c68-d095-2521-91cd" name="Horse" hidden="false" collective="false" import="true" targetId="03ea-19e6-c1ac-a767" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf74-8b5d-edeb-13b9" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="b70e-54d8-f841-bea9" name="Abilities" hidden="false" collective="false" import="true" targetId="5cf3-406c-e5d4-da92" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="d99e-1698-db73-e756" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="fde7-1c70-bc36-528a" name="Retinue" hidden="false" collective="false" import="true" targetId="997f-aeb9-5cca-b432" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9ca-4fc3-e6d3-fb2f" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="84a9-a3d5-65a9-ae7f" name="Geoffrey de Mandeville, Earl of Essex" hidden="false" collective="false" import="true" targetId="d533-7696-84ab-0cc0" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edf6-728f-09ec-c2d6" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23a8-c468-39aa-561b" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="f086-63a5-2efe-bd3d" name="Mail" hidden="false" collective="false" import="true" targetId="92a6-7636-bab5-dfc2" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d54-c6f8-2a88-5c9e" type="min"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="3cf4-6ab6-b2a4-d8e9" name="Sword" hidden="false" collective="false" import="true" targetId="b92d-dec3-5451-a116" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5297-a669-08c1-342c" type="min"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="43.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a0e3-9aa1-fa4b-3a4f" name="King David I" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6be6-cf84-7a38-50f1" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="b15a-4058-82f5-c858" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
+        <categoryLink id="efa5-efbd-c776-a480" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="4661-d802-ede0-3726" name="Knight" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="false"/>
+        <categoryLink id="0f47-61c4-09d7-7e58" name="Royal" hidden="false" targetId="6467-f866-66fc-61b2" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="763a-6a1d-c9cf-796a" name="Mode of convayance" hidden="false" collective="false" import="true" defaultSelectionEntryId="102d-09fd-21a1-986a">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09f4-2903-e0ec-d22d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="147d-ff36-9857-717c" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="102d-09fd-21a1-986a" name="Foot" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc9e-bacb-a01b-fa99" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="4b5e-4c9b-b565-1919" name="Barded Horse" hidden="false" collective="false" import="true" targetId="311c-db8c-6fde-0a7e" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0385-d5cf-243d-0dfd" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="a83a-780a-4a3e-4853" name="Barder War Horse" hidden="false" collective="false" import="true" targetId="0b71-8857-d20d-9825" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0726-e7b0-2a48-11c2" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="359f-e98a-947e-47ae" name="Horse" hidden="false" collective="false" import="true" targetId="03ea-19e6-c1ac-a767" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44eb-1cc0-eec1-2a20" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="55cd-4f69-7c84-a51a" name="Command Group" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d08-c603-95c1-77c6" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="9ceb-94ce-2212-61fd" name="Bowmen" hidden="false" collective="false" import="true" targetId="27b1-1abe-e2ac-bcb8" type="selectionEntry"/>
+            <entryLink id="942d-3230-e1bb-9004" name="Crossbowmen" hidden="false" collective="false" import="true" targetId="0fe6-1765-7891-c0ca" type="selectionEntry"/>
+            <entryLink id="f7e2-da77-9b69-0f8c" name="Knights" hidden="false" collective="false" import="true" targetId="50b9-e9ce-6be2-fa7f" type="selectionEntry"/>
+            <entryLink id="e910-33db-5585-f9a2" name="Militant Monks" hidden="false" collective="false" import="true" targetId="8f13-a227-32d5-9148" type="selectionEntry"/>
+            <entryLink id="7370-d27e-7d76-7450" name="Sergeant" hidden="false" collective="false" import="true" targetId="74f9-193f-b750-0df4" type="selectionEntry"/>
+            <entryLink id="fdd7-9f68-87a4-8190" name="Spearmen" hidden="false" collective="false" import="true" targetId="e2fd-9732-ab29-d878" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="dec6-34cf-591c-efb4" name="Abilities" hidden="false" collective="false" import="true" targetId="5cf3-406c-e5d4-da92" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="7059-30d3-51c6-f47c" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="50.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e654-b133-5dc1-115c" name="Robert of Gloucester" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ac40-6c06-d7af-a14d" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="b06d-7042-09e8-79a8" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
+        <categoryLink id="a430-f6d5-cd8e-4271" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="ade7-8260-0182-bc7e" name="Knight" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="22d5-3c3b-d6fc-f6a3" name="Mode of convayance" hidden="false" collective="false" import="true" defaultSelectionEntryId="76ae-1564-d2f1-28b5">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5331-22b8-80b2-ad4a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23da-1abd-4df8-9677" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="76ae-1564-d2f1-28b5" name="Foot" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1747-22d8-9f3b-cb90" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="1bc5-33ba-d35d-aef4" name="Barded Horse" hidden="false" collective="false" import="true" targetId="311c-db8c-6fde-0a7e" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c4a-a582-871f-d277" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="731c-2bdb-414b-3552" name="Barder War Horse" hidden="false" collective="false" import="true" targetId="0b71-8857-d20d-9825" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="32d1-37e9-776f-92e5" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="2fef-5abf-0dd9-a0e6" name="Horse" hidden="false" collective="false" import="true" targetId="03ea-19e6-c1ac-a767" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2e1-3c64-c27a-57a3" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6c88-cfd1-29ae-9e8e" name="Command Group" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b146-4fd3-a4b8-7b78" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="2c29-eef2-30a9-91cf" name="Bowmen" hidden="false" collective="false" import="true" targetId="27b1-1abe-e2ac-bcb8" type="selectionEntry"/>
+            <entryLink id="7eaf-5cce-1b43-0dae" name="Crossbowmen" hidden="false" collective="false" import="true" targetId="0fe6-1765-7891-c0ca" type="selectionEntry"/>
+            <entryLink id="c2a0-414a-61fa-6c6d" name="Knights" hidden="false" collective="false" import="true" targetId="50b9-e9ce-6be2-fa7f" type="selectionEntry"/>
+            <entryLink id="b252-9143-0ce1-5d16" name="Militant Monks" hidden="false" collective="false" import="true" targetId="8f13-a227-32d5-9148" type="selectionEntry"/>
+            <entryLink id="ffa5-9abe-a61e-31ed" name="Sergeant" hidden="false" collective="false" import="true" targetId="74f9-193f-b750-0df4" type="selectionEntry"/>
+            <entryLink id="d0fa-d3e7-f591-e48d" name="Spearmen" hidden="false" collective="false" import="true" targetId="e2fd-9732-ab29-d878" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="41d2-5136-5989-67f6" name="Abilities" hidden="false" collective="false" import="true" targetId="5cf3-406c-e5d4-da92" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="713c-4744-6a64-7a7b" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="30.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9814-bae2-1bde-442f" name="Empress Matilda" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8cb1-31fe-534c-3e6e" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="e129-6baf-5fba-54dd" name="Woman at War" hidden="false" targetId="73ad-b9b8-2945-fd04" type="rule"/>
+        <infoLink id="4ffd-8123-b6b2-00d2" name="Horror" hidden="false" targetId="1ff1-e144-248d-b3ee" type="rule"/>
+        <infoLink id="f6ed-9f3a-f2e5-9528" name="Commander" hidden="false" targetId="52d4-c810-651d-72af" type="rule"/>
+        <infoLink id="916d-8307-ecea-3f98" name="Escape Artist" hidden="false" targetId="a7d3-68e9-67b6-6839" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ccfd-fdca-5632-ad8f" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="991b-7b22-6530-4b9b" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="7e22-4b31-61a7-f3b7" name="Command Group" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b100-236b-8d52-7776" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="890a-1220-347c-4449" name="Bowmen" hidden="false" collective="false" import="true" targetId="27b1-1abe-e2ac-bcb8" type="selectionEntry"/>
+            <entryLink id="0e59-42e6-bda6-ef20" name="Crossbowmen" hidden="false" collective="false" import="true" targetId="0fe6-1765-7891-c0ca" type="selectionEntry"/>
+            <entryLink id="08d6-40d5-c2c7-3140" name="Knights" hidden="false" collective="false" import="true" targetId="50b9-e9ce-6be2-fa7f" type="selectionEntry"/>
+            <entryLink id="b36c-1976-6a3e-5049" name="Militant Monks" hidden="false" collective="false" import="true" targetId="8f13-a227-32d5-9148" type="selectionEntry"/>
+            <entryLink id="3ef0-b1ac-c8ea-a570" name="Sergeant" hidden="false" collective="false" import="true" targetId="74f9-193f-b750-0df4" type="selectionEntry"/>
+            <entryLink id="898d-37c9-e0d8-4be8" name="Spearmen" hidden="false" collective="false" import="true" targetId="e2fd-9732-ab29-d878" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="3916-f0f7-611c-444f" name="Mode of convayance" hidden="false" collective="false" import="true" defaultSelectionEntryId="7a12-471c-10ea-3958">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d430-5f03-09db-2f2c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e69-7c22-fba2-432c" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="7a12-471c-10ea-3958" name="Foot" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="667f-3184-0cc1-79d9" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="3e2c-f55b-1fa9-0bb8" name="Barded Horse" hidden="false" collective="false" import="true" targetId="311c-db8c-6fde-0a7e" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="94d0-8e50-4cc2-592b" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="cd55-5690-32d1-3527" name="Barder War Horse" hidden="false" collective="false" import="true" targetId="0b71-8857-d20d-9825" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d1f6-c669-d7b4-2dd0" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="78bb-e2e1-56a9-d6d2" name="Horse" hidden="false" collective="false" import="true" targetId="03ea-19e6-c1ac-a767" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="039d-b81a-d3ab-965c" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="90a4-2b62-457b-a42f" name="Abilities" hidden="false" collective="false" import="true" targetId="5cf3-406c-e5d4-da92" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="131d-3bfd-85ad-5b9a" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="961c-53c8-77b0-0c5a" name="Retinue" hidden="false" collective="false" import="true" targetId="997f-aeb9-5cca-b432" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a13-5789-e69e-ea6d" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="32.0"/>
+      </costs>
+    </selectionEntry>
+  </selectionEntries>
+  <entryLinks>
+    <entryLink id="9205-75b2-aebc-97ad" name="Baron" hidden="false" collective="false" import="true" targetId="aba9-78b3-fda3-6077" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="a925-1bbd-78c6-9669" name="Baron" hidden="false" targetId="6b00-32e9-def7-2472" primary="false"/>
+        <categoryLink id="1f77-9e28-4b2a-e388" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="8f06-6e49-78db-9858" name="Knight" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="2b01-1ac8-d091-1b29" name="Lord" hidden="false" collective="false" import="true" targetId="282b-5ea6-eb91-f293" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="cd09-c20e-fadd-ce23" name="Knight" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="false"/>
+        <categoryLink id="cc34-d61c-4aa6-ad38" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="787d-de9d-8636-49f7" name="Veteran Sergeant" hidden="false" collective="false" import="true" targetId="407a-bd47-d065-acaf" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="c330-7058-cbc4-fea2" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="3ff0-b5d6-337b-abd8" name="Bowmen" hidden="false" collective="false" import="true" targetId="27b1-1abe-e2ac-bcb8" type="selectionEntry"/>
+    <entryLink id="49f0-4202-a98e-195d" name="Crossbowmen" hidden="false" collective="false" import="true" targetId="0fe6-1765-7891-c0ca" type="selectionEntry"/>
+    <entryLink id="4aa0-e79f-34c2-8eeb" name="Levy" hidden="false" collective="false" import="true" targetId="5e0c-deb3-47b7-a2ec" type="selectionEntry"/>
+    <entryLink id="7cf6-e269-c87c-95c0" name="Militant Monks" hidden="false" collective="false" import="true" targetId="8f13-a227-32d5-9148" type="selectionEntry"/>
+    <entryLink id="91fc-30bd-657d-a13c" name="Spearmen" hidden="false" collective="false" import="true" targetId="e2fd-9732-ab29-d878" type="selectionEntry"/>
+    <entryLink id="6de3-1cec-f90e-b2d9" name="Knights" hidden="false" collective="false" import="true" targetId="50b9-e9ce-6be2-fa7f" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="4d0b-52f0-eef5-bdd7" name="New CategoryLink" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="db3b-5fc1-9b51-6941" name="Sergeant" hidden="false" collective="false" import="true" targetId="480b-6b5d-1f23-41bd" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="2578-6bfc-954f-f8e0" name="New CategoryLink" hidden="false" targetId="bdf0-2079-3cba-a3a0" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+  </entryLinks>
+  <catalogueLinks>
+    <catalogueLink id="256a-69ab-986d-2ee9" name="Command" targetId="de04-24ed-2b94-b426" type="catalogue" importRootEntries="true"/>
+    <catalogueLink id="a8b0-7b90-71bb-333a" name="Troops" targetId="6022-99dd-88dd-d5a0" type="catalogue" importRootEntries="true"/>
+  </catalogueLinks>
+</catalogue>

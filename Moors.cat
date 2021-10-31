@@ -1,0 +1,1163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="6ab9-d498-2456-e104" name="Moors" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="64c6-5bda-e428-c44b" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <entryLinks>
+    <entryLink id="1082-b90f-f1d7-a896" name="Arab Bowmen" hidden="false" collective="false" import="true" targetId="df25-73c8-a131-5749" type="selectionEntry"/>
+    <entryLink id="ad1a-40df-e8db-fe1a" name="Naffatuns" hidden="false" collective="false" import="true" targetId="7c5d-1b28-c205-5b79" type="selectionEntry"/>
+    <entryLink id="ee51-df1e-67d5-1a2f" name="Arab Slingers" hidden="false" collective="false" import="true" targetId="2d1c-4750-d77e-2d45" type="selectionEntry"/>
+    <entryLink id="2960-dc47-2020-5779" name="Arab Cavalry" hidden="false" collective="false" import="true" targetId="4ae2-3b5c-dec9-d10b" type="selectionEntry"/>
+    <entryLink id="f817-35d8-835e-184e" name="Arab Spearmen" hidden="false" collective="false" import="true" targetId="f2ac-d80d-14c1-e475" type="selectionEntry"/>
+    <entryLink id="a999-154f-e364-e85d" name="Arab Javelinmen" hidden="false" collective="false" import="true" targetId="ff39-a0ab-61f8-8df7" type="selectionEntry"/>
+    <entryLink id="a2a3-1488-b180-e27e" name="Black Guard Commander" hidden="false" collective="false" import="true" targetId="11f4-dc3d-d1e8-ef9b" type="selectionEntry"/>
+    <entryLink id="df60-4754-cf60-f84a" name="Black Guard" hidden="false" collective="false" import="true" targetId="aba2-8d3d-4720-26f8" type="selectionEntry"/>
+    <entryLink id="1ae9-503f-7f8d-6903" name="Moorish Chieftain" hidden="false" collective="false" import="true" targetId="650d-8daa-fd5b-eccb" type="selectionEntry"/>
+    <entryLink id="041a-d9f8-f404-3ef2" name="Moorish Tribal Warriors" hidden="false" collective="false" import="true" targetId="ab22-b1fc-a0d7-f913" type="selectionEntry"/>
+    <entryLink id="0307-8348-891b-26cb" name="Arab Heavy Cavalry" hidden="false" collective="false" import="true" targetId="4987-6f34-df2a-3052" type="selectionEntry"/>
+    <entryLink id="7f35-dcd9-a30c-f8d9" name="Daylami Commander" hidden="false" collective="false" import="true" targetId="461c-f3b8-99cb-c46a" type="selectionEntry"/>
+    <entryLink id="85a3-4db1-7b83-01de" name="Daylami Archers" hidden="false" collective="false" import="true" targetId="9a08-d73e-4e72-24e5" type="selectionEntry"/>
+    <entryLink id="0da2-3ee9-339f-2665" name="Daylami Infantrymen" hidden="false" collective="false" import="true" targetId="7174-0076-4550-ce32" type="selectionEntry"/>
+    <entryLink id="ad26-704b-59ed-57ca" name="Arab Light Cavalry Command" hidden="false" collective="false" import="true" targetId="7598-1ae9-906e-e3b8" type="selectionEntry"/>
+    <entryLink id="8654-e099-98c5-bfbe" name="Ghulam Command" hidden="false" collective="false" import="true" targetId="79ec-1af7-3d7d-3e1d" type="selectionEntry"/>
+    <entryLink id="ce39-7a82-de34-8320" name="Ghulams" hidden="false" collective="false" import="true" targetId="f640-1352-65ab-ef94" type="selectionEntry"/>
+    <entryLink id="a191-8472-e53f-7be8" name="Royal Ghulam" hidden="false" collective="false" import="true" targetId="070b-806d-73cb-9c40" type="selectionEntry"/>
+    <entryLink id="66db-c834-78a2-e901" name="Arab Horse Archers" hidden="false" collective="false" import="true" targetId="68d1-758a-b3aa-8fc0" type="selectionEntry"/>
+    <entryLink id="f031-3230-02a4-d0f2" name="Seljuk Cavalry Command" hidden="false" collective="false" import="true" targetId="f9c6-ce59-c837-8b29" type="selectionEntry"/>
+    <entryLink id="1fe2-e6a1-1870-2a3f" name="Seljuk Horse Archers" hidden="false" collective="false" import="true" targetId="689e-870b-a8cd-ec92" type="selectionEntry"/>
+    <entryLink id="c308-8f45-88fb-8b44" name="Arab Heavy Cavalry Command" hidden="false" collective="false" import="true" targetId="b9fc-e2f6-8f83-dbef" type="selectionEntry"/>
+    <entryLink id="6513-a928-ac06-86b8" name="Seljuk Heavy Cavalry" hidden="false" collective="false" import="true" targetId="f2c9-f179-19bb-da67" type="selectionEntry"/>
+    <entryLink id="84fd-45d2-b0d2-f389" name="Khwarisminian Extra Heavy Cavalry" hidden="false" collective="false" import="true" targetId="967e-5f58-5b7e-43fb" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="319c-6cb7-e069-4b76" name="New CategoryLink" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="true"/>
+        <categoryLink id="dc5d-0082-1737-8714" name="Ranged Troops" hidden="false" targetId="fdd7-aa04-3596-2306" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="00ec-6c3a-8b7f-3a31" name="Khwarisminian Heavy Cavalry" hidden="false" collective="false" import="true" targetId="0324-5f49-bedf-4eab" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="4258-8d74-e56a-2752" name="New CategoryLink" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="true"/>
+        <categoryLink id="1bf0-a5f7-a5e7-bb3c" name="Ranged Troops" hidden="false" targetId="fdd7-aa04-3596-2306" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="3968-7e12-c013-8f13" name="Khwarisminian Horse Archer" hidden="false" collective="false" import="true" targetId="19f3-951d-7762-dbb1" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="94b7-84a0-fcd4-24fe" name="New CategoryLink" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="true"/>
+        <categoryLink id="94fc-b811-fc26-d6dc" name="Ranged Troops" hidden="false" targetId="fdd7-aa04-3596-2306" primary="false"/>
+        <categoryLink id="d586-808c-4af5-5456" name="Archer" hidden="false" targetId="bf14-44c5-2361-fcc8" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="d705-8326-77f5-7947" name="Sudanese Spearmen" hidden="false" collective="false" import="true" targetId="1ebf-7893-dc7e-62c9" type="selectionEntry"/>
+    <entryLink id="ddea-9002-f28f-6d46" name="Sudanese Archers" hidden="false" collective="false" import="true" targetId="6d1d-da89-c559-1dc6" type="selectionEntry"/>
+  </entryLinks>
+  <sharedSelectionEntries>
+    <selectionEntry id="fb43-23a8-ea31-1f34" name="Arab Bowman" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ca0-259f-20a7-8b19" type="min"/>
+      </constraints>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="9.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="df25-73c8-a131-5749" name="Arab Bowmen" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="a4ef-5498-e802-bee0" name="Arab Bowmen" hidden="false" typeId="cb3d-4828-04fa-4f44" typeName="Unit Profile">
+          <characteristics>
+            <characteristic name="Movement" typeId="d448-b12a-6a0a-db0d">6</characteristic>
+            <characteristic name="Attack" typeId="18fc-193a-b9ef-d0fe">9</characteristic>
+            <characteristic name="Defence" typeId="f6e4-e58a-9136-4796">7</characteristic>
+            <characteristic name="Morale" typeId="c910-b97c-59a5-0e72">6</characteristic>
+            <characteristic name="Actions" typeId="0300-e2b3-1ee3-608b">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="d077-9211-8046-440c" name="Archer" hidden="false" targetId="bf14-44c5-2361-fcc8" primary="false"/>
+        <categoryLink id="bf24-714f-0088-02c0" name="New CategoryLink" hidden="false" targetId="fdd7-aa04-3596-2306" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="48f1-cf24-ab6c-3426" name="Experience" hidden="false" collective="false" import="true" defaultSelectionEntryId="10c2-cde9-754a-ae5c">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c96-4d87-0c76-e8cf" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="627b-7fda-1e71-a8ab" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="10c2-cde9-754a-ae5c" name="Green Arab Bowman" hidden="false" collective="false" import="true" targetId="65ce-bf33-b65a-077c" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5e0-8080-d746-39aa" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="670f-04e0-3b7b-e1a0" name="Irregular Arab Bowman" hidden="false" collective="false" import="true" targetId="63a1-742b-5eff-2455" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0450-ac4b-80df-ff54" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="e061-e259-8741-316d" name="Regular Arab Bowman" hidden="false" collective="false" import="true" targetId="cc9d-e50f-97a0-a1c3" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d41-cc62-6d36-f960" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="845f-1b9e-c79d-5ffc" name="Veteran Arab Bowman" hidden="false" collective="false" import="true" targetId="e1d9-963e-76db-f986" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b159-0033-bc55-4801" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="571a-5ec9-fe37-c584" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="7499-3559-fb56-55e0">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="708d-3b6b-c469-d878" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="755f-504e-2bb2-4bbd" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="7499-3559-fb56-55e0" name="Bow" hidden="false" collective="false" import="true" targetId="70b5-31a7-5b85-58e1" type="selectionEntry"/>
+            <entryLink id="5031-d88c-9bb3-4607" name="Bow with Solenarion" hidden="true" collective="false" import="true" targetId="453c-c12b-9926-a4eb" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="845f-1b9e-c79d-5ffc" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e061-e259-8741-316d" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="518d-2464-ed07-0996" name="Armour" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="a37b-afe4-204b-f132" name="Mail" hidden="true" collective="false" import="true" targetId="92a6-7636-bab5-dfc2" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="845f-1b9e-c79d-5ffc" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="9772-52fc-0d1b-f2d5" name="Leather/Padded Armour" hidden="true" collective="false" import="true" targetId="12ae-994e-0d31-a13c" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="845f-1b9e-c79d-5ffc" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e061-e259-8741-316d" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="2434-558e-f0a8-4e2a" name="Arab Bowman" hidden="false" collective="false" import="true" targetId="fb43-23a8-ea31-1f34" type="selectionEntry">
+          <modifiers>
+            <modifier type="add" field="category" value="0e07-5fca-5909-cb7d">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="10c2-cde9-754a-ae5c" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="65ce-bf33-b65a-077c" name="Green Arab Bowman" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="63a1-742b-5eff-2455" name="Irregular Arab Bowman" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cc9d-e50f-97a0-a1c3" name="Regular Arab Bowman" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e1d9-963e-76db-f986" name="Veteran Arab Bowman" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="453c-c12b-9926-a4eb" name="Bow with Solenarion" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a584-04ec-3055-1449" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e00b-87f3-3826-db32" name="Naffatun" hidden="false" collective="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink id="bed3-e91b-061e-ac24" name="New CategoryLink" hidden="false" targetId="fdd7-aa04-3596-2306" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="12.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7c5d-1b28-c205-5b79" name="Naffatuns" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="710c-aa14-1c25-9f2d" name="Naffatuns" hidden="false" typeId="cb3d-4828-04fa-4f44" typeName="Unit Profile">
+          <characteristics>
+            <characteristic name="Movement" typeId="d448-b12a-6a0a-db0d">6</characteristic>
+            <characteristic name="Attack" typeId="18fc-193a-b9ef-d0fe">5</characteristic>
+            <characteristic name="Defence" typeId="f6e4-e58a-9136-4796">7</characteristic>
+            <characteristic name="Morale" typeId="c910-b97c-59a5-0e72">6</characteristic>
+            <characteristic name="Actions" typeId="0300-e2b3-1ee3-608b">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="70dd-5518-ca19-811b" name="New CategoryLink" hidden="false" targetId="fdd7-aa04-3596-2306" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="999a-bab0-de2b-5267" name="Experience" hidden="false" collective="false" import="true" defaultSelectionEntryId="1e0f-4ca9-8636-4868">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae28-06ae-bb31-dac3" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f82-56a4-e259-0a36" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="1e0f-4ca9-8636-4868" name="Regular Naffatun" hidden="false" collective="false" import="true" targetId="8786-3d49-d6f7-b25f" type="selectionEntry"/>
+            <entryLink id="0255-42f6-c587-fe3f" name="Veteran Naffatun" hidden="false" collective="false" import="true" targetId="cc60-0f07-a355-0a67" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="38a5-840e-2626-8d87" name="Fire pot" hidden="false" collective="false" import="true" targetId="cd32-1dc8-8fe3-4b50" type="selectionEntry"/>
+        <entryLink id="a26f-54c4-0473-6df4" name="Naffatun" hidden="false" collective="false" import="true" targetId="e00b-87f3-3826-db32" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c111-44b8-963d-5fae" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8786-3d49-d6f7-b25f" name="Regular Naffatun" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cc60-0f07-a355-0a67" name="Veteran Naffatun" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cd32-1dc8-8fe3-4b50" name="Fire pot" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="081f-601a-483a-8882" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e7f2-9f7e-5f6b-3d32" type="min"/>
+      </constraints>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0f89-9468-30eb-18f6" name="Arab Slinger" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0d3-f8e5-062b-aab8" type="min"/>
+      </constraints>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2d1c-4750-d77e-2d45" name="Arab Slingers" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="6171-cb45-332a-c83d" name="New CategoryLink" hidden="false" targetId="fdd7-aa04-3596-2306" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="e7ed-ea63-d878-ec14" name="Experience" hidden="false" collective="false" import="true" defaultSelectionEntryId="c172-f19b-179d-cb08">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c092-2645-9deb-5251" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d55a-7775-64f6-4d14" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="c172-f19b-179d-cb08" name="Green Arab Slinger" hidden="false" collective="false" import="true" targetId="1d73-a3bd-58fd-4c13" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c0ab-5c68-8235-3512" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="344f-6a65-4de4-c7fb" name="Irregular Arab Slinger" hidden="false" collective="false" import="true" targetId="248e-df90-25cb-0023" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5d8-7ab0-6867-a58e" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="0f64-72b2-630f-d755" name="Regular Arab Slinger" hidden="false" collective="false" import="true" targetId="9c0a-c0be-828a-3d46" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3da1-e9cd-ce3c-fe06" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="d3bf-eb9f-871a-2c46" name="Arab Slinger" hidden="false" collective="false" import="true" targetId="0f89-9468-30eb-18f6" type="selectionEntry">
+          <modifiers>
+            <modifier type="add" field="category" value="0e07-5fca-5909-cb7d">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c172-f19b-179d-cb08" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="46c1-fd4a-7632-0108" name="Sling" hidden="false" collective="false" import="true" targetId="0548-5157-125a-e206" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99a6-67ae-f0be-4748" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7489-3ebe-4bb9-e5f4" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1d73-a3bd-58fd-4c13" name="Green Arab Slinger" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9c0a-c0be-828a-3d46" name="Regular Arab Slinger" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="248e-df90-25cb-0023" name="Irregular Arab Slinger" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f584-a2de-5db5-391e" name="Arab Spearman" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1fa-b92f-ef09-92bd" type="min"/>
+      </constraints>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f2ac-d80d-14c1-e475" name="Arab Spearmen" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="1131-0aa5-df98-e4cf" name="Arab Spearmen" hidden="false" typeId="cb3d-4828-04fa-4f44" typeName="Unit Profile">
+          <characteristics>
+            <characteristic name="Movement" typeId="d448-b12a-6a0a-db0d">6</characteristic>
+            <characteristic name="Attack" typeId="18fc-193a-b9ef-d0fe">8</characteristic>
+            <characteristic name="Defence" typeId="f6e4-e58a-9136-4796">7</characteristic>
+            <characteristic name="Morale" typeId="c910-b97c-59a5-0e72">6</characteristic>
+            <characteristic name="Actions" typeId="0300-e2b3-1ee3-608b">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="061d-3acf-b5be-ccac" name="Spearman" hidden="false" targetId="b104-0557-0db2-e2d3" primary="false"/>
+        <categoryLink id="5db3-63fd-f7bd-9b2e" name="New CategoryLink" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="a806-32da-e005-cf8d" name="Experience" hidden="false" collective="false" import="true" defaultSelectionEntryId="1d33-5272-47a2-c14b">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c3f-c4f3-73b3-3f15" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd19-7c49-da04-d4a8" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="1d33-5272-47a2-c14b" name="Green Arab Spearmen" hidden="false" collective="false" import="true" targetId="5302-d95f-96ea-66c2" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f51-359c-e3bb-2571" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="7561-5d2f-dd73-0eb2" name="Irregular Arab Spearmen" hidden="false" collective="false" import="true" targetId="2b99-ea5b-2b05-64b0" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed39-bafc-5a56-c718" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="0d91-c0ce-1c46-f97a" name="Regular Arab Spearmen" hidden="false" collective="false" import="true" targetId="ed19-6c45-2aa9-5a71" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c35-a5a0-5889-67f4" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="3c4f-5a4e-7731-5a43" name="Veteran Arab Spearmen" hidden="false" collective="false" import="true" targetId="6e6a-9c2b-e499-c55c" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3fb3-2c19-b1c6-fc77" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="becc-f9e0-ef45-4ff6" name="Armour" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="0fb4-2d68-4d94-59ae" name="Mail" hidden="true" collective="false" import="true" targetId="92a6-7636-bab5-dfc2" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c4f-5a4e-7731-5a43" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="efd3-fc92-f723-e02d" name="Leather/Padded Armour" hidden="true" collective="false" import="true" targetId="12ae-994e-0d31-a13c" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c4f-5a4e-7731-5a43" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0d91-c0ce-1c46-f97a" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="96e7-fc29-359c-6be1" name="Spearman" hidden="false" collective="false" import="true" targetId="f499-82b5-48ac-e744" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="name" value="Arab Spearman"/>
+            <modifier type="add" field="category" value="0e07-5fca-5909-cb7d">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d33-5272-47a2-c14b" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fdfa-459f-3c9f-57ec" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="9.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2b99-ea5b-2b05-64b0" name="Irregular Arab Spearmen" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ed19-6c45-2aa9-5a71" name="Regular Arab Spearmen" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6e6a-9c2b-e499-c55c" name="Veteran Arab Spearmen" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5302-d95f-96ea-66c2" name="Green Arab Spearmen" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0084-3ecb-2564-069f" name="Arab Horse" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4ae2-3b5c-dec9-d10b" name="Arab Light Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="a2c1-834f-ecf2-a104" name="Arab Light Cavalry" hidden="false" typeId="cb3d-4828-04fa-4f44" typeName="Unit Profile">
+          <characteristics>
+            <characteristic name="Movement" typeId="d448-b12a-6a0a-db0d">5</characteristic>
+            <characteristic name="Attack" typeId="18fc-193a-b9ef-d0fe">6</characteristic>
+            <characteristic name="Defence" typeId="f6e4-e58a-9136-4796">6</characteristic>
+            <characteristic name="Morale" typeId="c910-b97c-59a5-0e72">5</characteristic>
+            <characteristic name="Actions" typeId="0300-e2b3-1ee3-608b">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="6df0-05da-ade6-4b0e" name="Cavalry" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="dfef-8ce9-7736-5542" name="Armour" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="321d-029d-7150-0591" name="Leather/Padded Armour" hidden="false" collective="false" import="true" targetId="12ae-994e-0d31-a13c" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="6b54-1b2c-ab75-548e" name="Arab Horse" hidden="false" collective="false" import="true" targetId="0084-3ecb-2564-069f" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c6b-0f9f-171b-03b3" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="15.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2db0-be25-6367-bb67" name="Arab Javelinman" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ff39-a0ab-61f8-8df7" name="Arab Javelinmen" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="382f-7648-2dba-e671" name="Ranged Troops" hidden="false" targetId="fdd7-aa04-3596-2306" primary="true"/>
+        <categoryLink id="305c-4a26-9577-23f2" name="Spearman" hidden="false" targetId="b104-0557-0db2-e2d3" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="3eab-1bdd-17b4-e22f" name="Arab Javelinman" hidden="false" collective="false" import="true" targetId="2db0-be25-6367-bb67" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cadc-a40e-d469-45a6" type="min"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="6652-762b-92f5-f0b0" name="Javelin" hidden="false" collective="false" import="true" targetId="87a6-e185-ca80-0fed" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e428-8b6b-3cf3-8916" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a64-66e2-b7f5-d869" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="11f4-dc3d-d1e8-ef9b" name="Black Guard Commander" hidden="false" collective="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink id="e388-7c58-3eff-9806" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="45b2-372c-43f0-70cd" name="Elite" hidden="false" targetId="afa4-eb59-41b5-4dc5" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="f13a-89e6-14fe-9ff2" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="2652-26f4-43d2-21ee">
+          <entryLinks>
+            <entryLink id="479d-2037-df9b-fbab" name="Mail" hidden="false" collective="false" import="true" targetId="92a6-7636-bab5-dfc2" type="selectionEntry"/>
+            <entryLink id="2652-26f4-43d2-21ee" name="Leather/Padded Armour" hidden="false" collective="false" import="true" targetId="12ae-994e-0d31-a13c" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="4d21-a76b-8385-9558" name="Weapon" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="647a-7167-89a7-bff1" name="Sword" hidden="false" collective="false" import="true" targetId="b92d-dec3-5451-a116" type="selectionEntry"/>
+            <entryLink id="c190-9a89-ca2e-d4dc" name="Bow" hidden="false" collective="false" import="true" targetId="70b5-31a7-5b85-58e1" type="selectionEntry"/>
+            <entryLink id="d05c-51b6-ecda-0a51" name="Spear " hidden="false" collective="false" import="true" targetId="e95d-5e82-94dc-edc5" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="50fc-e4ae-3d0a-ccfc" name="Retinue" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="e33f-33ca-5f99-deaa" name="Imam" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd6a-1a1d-2138-78b7" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="fc20-14cd-31f6-8867" name="Priest" hidden="false" collective="false" import="true" targetId="6b47-7716-7239-05d9" type="selectionEntry">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Imam"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d31-9a94-9cb5-3eb8" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0302-0e39-fdcc-4c03" type="min"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="bbad-2039-686e-5e20" name="Musician" hidden="false" collective="false" import="true" targetId="357d-b3b0-1d7d-9835" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5eff-b0f6-463b-bd98" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="5e80-1f0f-d9de-1ba7" name="Bannerman" hidden="false" collective="false" import="true" targetId="dfb7-4fd3-5f6e-a748" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0ea-8903-c5b2-ec39" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="fae6-f4af-2dff-4ca1" name="Command Group" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="d4a3-3278-2882-8d44" name="Black Guard" hidden="false" collective="false" import="true" targetId="aba2-8d3d-4720-26f8" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8cae-f93d-2b19-a5f2" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="efd2-0fc2-80c0-984f" name="Black Guard (single)" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="aba2-8d3d-4720-26f8" name="Black Guard" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="da4d-bf37-c42f-eb58" name="New CategoryLink" hidden="false" targetId="afa4-eb59-41b5-4dc5" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="8f96-0948-9108-526f" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="cbc0-0d6c-ffd2-36e2">
+          <entryLinks>
+            <entryLink id="cbc0-0d6c-ffd2-36e2" name="Sword" hidden="false" collective="false" import="true" targetId="b92d-dec3-5451-a116" type="selectionEntry"/>
+            <entryLink id="6370-0df3-24f9-969e" name="Bow" hidden="false" collective="false" import="true" targetId="70b5-31a7-5b85-58e1" type="selectionEntry"/>
+            <entryLink id="3717-ac8f-8f3b-39b8" name="Spear " hidden="false" collective="false" import="true" targetId="e95d-5e82-94dc-edc5" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="d61a-9c88-78f6-ba2c" name="Armour" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="62a3-ebb6-3838-321c" name="Mail" hidden="false" collective="false" import="true" targetId="92a6-7636-bab5-dfc2" type="selectionEntry"/>
+            <entryLink id="156d-ff01-f5b5-61d3" name="Leather/Padded Armour" hidden="false" collective="false" import="true" targetId="12ae-994e-0d31-a13c" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="d6ca-5447-c602-c77a" name="Black Guard (single)" hidden="false" collective="false" import="true" targetId="efd2-0fc2-80c0-984f" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbdd-820a-bdfe-6c83" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="650d-8daa-fd5b-eccb" name="Moorish Chieftain" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b77-837f-3771-4c95" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="04f3-7172-e0ea-df40" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="6242-b930-d192-28ee" name="Shield" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="5cf7-c03d-fcb4-7e94" name="Small Shield" hidden="false" collective="false" import="true" targetId="13d2-8c95-f5b7-40c1" type="selectionEntry"/>
+            <entryLink id="bd88-b374-03a0-7a01" name="Medium Shield" hidden="false" collective="false" import="true" targetId="2273-dc65-01be-95ff" type="selectionEntry"/>
+            <entryLink id="7c54-02e3-90b1-7598" name="Large Shield" hidden="false" collective="false" import="true" targetId="7afb-a940-1505-1d3d" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="8a92-05fe-c43c-3311" name="Retinue" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="ca5e-768f-38a2-7a22" name="Imam" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3beb-c967-8927-c5b7" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="cd23-21a0-7b22-0b9a" name="Priest" hidden="false" collective="false" import="true" targetId="6b47-7716-7239-05d9" type="selectionEntry">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Imam"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54e9-3001-f173-3c1c" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d487-25ac-8141-f430" type="min"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="6101-071c-6bfb-d191" name="Musician" hidden="false" collective="false" import="true" targetId="357d-b3b0-1d7d-9835" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1962-cf98-7651-57bc" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="4205-2c3f-8be7-5945" name="Bannerman" hidden="false" collective="false" import="true" targetId="dfb7-4fd3-5f6e-a748" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6ce-6d32-4c85-2201" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="0015-e322-5c9c-054b" name="Armour" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="9d4b-3c15-efb8-b6ff" name="Mail" hidden="false" collective="false" import="true" targetId="92a6-7636-bab5-dfc2" type="selectionEntry"/>
+            <entryLink id="8e40-9bee-8299-d7c1" name="Leather/Padded Armour" hidden="false" collective="false" import="true" targetId="12ae-994e-0d31-a13c" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="1d84-6ff3-1438-23f1" name="Command Group" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2587-da53-81cf-56cd" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="65ed-3c37-6025-edad" name="Arab Bowmen" hidden="false" collective="false" import="true" targetId="df25-73c8-a131-5749" type="selectionEntry"/>
+            <entryLink id="4248-9d2f-f4ad-6fb9" name="Arab Javelinmen" hidden="false" collective="false" import="true" targetId="ff39-a0ab-61f8-8df7" type="selectionEntry"/>
+            <entryLink id="326b-a23e-8fff-720e" name="Arab Slingers" hidden="false" collective="false" import="true" targetId="2d1c-4750-d77e-2d45" type="selectionEntry"/>
+            <entryLink id="45d6-0b2b-edba-3c5a" name="Arab Spearmen" hidden="false" collective="false" import="true" targetId="f2ac-d80d-14c1-e475" type="selectionEntry"/>
+            <entryLink id="85d4-1e35-fe11-e188" name="Moorish Tribal Warriors" hidden="false" collective="false" import="true" targetId="ab22-b1fc-a0d7-f913" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="5bd9-eef5-7de5-40a7" name="Sword" hidden="false" collective="false" import="true" targetId="b92d-dec3-5451-a116" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f053-fd11-0ba3-8ec9" name="Green Moorish Tribal Warrior" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ab22-b1fc-a0d7-f913" name="Moorish Tribal Warriors" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="ab18-2a77-03b5-0724" name="New CategoryLink" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="2288-067d-4784-971e" name="Weapon" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="89c5-59d5-9e2c-2692" name="Sword" hidden="false" collective="false" import="true" targetId="b92d-dec3-5451-a116" type="selectionEntry"/>
+            <entryLink id="5191-0b47-635e-16cc" name="Bow" hidden="false" collective="false" import="true" targetId="70b5-31a7-5b85-58e1" type="selectionEntry"/>
+            <entryLink id="9614-eebb-9d67-02a3" name="Spear " hidden="false" collective="false" import="true" targetId="e95d-5e82-94dc-edc5" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b3f7-f537-438a-a0b5" name="Armour" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="9e47-b675-d632-20b9" name="Mail" hidden="false" collective="false" import="true" targetId="92a6-7636-bab5-dfc2" type="selectionEntry"/>
+            <entryLink id="fa1e-6d9f-75b3-9c61" name="Leather/Padded Armour" hidden="false" collective="false" import="true" targetId="12ae-994e-0d31-a13c" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="c0ea-1792-e900-dafa" name="Shield" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="8dc0-ab63-5f59-aed0" name="Small Shield" hidden="false" collective="false" import="true" targetId="13d2-8c95-f5b7-40c1" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f051-4118-f80a-3313" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="c155-4ec6-f0fe-32d9" name="Medium Shield" hidden="false" collective="false" import="true" targetId="2273-dc65-01be-95ff" type="selectionEntry"/>
+            <entryLink id="7818-4abd-c313-7c9a" name="Large Shield" hidden="false" collective="false" import="true" targetId="7afb-a940-1505-1d3d" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b690-765b-bf30-d0ed" name="Experience" hidden="false" collective="false" import="true" defaultSelectionEntryId="162b-d9c4-686d-fd81">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6264-43a0-a37f-7d40" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc93-565a-6b26-e882" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="162b-d9c4-686d-fd81" name="Green Moorish Tribal Warrior" hidden="false" collective="false" import="true" targetId="f053-fd11-0ba3-8ec9" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96d1-94bd-36f3-b657" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="8a29-94e7-d256-5d42" name="Irregular Moorish Tribal Warrior" hidden="false" collective="false" import="true" targetId="4f33-14cb-ef40-0176" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcf4-e107-1880-1d5f" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="c470-1da0-ad0d-4988" name="Regular Moorish Tribal Warrior" hidden="false" collective="false" import="true" targetId="ff09-b821-caf1-6246" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a98e-fb77-20f7-3340" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="73b6-dbf9-1a87-bc85" name="Veteran Moorish Tribal Warrior" hidden="false" collective="false" import="true" targetId="1f49-4f7f-3b32-d97c" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d129-c765-fcd7-2b92" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="0059-5acd-0bbf-e2f3" name="Moorish Tribal Warrior" hidden="false" collective="false" import="true" targetId="3a1f-c243-925a-2d73" type="selectionEntry">
+          <modifiers>
+            <modifier type="add" field="category" value="0e07-5fca-5909-cb7d">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="162b-d9c4-686d-fd81" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af43-f61f-d4c4-9203" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4f33-14cb-ef40-0176" name="Irregular Moorish Tribal Warrior" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ff09-b821-caf1-6246" name="Regular Moorish Tribal Warrior" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1f49-4f7f-3b32-d97c" name="Veteran Moorish Tribal Warrior" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3a1f-c243-925a-2d73" name="Moorish Tribal Warrior" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="461c-f3b8-99cb-c46a" name="Daylami Commander" hidden="false" collective="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink id="f10f-4a95-f2e6-1f07" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="92a8-b4ed-d6ee-71f2" name="Command Group" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83c3-0eb4-8b92-b0e2" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="f2f1-38ce-cebc-b45d" name="Daylami Archers" hidden="false" collective="false" import="true" targetId="9a08-d73e-4e72-24e5" type="selectionEntry"/>
+            <entryLink id="50a4-5aa4-c94f-d571" name="Daylami Infantrymen" hidden="false" collective="false" import="true" targetId="7174-0076-4550-ce32" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="8382-970d-602d-7bba" name="Daylami Infantry" hidden="false" collective="false" import="true" type="model"/>
+    <selectionEntry id="3483-293e-ef15-4f98" name="Daylami Archer" hidden="false" collective="false" import="true" type="model"/>
+    <selectionEntry id="9a08-d73e-4e72-24e5" name="Daylami Archers" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="73eb-34c1-a49d-688d" name="Archer" hidden="false" targetId="bf14-44c5-2361-fcc8" primary="false"/>
+        <categoryLink id="5a99-de36-620a-9baf" name="Ranged Troops" hidden="false" targetId="fdd7-aa04-3596-2306" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="7e8e-4b1f-bd44-8c53" name="Daylami Archer" hidden="false" collective="false" import="true" targetId="3483-293e-ef15-4f98" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad44-86ca-385c-9212" type="min"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="7704-a496-997d-71e2" name="Bow" hidden="false" collective="false" import="true" targetId="70b5-31a7-5b85-58e1" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d41f-7886-2c5d-764d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a86-8ad7-6dbf-083c" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="7174-0076-4550-ce32" name="Daylami Infantrymen" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="aa72-5766-6015-fda9" name="New CategoryLink" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="0f8d-3603-1acc-279f" name="Daylami Infantry" hidden="false" collective="false" import="true" targetId="8382-970d-602d-7bba" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b5c-1326-ab2f-d5ed" type="min"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="8f1e-8e89-ba9e-8999" name="Spear " hidden="false" collective="false" import="true" targetId="e95d-5e82-94dc-edc5" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5712-cf13-fd63-ed1b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c67-1f71-fb13-53a1" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="4987-6f34-df2a-3052" name="Arab Heavy Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="b7a5-28f0-51eb-e76e" name="Arab Heavy Cavalry" hidden="false" typeId="cb3d-4828-04fa-4f44" typeName="Unit Profile">
+          <characteristics>
+            <characteristic name="Movement" typeId="d448-b12a-6a0a-db0d">7</characteristic>
+            <characteristic name="Attack" typeId="18fc-193a-b9ef-d0fe">6</characteristic>
+            <characteristic name="Defence" typeId="f6e4-e58a-9136-4796">4</characteristic>
+            <characteristic name="Morale" typeId="c910-b97c-59a5-0e72">5</characteristic>
+            <characteristic name="Actions" typeId="0300-e2b3-1ee3-608b">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="6e34-d415-375d-11ba" name="Cavalry" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9a9b-4b21-2f6c-b302" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="638a-233d-9938-7216">
+          <entryLinks>
+            <entryLink id="7a00-6ece-7f77-53ff" name="Mail" hidden="false" collective="false" import="true" targetId="92a6-7636-bab5-dfc2" type="selectionEntry"/>
+            <entryLink id="638a-233d-9938-7216" name="Leather/Padded Armour" hidden="false" collective="false" import="true" targetId="12ae-994e-0d31-a13c" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="ec41-6b08-780a-f27e" name="Arab Horse" hidden="false" collective="false" import="true" targetId="0084-3ecb-2564-069f" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ee5-9bac-27d7-60f7" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="20.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7598-1ae9-906e-e3b8" name="Arab Light Cavalry Command" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c693-d677-5251-0c47" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="e169-9667-7e7c-1584" name="Arab Light Cavalry" hidden="false" typeId="cb3d-4828-04fa-4f44" typeName="Unit Profile">
+          <characteristics>
+            <characteristic name="Movement" typeId="d448-b12a-6a0a-db0d">5</characteristic>
+            <characteristic name="Attack" typeId="18fc-193a-b9ef-d0fe">6</characteristic>
+            <characteristic name="Defence" typeId="f6e4-e58a-9136-4796">6</characteristic>
+            <characteristic name="Morale" typeId="c910-b97c-59a5-0e72">5</characteristic>
+            <characteristic name="Actions" typeId="0300-e2b3-1ee3-608b">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="4ce4-42b4-ae87-8a0a" name="Cavalry" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="false"/>
+        <categoryLink id="9665-4bfd-2338-563c" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="3fd3-65fd-36a3-2e11" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="b18c-ab12-8ee9-f197">
+          <entryLinks>
+            <entryLink id="b18c-ab12-8ee9-f197" name="Leather/Padded Armour" hidden="false" collective="false" import="true" targetId="12ae-994e-0d31-a13c" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="4dde-6a96-8462-23d3" name="Command Group" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="adeb-0ab9-300b-2477" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="5532-5ba2-4154-766a" name="Arab Light Cavalry" hidden="false" collective="false" import="true" targetId="4ae2-3b5c-dec9-d10b" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="1487-29de-6339-098b" name="Arab Horse" hidden="false" collective="false" import="true" targetId="0084-3ecb-2564-069f" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4ee-b3e8-fe4a-dfd1" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf02-6fa2-887a-8802" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="15.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="070b-806d-73cb-9c40" name="Royal Ghulam" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="1b4d-7e7d-7178-37e8" name="New CategoryLink" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="true"/>
+        <categoryLink id="466b-a210-4dd8-4e27" name="Elite" hidden="false" targetId="afa4-eb59-41b5-4dc5" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="bd1c-ee3c-719a-40a3" name="Barded War Horse" hidden="false" collective="false" import="true" targetId="0b71-8857-d20d-9825" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8803-7d39-7160-6d88" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a8b-112f-e70e-7665" type="min"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="dd9f-f518-2209-1354" name="Ghulam" hidden="false" collective="false" import="true" targetId="fadb-4383-007e-2502" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6129-feab-e173-a41a" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="79ec-1af7-3d7d-3e1d" name="Ghulam Command" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="17f8-6606-eb78-fda6" name="Cavalry" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="false"/>
+        <categoryLink id="388c-bf5c-83d1-39cd" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="d966-c178-0299-3997" name="Command Group" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87d0-34a8-a509-7f18" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="3550-6830-0e13-8e47" name="Ghulams" hidden="false" collective="false" import="true" targetId="f640-1352-65ab-ef94" type="selectionEntry"/>
+            <entryLink id="6e84-e1b1-b37d-afcd" name="Royal Ghulam" hidden="false" collective="false" import="true" targetId="070b-806d-73cb-9c40" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="e79c-7fc7-b166-f609" name="Ghulam" hidden="false" collective="false" import="true" targetId="fadb-4383-007e-2502" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb56-f114-0f56-fdcd" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51f9-b066-3d88-b729" type="min"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="a222-ffa7-8b2c-061e" name="Barded Horse" hidden="false" collective="false" import="true" targetId="311c-db8c-6fde-0a7e" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee4b-2822-3e4f-67bb" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8305-624b-6052-72de" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="f640-1352-65ab-ef94" name="Ghulams" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="de96-c17c-b78d-6e0f" name="New CategoryLink" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="2a87-b476-7871-c2cc" name="Ghulam" hidden="false" collective="false" import="true" targetId="fadb-4383-007e-2502" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7de2-3c80-7629-bbaf" type="min"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="050b-9544-fa5e-bc79" name="Barded Horse" hidden="false" collective="false" import="true" targetId="311c-db8c-6fde-0a7e" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ceb7-d854-94fe-f5f0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c8d-0fc6-cd65-bdea" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="fadb-4383-007e-2502" name="Ghulam" hidden="false" collective="false" import="true" type="model"/>
+    <selectionEntry id="f9c6-ce59-c837-8b29" name="Seljuk Cavalry Command" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="fba7-5350-2b7a-7a9c" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="03a2-1b52-3138-4ae2" name="Cavalry" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="false"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="689e-870b-a8cd-ec92" name="Seljuk Horse Archers" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="a2f5-847c-3361-8215" name="Cavalry" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="true"/>
+        <categoryLink id="1e08-251d-7ac9-2709" name="New CategoryLink" hidden="false" targetId="fdd7-aa04-3596-2306" primary="false"/>
+        <categoryLink id="ff3a-68e2-5656-c1c3" name="Archer" hidden="false" targetId="bf14-44c5-2361-fcc8" primary="false"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="ef30-495f-75cb-55aa" name="Seljuk" hidden="false" collective="false" import="true" type="model"/>
+    <selectionEntry id="c550-3834-7cae-c31a" name="Arab Heavy Infantryman" hidden="false" collective="false" import="true" type="model"/>
+    <selectionEntry id="6596-08af-9942-f5ab" name="Arab Heavy Infantry" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="62df-5070-6e4b-d3f1" name="New CategoryLink" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="e4de-8fdf-e667-3f52" name="Arab Horse Archer" hidden="false" collective="false" import="true" type="model">
+      <entryLinks>
+        <entryLink id="7108-f031-f0e4-5052" name="Bow" hidden="false" collective="false" import="true" targetId="70b5-31a7-5b85-58e1" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="68d1-758a-b3aa-8fc0" name="Arab Horse Archers" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="7ac4-940c-0cbe-5b18" name="Archer" hidden="false" targetId="bf14-44c5-2361-fcc8" primary="false"/>
+        <categoryLink id="62c4-ae81-430b-2ba2" name="New CategoryLink" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="true"/>
+        <categoryLink id="e389-ed07-3276-412e" name="Ranged Troops" hidden="false" targetId="fdd7-aa04-3596-2306" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="4a66-d7aa-cb73-47c7" name="Arab Horse Archer" hidden="false" collective="false" import="true" targetId="e4de-8fdf-e667-3f52" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="b9fc-e2f6-8f83-dbef" name="Arab Heavy Cavalry Command" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c358-71c4-1541-740b" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0660-a7d0-5679-a68f" name="Arab Heavy Cavalry" hidden="false" typeId="cb3d-4828-04fa-4f44" typeName="Unit Profile">
+          <characteristics>
+            <characteristic name="Movement" typeId="d448-b12a-6a0a-db0d">5</characteristic>
+            <characteristic name="Attack" typeId="18fc-193a-b9ef-d0fe">6</characteristic>
+            <characteristic name="Defence" typeId="f6e4-e58a-9136-4796">6</characteristic>
+            <characteristic name="Morale" typeId="c910-b97c-59a5-0e72">5</characteristic>
+            <characteristic name="Actions" typeId="0300-e2b3-1ee3-608b">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="a9b0-205c-f5a1-727a" name="Cavalry" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="false"/>
+        <categoryLink id="8260-7dfa-1659-9032" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9afc-bcaa-8a88-edab" name="Armour" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="499b-87f7-6e71-098d" name="Mail" hidden="false" collective="false" import="true" targetId="92a6-7636-bab5-dfc2" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="caef-4ca4-7b31-f15d" name="Command Group" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dfaf-157f-d90c-9447" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="883a-e253-1c92-1144" name="Arab Heavy Cavalry" hidden="false" collective="false" import="true" targetId="4987-6f34-df2a-3052" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="5f4b-7ca8-090e-76a6" name="Arab Horse" hidden="false" collective="false" import="true" targetId="0084-3ecb-2564-069f" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff8f-94ee-2634-7559" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2160-d789-91da-05a9" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="20.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f2c9-f179-19bb-da67" name="Seljuk Heavy Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="14c3-915b-bc51-ca86" name="Archer" hidden="false" targetId="bf14-44c5-2361-fcc8" primary="false"/>
+        <categoryLink id="a27d-3861-60d1-c807" name="New CategoryLink" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="a31e-762a-2d63-f53b" name="Bow" hidden="false" collective="false" import="true" targetId="70b5-31a7-5b85-58e1" type="selectionEntry"/>
+        <entryLink id="5e0c-3ce3-530e-9bc3" name="Lance &amp; Sword" hidden="false" collective="false" import="true" targetId="5156-c90f-377e-9da4" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="91a9-da1a-0fc8-a873" name="Bedouin Cavalry" hidden="false" collective="false" import="true" type="model"/>
+    <selectionEntry id="1980-fdf0-f327-23b5" name="Bedouin Light Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <entryLinks>
+        <entryLink id="c0a9-7799-7fe7-fce6" name="Spear " hidden="false" collective="false" import="true" targetId="e95d-5e82-94dc-edc5" type="selectionEntry"/>
+        <entryLink id="2c01-0b65-9387-ffc5" name="Bedouin Cavalry" hidden="false" collective="false" import="true" targetId="91a9-da1a-0fc8-a873" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="0324-5f49-bedf-4eab" name="Khwarisminian Heavy Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <entryLinks>
+        <entryLink id="9309-f6bb-c0be-dd34" name="Lance &amp; Sword" hidden="false" collective="false" import="true" targetId="5156-c90f-377e-9da4" type="selectionEntry"/>
+        <entryLink id="54c1-1cff-27c2-522f" name="Bow" hidden="false" collective="false" import="true" targetId="70b5-31a7-5b85-58e1" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="967e-5f58-5b7e-43fb" name="Khwarisminian Extra Heavy Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="d131-bd32-0795-ebc8" name="Cavalry" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="true"/>
+        <categoryLink id="529c-92f9-7dda-c64f" name="Ranged Troops" hidden="false" targetId="fdd7-aa04-3596-2306" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="c3c8-e23d-8b28-7038" name="Bow" hidden="false" collective="false" import="true" targetId="70b5-31a7-5b85-58e1" type="selectionEntry"/>
+        <entryLink id="9fe5-5359-a5f4-6e37" name="Lance &amp; Sword" hidden="false" collective="false" import="true" targetId="5156-c90f-377e-9da4" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="19f3-951d-7762-dbb1" name="Khwarisminian Horse Archer" hidden="false" collective="false" import="true" type="model">
+      <entryLinks>
+        <entryLink id="76cf-c15d-2fc5-f941" name="Bow" hidden="false" collective="false" import="true" targetId="70b5-31a7-5b85-58e1" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="c7fc-9043-c6f0-73a7" name="Khwarisminian Horse" hidden="false" collective="false" import="true" type="model"/>
+    <selectionEntry id="e2df-a5b2-7aa9-b35e" name="Sudanese Spearman" hidden="false" collective="false" import="true" type="model"/>
+    <selectionEntry id="1ebf-7893-dc7e-62c9" name="Sudanese Spearmen" hidden="false" collective="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink id="067a-b074-877a-fc76" name="Spearman" hidden="false" targetId="b104-0557-0db2-e2d3" primary="false"/>
+        <categoryLink id="8180-0767-1cf9-5a19" name="New CategoryLink" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="5f40-6306-3dc2-8568" name="Sudanese Spearman" hidden="false" collective="false" import="true" targetId="e2df-a5b2-7aa9-b35e" type="selectionEntry"/>
+        <entryLink id="7b19-3d27-890a-a1f6" name="Spear " hidden="false" collective="false" import="true" targetId="e95d-5e82-94dc-edc5" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="6840-955b-31ce-4a4f" name="Sudanese Archer" hidden="false" collective="false" import="true" type="model"/>
+    <selectionEntry id="6d1d-da89-c559-1dc6" name="Sudanese Archers" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="9189-a51a-01ca-43c1" name="Archer" hidden="false" targetId="bf14-44c5-2361-fcc8" primary="false"/>
+        <categoryLink id="9fc0-081e-c899-272d" name="New CategoryLink" hidden="false" targetId="fdd7-aa04-3596-2306" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="b4ab-a378-f348-3daa" name="Sudanese Archer" hidden="false" collective="false" import="true" targetId="6840-955b-31ce-4a4f" type="selectionEntry"/>
+        <entryLink id="a108-1dc8-bfff-e5f0" name="Bow" hidden="false" collective="false" import="true" targetId="70b5-31a7-5b85-58e1" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntry>
+  </sharedSelectionEntries>
+</catalogue>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="02f8-fbdd-bb83-6f13" name="Kings Army 1215-1217" revision="1" battleScribeVersion="2.03" authorName="Stephen Trenholme" library="false" gameSystemId="64c6-5bda-e428-c44b" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <readme>First initial version of Warhost by Andy Hobday</readme>
+  <entryLinks>
+    <entryLink id="9205-75b2-aebc-97ad" name="Baron" hidden="false" collective="false" import="true" targetId="aba9-78b3-fda3-6077" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="a925-1bbd-78c6-9669" name="Baron" hidden="false" targetId="6b00-32e9-def7-2472" primary="false"/>
+        <categoryLink id="1f77-9e28-4b2a-e388" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="8f06-6e49-78db-9858" name="Knight" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="2b01-1ac8-d091-1b29" name="Lord" hidden="false" collective="false" import="true" targetId="282b-5ea6-eb91-f293" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="cd09-c20e-fadd-ce23" name="Knight" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="false"/>
+        <categoryLink id="cc34-d61c-4aa6-ad38" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="787d-de9d-8636-49f7" name="Veteran Sergeant" hidden="false" collective="false" import="true" targetId="407a-bd47-d065-acaf" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="c330-7058-cbc4-fea2" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="3ff0-b5d6-337b-abd8" name="Bowmen" hidden="false" collective="false" import="true" targetId="27b1-1abe-e2ac-bcb8" type="selectionEntry"/>
+    <entryLink id="49f0-4202-a98e-195d" name="Crossbowmen" hidden="false" collective="false" import="true" targetId="0fe6-1765-7891-c0ca" type="selectionEntry"/>
+    <entryLink id="4aa0-e79f-34c2-8eeb" name="Levy" hidden="false" collective="false" import="true" targetId="5e0c-deb3-47b7-a2ec" type="selectionEntry"/>
+    <entryLink id="7cf6-e269-c87c-95c0" name="Militant Monks" hidden="false" collective="false" import="true" targetId="8f13-a227-32d5-9148" type="selectionEntry"/>
+    <entryLink id="91fc-30bd-657d-a13c" name="Spearmen" hidden="false" collective="false" import="true" targetId="e2fd-9732-ab29-d878" type="selectionEntry"/>
+    <entryLink id="6de3-1cec-f90e-b2d9" name="Knights" hidden="false" collective="false" import="true" targetId="50b9-e9ce-6be2-fa7f" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="4d0b-52f0-eef5-bdd7" name="New CategoryLink" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="db3b-5fc1-9b51-6941" name="Sergeant" hidden="false" collective="false" import="true" targetId="74f9-193f-b750-0df4" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="2578-6bfc-954f-f8e0" name="New CategoryLink" hidden="false" targetId="bdf0-2079-3cba-a3a0" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="4bc8-928e-6b23-a818" name="Hubert de Burgh, 1st Earl of Kent" hidden="false" collective="false" import="true" targetId="ad3d-8101-7665-44cc" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b195-655b-7545-42ca" type="max"/>
+      </constraints>
+    </entryLink>
+    <entryLink id="de5e-f69f-4e31-e32d" name="Falkes de Breaute" hidden="false" collective="false" import="true" targetId="1321-3b60-1523-aad2" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="87c0-7194-242d-e63a" type="max"/>
+      </constraints>
+    </entryLink>
+    <entryLink id="7c8f-91b6-e2b5-e84d" name="William Marshal, 1st Earl of Pembroke" hidden="false" collective="false" import="true" targetId="97b1-dc06-45cf-e80e" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="21e8-5190-572e-efc5" type="max"/>
+      </constraints>
+    </entryLink>
+    <entryLink id="bb7a-7de7-0183-db76" name="King John of England" hidden="false" collective="false" import="true" targetId="5d7e-a1da-5e4c-d1ed" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="85ac-8294-9fe1-cd8e" type="max"/>
+      </constraints>
+    </entryLink>
+    <entryLink id="281a-1365-59b7-4beb" name="Custom Baron" hidden="false" collective="false" import="true" targetId="a8cc-0dc1-97ef-9755" type="selectionEntry"/>
+    <entryLink id="460d-8db2-e900-a9ee" name="Custom Lord" hidden="false" collective="false" import="true" targetId="e631-a621-4c3c-56bb" type="selectionEntry"/>
+    <entryLink id="0a93-c6c2-eeaf-560f" name="William de Warenne" hidden="false" collective="false" import="true" targetId="1535-8a11-ad84-0e96" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed46-8cfb-d5e9-598d" type="max"/>
+      </constraints>
+    </entryLink>
+    <entryLink id="038c-d7e7-9f8c-6ae2" name="Bishop" hidden="false" collective="false" import="true" targetId="04de-8916-40ad-e7fa" type="selectionEntry"/>
+    <entryLink id="49b7-1f6d-8a3b-7fa0" name="Peter des Roche, Bishop of Winchester" hidden="false" collective="false" import="true" targetId="18b9-cf24-4fc3-98e3" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ae6-f8c9-828e-b9e7" type="max"/>
+      </constraints>
+    </entryLink>
+    <entryLink id="0fdd-d538-83e8-e8af" name="Eustance de Lowdham, The Undersheriff" hidden="false" collective="false" import="true" targetId="4727-d1cf-c5a1-d78d" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="fd1b-f7fd-e9b4-dd47" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
+        <categoryLink id="04ab-d5f7-7bdc-e40b" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="aa92-c5a8-14cb-1746" name="Philippe Marc" hidden="false" collective="false" import="true" targetId="1ed2-97e3-7aa7-689b" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="ee2a-28e1-9e78-f2d0" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
+        <categoryLink id="9cd1-5a8f-3846-3d0f" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="8f01-828d-accd-8a74" name="Fulk Fitz Warin" hidden="false" collective="false" import="true" targetId="3890-0574-f067-ccf6" type="selectionEntry"/>
+    <entryLink id="9977-2cd9-b435-6afe" name="Walter de Grey, Bishop of York" publicationId="6c06-f51b-fa39-53d5" page="19" hidden="false" collective="false" import="true" targetId="9b6a-bf77-27e8-8529" type="selectionEntry"/>
+    <entryLink id="c863-c5ef-5a24-05fc" name="Priest of Wimentum" hidden="false" collective="false" import="true" targetId="4257-d1e4-ef72-5ada" type="selectionEntry"/>
+  </entryLinks>
+  <catalogueLinks>
+    <catalogueLink id="256a-69ab-986d-2ee9" name="Command" targetId="de04-24ed-2b94-b426" type="catalogue" importRootEntries="true"/>
+    <catalogueLink id="a8b0-7b90-71bb-333a" name="Troops" targetId="6022-99dd-88dd-d5a0" type="catalogue" importRootEntries="true"/>
+    <catalogueLink id="4e93-ad03-08db-bc41" name="Custom profiles" targetId="fabd-b04b-0132-308a" type="catalogue" importRootEntries="true"/>
+  </catalogueLinks>
+</catalogue>

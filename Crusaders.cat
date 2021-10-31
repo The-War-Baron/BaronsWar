@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="58f2-2b81-61cf-759f" name="Crusaders" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="64c6-5bda-e428-c44b" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <entryLinks>
+    <entryLink id="bd0b-279c-79e8-9f87" name="Knights" hidden="false" collective="false" import="true" targetId="50b9-e9ce-6be2-fa7f" type="selectionEntry"/>
+    <entryLink id="ea66-6de5-f57a-35cc" name="Flemish Mounted Sergeants" hidden="false" collective="false" import="true" targetId="f880-b3d2-6323-f92c" type="selectionEntry"/>
+    <entryLink id="9e58-c235-b878-40e0" name="Veteran Sergeant" hidden="false" collective="false" import="true" targetId="407a-bd47-d065-acaf" type="selectionEntry"/>
+    <entryLink id="7e7c-5bfd-3696-e3a6" name="Sergeant" hidden="false" collective="false" import="true" targetId="74f9-193f-b750-0df4" type="selectionEntry"/>
+    <entryLink id="c766-b010-da0e-0447" name="Knight&apos;s Templar" hidden="false" collective="false" import="true" targetId="6d31-bb8f-276d-e54d" type="selectionEntry"/>
+  </entryLinks>
+  <catalogueLinks>
+    <catalogueLink id="b7a0-cf8f-18b0-0558" name="Troops" targetId="6022-99dd-88dd-d5a0" type="catalogue" importRootEntries="true"/>
+    <catalogueLink id="1d44-1c02-5d33-6002" name="Command" targetId="de04-24ed-2b94-b426" type="catalogue" importRootEntries="true"/>
+    <catalogueLink id="10f9-276a-6420-6f9b" name="Custom profiles" targetId="fabd-b04b-0132-308a" type="catalogue" importRootEntries="true"/>
+  </catalogueLinks>
+</catalogue>

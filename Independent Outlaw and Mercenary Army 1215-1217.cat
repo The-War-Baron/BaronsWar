@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="ba09-667f-37c8-784b" name="Independent Outlaw and Mercenary Army 1215-1217" revision="1" battleScribeVersion="2.03" authorName="Stephen Trenholme" library="false" gameSystemId="64c6-5bda-e428-c44b" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <readme>First initial version of Warhost by Andy Hobday</readme>
+  <entryLinks>
+    <entryLink id="9205-75b2-aebc-97ad" name="Baron" hidden="false" collective="false" import="true" targetId="aba9-78b3-fda3-6077" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="a925-1bbd-78c6-9669" name="Baron" hidden="false" targetId="6b00-32e9-def7-2472" primary="false"/>
+        <categoryLink id="1f77-9e28-4b2a-e388" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="8f06-6e49-78db-9858" name="Knight" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="2b01-1ac8-d091-1b29" name="Lord" hidden="false" collective="false" import="true" targetId="282b-5ea6-eb91-f293" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="b798-851e-d7c1-13aa" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="c008-b24b-05e1-8a42" name="Knight" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="787d-de9d-8636-49f7" name="Veteran Sergeant" hidden="false" collective="false" import="true" targetId="407a-bd47-d065-acaf" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="77ad-9708-2856-131b" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="3ff0-b5d6-337b-abd8" name="Bowmen" hidden="false" collective="false" import="true" targetId="27b1-1abe-e2ac-bcb8" type="selectionEntry"/>
+    <entryLink id="49f0-4202-a98e-195d" name="Crossbowmen" hidden="false" collective="false" import="true" targetId="0fe6-1765-7891-c0ca" type="selectionEntry"/>
+    <entryLink id="4aa0-e79f-34c2-8eeb" name="Levy" hidden="false" collective="false" import="true" targetId="5e0c-deb3-47b7-a2ec" type="selectionEntry"/>
+    <entryLink id="7cf6-e269-c87c-95c0" name="Militant Monks" hidden="false" collective="false" import="true" targetId="8f13-a227-32d5-9148" type="selectionEntry"/>
+    <entryLink id="91fc-30bd-657d-a13c" name="Spearmen" hidden="false" collective="false" import="true" targetId="e2fd-9732-ab29-d878" type="selectionEntry"/>
+    <entryLink id="6de3-1cec-f90e-b2d9" name="Knights" hidden="false" collective="false" import="true" targetId="50b9-e9ce-6be2-fa7f" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="4d0b-52f0-eef5-bdd7" name="New CategoryLink" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="db3b-5fc1-9b51-6941" name="Outlawed Foot Sergeant" hidden="false" collective="false" import="true" targetId="480b-6b5d-1f23-41bd" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="2578-6bfc-954f-f8e0" name="New CategoryLink" hidden="false" targetId="bdf0-2079-3cba-a3a0" primary="false"/>
+        <categoryLink id="9a85-fc3f-68ff-1874" name="New CategoryLink" hidden="false" targetId="dbc8-d782-a862-9c3d" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="4bc8-928e-6b23-a818" name="Robin Hood" hidden="false" collective="false" import="true" targetId="e492-748a-2371-e227" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="b366-a737-e27d-afb2" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
+        <categoryLink id="de71-6acb-71f7-4951" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="4869-0124-e9e7-7d36" name="New CategoryLink" hidden="false" targetId="c26f-c67d-abe6-9a02" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="de5e-f69f-4e31-e32d" name="Maid Marian" hidden="false" collective="false" import="true" targetId="a2ef-3f7f-f0b7-7d1e" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="24d5-224e-14e4-ff9a" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
+        <categoryLink id="8966-95ca-151c-8477" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="82a0-493f-c900-09f9" name="New CategoryLink" hidden="false" targetId="c26f-c67d-abe6-9a02" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="a4b8-31de-b1ef-f2d2" name="Welsh Longbowmen" hidden="false" collective="false" import="true" targetId="fe82-3eb0-b7e9-77a6" type="selectionEntry"/>
+    <entryLink id="93c5-1c21-858e-9fa0" name="Custom Baron" hidden="false" collective="false" import="true" targetId="a8cc-0dc1-97ef-9755" type="selectionEntry"/>
+    <entryLink id="1101-6908-8cb0-1a04" name="Custom Lord" hidden="false" collective="false" import="true" targetId="e631-a621-4c3c-56bb" type="selectionEntry"/>
+    <entryLink id="2930-3eb0-6c5f-4f5d" name="Outlawed Noble" hidden="false" collective="false" import="true" targetId="c9bd-f39d-7625-dc1a" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="20c1-eb1c-82cc-9c69" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="88f4-ee27-a79f-4859" name="Outlaw" hidden="false" targetId="dbc8-d782-a862-9c3d" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="cbed-3d84-ffb1-0e51" name="Outlaws" hidden="false" collective="false" import="true" targetId="07ef-9706-3480-ac2a" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="5323-a439-dfb3-a170" name="New CategoryLink" hidden="false" targetId="dbc8-d782-a862-9c3d" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="2e96-2a8e-f6c7-f2b1" name="Forest Slingers" hidden="false" collective="false" import="true" targetId="f5e3-b554-ade4-845b" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="7450-30a5-035f-879b" name="New CategoryLink" hidden="false" targetId="dbc8-d782-a862-9c3d" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="64d2-fe42-6004-ff54" name="Cutthroats" hidden="false" collective="false" import="true" targetId="4722-7249-b870-ee4c" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="9674-a34e-0b84-2db8" name="New CategoryLink" hidden="false" targetId="dbc8-d782-a862-9c3d" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="d545-a183-6673-4b40" name="Petty Criminals" hidden="false" collective="false" import="true" targetId="90c4-5b76-0469-2764" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="5a7b-8a74-3697-5ede" name="Outlaw" hidden="false" targetId="dbc8-d782-a862-9c3d" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="0e4a-84e4-458a-ad46" name="Sergeant" hidden="false" collective="false" import="true" targetId="74f9-193f-b750-0df4" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="f763-550d-3680-d6c9" name="Sergeant" hidden="false" targetId="bdf0-2079-3cba-a3a0" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="23d6-2855-e5ab-dd00" name="William of Cassingham" hidden="false" collective="false" import="true" targetId="9a2a-5bda-aa89-78b7" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="aeb1-e06f-0e0c-b1f5" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
+        <categoryLink id="0e26-5ddc-da07-8e70" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="65a6-2776-da84-fb9b" name="Outlaw" hidden="false" targetId="dbc8-d782-a862-9c3d" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="42fb-face-d2b5-e14e" name="Flemish Mounted Sergeants" hidden="false" collective="false" import="true" targetId="f880-b3d2-6323-f92c" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="ab28-83bc-8b86-1bb0" name="Cavalry" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="false"/>
+        <categoryLink id="b9e1-342e-49ae-b0b8" name="Sergeant" hidden="false" targetId="bdf0-2079-3cba-a3a0" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="2913-6e28-f28a-6ace" name="Outlaw Commander" hidden="false" collective="false" import="true" targetId="b2a0-9f48-fea2-96f4" type="selectionEntry"/>
+    <entryLink id="8344-06f1-63cd-3d36" name="Poacher" hidden="false" collective="false" import="true" targetId="db05-fbf7-0682-4e56" type="selectionEntry"/>
+    <entryLink id="8af7-168f-ee01-814c" name="Outlaw Assassin" hidden="false" collective="false" import="true" targetId="0135-71a7-3e6b-c277" type="selectionEntry"/>
+    <entryLink id="7582-2925-c4dd-3c45" name="Deserter Kapitan" hidden="false" collective="false" import="true" targetId="c6fc-98da-09a5-298a" type="selectionEntry"/>
+    <entryLink id="fd1e-e79f-266c-0a56" name="Eustace The Monk" hidden="false" collective="false" import="true" targetId="ffb7-5508-9ddc-af52" type="selectionEntry"/>
+    <entryLink id="ff59-68d0-950d-4668" name="Custom Outlaw Leader" hidden="false" collective="false" import="true" targetId="5814-4641-3740-e26c" type="selectionEntry"/>
+    <entryLink id="4ade-a17d-e44c-7260" name="Custom Outlaw Noble" hidden="false" collective="false" import="true" targetId="c9cb-f66f-5aa5-dfc1" type="selectionEntry"/>
+    <entryLink id="4870-234a-5fdb-3294" name="William the Rough, King of Scotland" hidden="false" collective="false" import="true" targetId="6cd1-463a-d48a-efd7" type="selectionEntry"/>
+    <entryLink id="d985-e0e7-35bb-4814" name="Highland Cateran" hidden="false" collective="false" import="true" targetId="83cf-efc8-529a-f6cc" type="selectionEntry"/>
+    <entryLink id="d9ec-6ca0-03d9-fdcf" name="Kings Guard" hidden="false" collective="false" import="true" targetId="d0cc-bb50-4bbc-9404" type="selectionEntry"/>
+    <entryLink id="550a-321c-940e-4dfd" name="Borderers" hidden="false" collective="false" import="true" targetId="4f65-2029-852f-cb0f" type="selectionEntry"/>
+  </entryLinks>
+  <catalogueLinks>
+    <catalogueLink id="256a-69ab-986d-2ee9" name="Command" targetId="de04-24ed-2b94-b426" type="catalogue" importRootEntries="true"/>
+    <catalogueLink id="a8b0-7b90-71bb-333a" name="Troops" targetId="6022-99dd-88dd-d5a0" type="catalogue" importRootEntries="true"/>
+    <catalogueLink id="f739-a9a7-bc88-95e4" name="Custom profiles" targetId="fabd-b04b-0132-308a" type="catalogue" importRootEntries="true"/>
+  </catalogueLinks>
+</catalogue>
