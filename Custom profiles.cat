@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fabd-b04b-0132-308a" name="Custom profiles" revision="1" battleScribeVersion="2.03" library="true" gameSystemId="64c6-5bda-e428-c44b" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fabd-b04b-0132-308a" name="Custom profiles" revision="1" battleScribeVersion="2.03" library="true" gameSystemId="64c6-5bda-e428-c44b" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry id="a8cc-0dc1-97ef-9755" name="Custom Baron" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -116,10 +116,10 @@
             </modifier>
           </modifiers>
           <characteristics>
-            <characteristic name="Movement" typeId="d448-b12a-6a0a-db0d">6</characteristic>
-            <characteristic name="Attack" typeId="18fc-193a-b9ef-d0fe">7</characteristic>
-            <characteristic name="Defence" typeId="f6e4-e58a-9136-4796">7</characteristic>
-            <characteristic name="Morale" typeId="c910-b97c-59a5-0e72">7</characteristic>
+            <characteristic name="Movement " typeId="d448-b12a-6a0a-db0d">6</characteristic>
+            <characteristic name="Attack (n+)" typeId="18fc-193a-b9ef-d0fe">7</characteristic>
+            <characteristic name="Defence (n+)" typeId="f6e4-e58a-9136-4796">7</characteristic>
+            <characteristic name="Morale (n+)" typeId="c910-b97c-59a5-0e72">7</characteristic>
             <characteristic name="Actions" typeId="0300-e2b3-1ee3-608b">3</characteristic>
           </characteristics>
         </profile>
@@ -146,21 +146,11 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="9afc-dbe5-369a-fd89" name="Mode of Conveyance" hidden="false" collective="false" import="true" defaultSelectionEntryId="939e-79cf-bd6a-40e4">
+        <selectionEntryGroup id="9afc-dbe5-369a-fd89" name="Mode of Conveyance" hidden="false" collective="false" import="true" defaultSelectionEntryId="0584-53ec-7dac-757d">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81ef-be5c-9ecb-e8c2" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba01-4dc9-3d94-bfb8" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="939e-79cf-bd6a-40e4" name="Foot" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e53f-0d46-5548-35a9" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink id="b19d-848d-af3c-4a51" name="Horse" hidden="false" collective="false" import="true" targetId="03ea-19e6-c1ac-a767" type="selectionEntry">
               <constraints>
@@ -178,13 +168,18 @@
                 <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="5.0"/>
               </costs>
             </entryLink>
-            <entryLink id="43d5-a5b2-e95f-0150" name="Barder War Horse" hidden="false" collective="false" import="true" targetId="0b71-8857-d20d-9825" type="selectionEntry">
+            <entryLink id="43d5-a5b2-e95f-0150" name="Barded War Horse" hidden="false" collective="false" import="true" targetId="0b71-8857-d20d-9825" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee56-efa9-742d-921f" type="max"/>
               </constraints>
               <costs>
                 <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="16.0"/>
               </costs>
+            </entryLink>
+            <entryLink id="0584-53ec-7dac-757d" name="Foot()" hidden="false" collective="false" import="true" targetId="5d61-332b-8195-4517" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6f2-5600-4d19-5ce9" type="max"/>
+              </constraints>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -718,19 +713,6 @@
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="d733-02b6-0dea-3d43" name="Command Group" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7212-c814-5acc-c682" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="3da4-90b4-b6af-2197" name="Bowmen" hidden="false" collective="false" import="true" targetId="27b1-1abe-e2ac-bcb8" type="selectionEntry"/>
-            <entryLink id="a55c-ec64-ea4c-1c5c" name="Crossbowmen" hidden="false" collective="false" import="true" targetId="0fe6-1765-7891-c0ca" type="selectionEntry"/>
-            <entryLink id="1df2-ac5c-5be8-0b65" name="Knights" hidden="false" collective="false" import="true" targetId="50b9-e9ce-6be2-fa7f" type="selectionEntry"/>
-            <entryLink id="2ca7-a15a-b649-2049" name="Militant Monks" hidden="false" collective="false" import="true" targetId="8f13-a227-32d5-9148" type="selectionEntry"/>
-            <entryLink id="7086-7cad-220d-5c44" name="Sergeants" hidden="false" collective="false" import="true" targetId="74f9-193f-b750-0df4" type="selectionEntry"/>
-            <entryLink id="59ab-c68d-8d11-7d01" name="Spearmen" hidden="false" collective="false" import="true" targetId="e2fd-9732-ab29-d878" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="2efe-5d9c-2ecc-9594" name="Retinue" hidden="false" collective="false" import="true" targetId="0c72-4863-1f64-e936" type="selectionEntry">
@@ -746,6 +728,7 @@
             <categoryLink id="f0a9-6815-694b-af28" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="0745-b956-3149-d958" name="Command Group" hidden="false" collective="false" import="true" targetId="2712-d876-806b-105c" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
@@ -866,10 +849,10 @@
             </modifier>
           </modifiers>
           <characteristics>
-            <characteristic name="Movement" typeId="d448-b12a-6a0a-db0d">6</characteristic>
-            <characteristic name="Attack" typeId="18fc-193a-b9ef-d0fe">7</characteristic>
-            <characteristic name="Defence" typeId="f6e4-e58a-9136-4796">7</characteristic>
-            <characteristic name="Morale" typeId="c910-b97c-59a5-0e72">7</characteristic>
+            <characteristic name="Movement " typeId="d448-b12a-6a0a-db0d">6</characteristic>
+            <characteristic name="Attack (n+)" typeId="18fc-193a-b9ef-d0fe">7</characteristic>
+            <characteristic name="Defence (n+)" typeId="f6e4-e58a-9136-4796">7</characteristic>
+            <characteristic name="Morale (n+)" typeId="c910-b97c-59a5-0e72">7</characteristic>
             <characteristic name="Actions" typeId="0300-e2b3-1ee3-608b">3</characteristic>
           </characteristics>
         </profile>
@@ -913,21 +896,11 @@
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="dc33-d186-2adb-bc3f" name="Mode of Conveyance" hidden="false" collective="false" import="true" defaultSelectionEntryId="2893-5bf3-b4c0-62e3">
+        <selectionEntryGroup id="dc33-d186-2adb-bc3f" name="Mode of Conveyance" hidden="false" collective="false" import="true" defaultSelectionEntryId="168c-24dd-7ea8-6a0a">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9077-1055-cd67-e768" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d419-0bb8-bbd8-87d2" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="2893-5bf3-b4c0-62e3" name="Foot" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9486-18c9-bb7b-5b8f" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink id="8d91-16c6-3abc-7a75" name="Horse" hidden="false" collective="false" import="true" targetId="03ea-19e6-c1ac-a767" type="selectionEntry">
               <constraints>
@@ -945,13 +918,18 @@
                 <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="5.0"/>
               </costs>
             </entryLink>
-            <entryLink id="4bd0-ab36-212e-a21d" name="Barder War Horse" hidden="false" collective="false" import="true" targetId="0b71-8857-d20d-9825" type="selectionEntry">
+            <entryLink id="4bd0-ab36-212e-a21d" name="Barded War Horse" hidden="false" collective="false" import="true" targetId="0b71-8857-d20d-9825" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c0b-ba1f-4bde-69c2" type="max"/>
               </constraints>
               <costs>
                 <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="16.0"/>
               </costs>
+            </entryLink>
+            <entryLink id="168c-24dd-7ea8-6a0a" name="Foot()" hidden="false" collective="false" import="true" targetId="5d61-332b-8195-4517" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9181-77ed-3aef-67ab" type="max"/>
+              </constraints>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -1468,19 +1446,6 @@
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="54bd-98ec-38b3-d0f3" name="Command Group" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6991-6183-ab8b-2179" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="6b5b-ed2c-1cc7-5ae3" name="Bowmen" hidden="false" collective="false" import="true" targetId="27b1-1abe-e2ac-bcb8" type="selectionEntry"/>
-            <entryLink id="5c05-f69d-8fcb-659b" name="Crossbowmen" hidden="false" collective="false" import="true" targetId="0fe6-1765-7891-c0ca" type="selectionEntry"/>
-            <entryLink id="7520-32c9-53a9-bd39" name="Knights" hidden="false" collective="false" import="true" targetId="50b9-e9ce-6be2-fa7f" type="selectionEntry"/>
-            <entryLink id="f917-8093-6506-404f" name="Militant Monks" hidden="false" collective="false" import="true" targetId="8f13-a227-32d5-9148" type="selectionEntry"/>
-            <entryLink id="6a41-fe29-7162-160b" name="Sergeants" hidden="false" collective="false" import="true" targetId="74f9-193f-b750-0df4" type="selectionEntry"/>
-            <entryLink id="b4d3-c431-78c2-29a5" name="Spearmen" hidden="false" collective="false" import="true" targetId="e2fd-9732-ab29-d878" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="ed34-569e-141f-c26e" name="Abilities" hidden="false" collective="false" import="true" targetId="5cf3-406c-e5d4-da92" type="selectionEntry">
@@ -1496,6 +1461,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45ab-caaf-0c5c-53cd" type="max"/>
           </constraints>
         </entryLink>
+        <entryLink id="c289-f35f-6096-fbeb" name="Command Group" hidden="false" collective="false" import="true" targetId="2712-d876-806b-105c" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
@@ -1598,10 +1564,10 @@
             </modifier>
           </modifiers>
           <characteristics>
-            <characteristic name="Movement" typeId="d448-b12a-6a0a-db0d">6</characteristic>
-            <characteristic name="Attack" typeId="18fc-193a-b9ef-d0fe">7</characteristic>
-            <characteristic name="Defence" typeId="f6e4-e58a-9136-4796">7</characteristic>
-            <characteristic name="Morale" typeId="c910-b97c-59a5-0e72">7</characteristic>
+            <characteristic name="Movement " typeId="d448-b12a-6a0a-db0d">6</characteristic>
+            <characteristic name="Attack (n+)" typeId="18fc-193a-b9ef-d0fe">7</characteristic>
+            <characteristic name="Defence (n+)" typeId="f6e4-e58a-9136-4796">7</characteristic>
+            <characteristic name="Morale (n+)" typeId="c910-b97c-59a5-0e72">7</characteristic>
             <characteristic name="Actions" typeId="0300-e2b3-1ee3-608b">2</characteristic>
           </characteristics>
         </profile>
@@ -2352,10 +2318,10 @@
             </modifier>
           </modifiers>
           <characteristics>
-            <characteristic name="Movement" typeId="d448-b12a-6a0a-db0d">6</characteristic>
-            <characteristic name="Attack" typeId="18fc-193a-b9ef-d0fe">7</characteristic>
-            <characteristic name="Defence" typeId="f6e4-e58a-9136-4796">7</characteristic>
-            <characteristic name="Morale" typeId="c910-b97c-59a5-0e72">7</characteristic>
+            <characteristic name="Movement " typeId="d448-b12a-6a0a-db0d">6</characteristic>
+            <characteristic name="Attack (n+)" typeId="18fc-193a-b9ef-d0fe">7</characteristic>
+            <characteristic name="Defence (n+)" typeId="f6e4-e58a-9136-4796">7</characteristic>
+            <characteristic name="Morale (n+)" typeId="c910-b97c-59a5-0e72">7</characteristic>
             <characteristic name="Actions" typeId="0300-e2b3-1ee3-608b">2</characteristic>
           </characteristics>
         </profile>
@@ -3011,6 +2977,245 @@
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup id="2712-d876-806b-105c" name="Command Group" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c38b-afc1-1768-9d7e" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="74fa-e05f-2dee-7252" name="Crossbowmen" hidden="false" collective="false" import="true" targetId="0fe6-1765-7891-c0ca" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="8044-2d32-9343-a159" name="Welsh Longbowmen" hidden="false" collective="false" import="true" targetId="ab25-0f39-eb1e-80f0" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d796-4a23-134b-2ffa" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="833d-85df-53a8-1932" name="Knights" hidden="false" collective="false" import="true" targetId="50b9-e9ce-6be2-fa7f" type="selectionEntry">
+          <modifiers>
+            <modifier type="add" field="category" value="81a2-d6c9-fc2e-901a"/>
+          </modifiers>
+        </entryLink>
+        <entryLink id="42e8-e8f1-3cd9-5fb6" name="Militant Monks" hidden="false" collective="false" import="true" targetId="8f13-a227-32d5-9148" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="92ed-4395-270c-6ffa" name="Spearmen" hidden="false" collective="false" import="true" targetId="e2fd-9732-ab29-d878" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="162a-4fc6-afd0-def4" name="Hearthguards" hidden="false" collective="false" import="true" targetId="f98d-1aca-6398-94fc" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d796-4a23-134b-2ffa" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="ea69-ddf1-c755-d02c" name="Knifemen" hidden="false" collective="false" import="true" targetId="625d-6b29-a716-fea2" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d796-4a23-134b-2ffa" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="878c-9b53-8fe0-4f03" name="Poor Warriors" hidden="false" collective="false" import="true" targetId="d14a-1d68-a3d3-9145" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d796-4a23-134b-2ffa" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="b5fb-d2b3-230f-997f" name="Slingers" hidden="false" collective="false" import="true" targetId="7132-dcaa-1b1f-a6b7" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d796-4a23-134b-2ffa" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="5ea3-e654-6c31-1dfb" name="Javelin Skirmishers" hidden="false" collective="false" import="true" targetId="33cb-b599-c13b-6e1d" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d796-4a23-134b-2ffa" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="96af-a160-e1af-0748" name="Cavalry" hidden="false" collective="false" import="true" targetId="5b78-7359-f42e-379e" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d796-4a23-134b-2ffa" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="9557-b02c-1858-7c58" name="Sergeants" hidden="false" collective="false" import="true" targetId="74f9-193f-b750-0df4" type="selectionEntry"/>
+        <entryLink id="e0df-ac81-0f7e-d2b2" name="Bowmen" hidden="false" collective="false" import="true" targetId="27b1-1abe-e2ac-bcb8" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="3325-ea74-57ed-b51b" name="Cutthroats" hidden="false" collective="false" import="true" targetId="4722-7249-b870-ee4c" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ba09-667f-37c8-784b" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="845f-5d16-0aa1-b548" name="Forest Slingers" hidden="false" collective="false" import="true" targetId="f5e3-b554-ade4-845b" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ba09-667f-37c8-784b" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="9dfd-9d1b-da8f-671f" name="Outlaw Sergeants" hidden="false" collective="false" import="true" targetId="480b-6b5d-1f23-41bd" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ba09-667f-37c8-784b" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="3e65-081a-5f67-31b2" name="Outlawed Knights" hidden="false" collective="false" import="true" targetId="a5eb-741f-c661-de67" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ba09-667f-37c8-784b" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="829a-9a68-4208-9c79" name="Outlaws" hidden="false" collective="false" import="true" targetId="07ef-9706-3480-ac2a" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ba09-667f-37c8-784b" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="3339-28f5-f69d-6215" name="Petty Criminals" hidden="false" collective="false" import="true" targetId="90c4-5b76-0469-2764" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ba09-667f-37c8-784b" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="107e-e941-b082-cbe8" name="Highland Cateran" hidden="false" collective="false" import="true" targetId="83cf-efc8-529a-f6cc" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abe5-1367-dffa-471f" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="0bf7-44f1-c113-4ec4" name="Borderers" hidden="false" collective="false" import="true" targetId="4f65-2029-852f-cb0f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abe5-1367-dffa-471f" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="e7ec-2184-6902-879c" name="Kings Guard" hidden="false" collective="false" import="true" targetId="d0cc-bb50-4bbc-9404" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abe5-1367-dffa-471f" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="3acc-7511-9b88-3b28" name="Levy" hidden="false" collective="false" import="true" targetId="5e0c-deb3-47b7-a2ec" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
   <catalogueLinks>
     <catalogueLink id="2ea7-a683-e77c-9818" name="Troops" targetId="6022-99dd-88dd-d5a0" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>

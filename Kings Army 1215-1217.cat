@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="02f8-fbdd-bb83-6f13" name="Kings Army 1215-1217" revision="1" battleScribeVersion="2.03" authorName="Stephen Trenholme" library="false" gameSystemId="64c6-5bda-e428-c44b" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="02f8-fbdd-bb83-6f13" name="Kings Army 1215-1217" revision="1" battleScribeVersion="2.03" authorName="Stephen Trenholme" library="false" gameSystemId="64c6-5bda-e428-c44b" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>First initial version of Warhost by Andy Hobday</readme>
   <entryLinks>
     <entryLink id="9205-75b2-aebc-97ad" name="Baron" hidden="false" collective="false" import="true" targetId="aba9-78b3-fda3-6077" type="selectionEntry">
@@ -30,7 +30,7 @@
         <categoryLink id="4d0b-52f0-eef5-bdd7" name="New CategoryLink" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="db3b-5fc1-9b51-6941" name="Sergeant" hidden="false" collective="false" import="true" targetId="74f9-193f-b750-0df4" type="selectionEntry">
+    <entryLink id="db3b-5fc1-9b51-6941" name="Sergeants" hidden="false" collective="false" import="true" targetId="74f9-193f-b750-0df4" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="2578-6bfc-954f-f8e0" name="New CategoryLink" hidden="false" targetId="bdf0-2079-3cba-a3a0" primary="true"/>
       </categoryLinks>
@@ -83,6 +83,11 @@
     <entryLink id="8f01-828d-accd-8a74" name="Fulk Fitz Warin" hidden="false" collective="false" import="true" targetId="3890-0574-f067-ccf6" type="selectionEntry"/>
     <entryLink id="9977-2cd9-b435-6afe" name="Walter de Grey, Bishop of York" publicationId="6c06-f51b-fa39-53d5" page="19" hidden="false" collective="false" import="true" targetId="9b6a-bf77-27e8-8529" type="selectionEntry"/>
     <entryLink id="c863-c5ef-5a24-05fc" name="Priest of Wimentum" hidden="false" collective="false" import="true" targetId="4257-d1e4-ef72-5ada" type="selectionEntry"/>
+    <entryLink id="e94e-4de2-7d8f-5298" name="The Blacksmith of Wimentum" hidden="false" collective="false" import="true" targetId="8d1a-103d-793c-25e4" type="selectionEntry">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="47.0"/>
+      </costs>
+    </entryLink>
   </entryLinks>
   <catalogueLinks>
     <catalogueLink id="256a-69ab-986d-2ee9" name="Command" targetId="de04-24ed-2b94-b426" type="catalogue" importRootEntries="true"/>

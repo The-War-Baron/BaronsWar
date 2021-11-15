@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue id="6022-99dd-88dd-d5a0" name="Troops" revision="1" battleScribeVersion="2.03" authorName="Stephen Trenholme" library="true" gameSystemId="64c6-5bda-e428-c44b" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
-  <readme>First initial version of Warhost by Andy Hobday</readme>
+  <readme>First initial version of Warhost by Andy Hobday
+
+Updated with FAQ</readme>
   <sharedSelectionEntries>
     <selectionEntry id="27b1-1abe-e2ac-bcb8" name="Bowmen" publicationId="0ef3-a4ac-86f8-fb60" page="57" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -837,10 +839,15 @@
             <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="9.0"/>
           </costs>
         </entryLink>
-        <entryLink id="580e-5d9b-11d3-ef37" name="Abilities" hidden="false" collective="false" import="true" targetId="5cf3-406c-e5d4-da92" type="selectionEntry"/>
+        <entryLink id="580e-5d9b-11d3-ef37" name="Abilities" hidden="false" collective="false" import="true" targetId="5cf3-406c-e5d4-da92" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="580e-5d9b-11d3-ef37" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8821-8709-66ac-48e5" type="max"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8f13-a227-32d5-9148" name="Militant Monks" publicationId="0ef3-a4ac-86f8-fb60" page="59" hidden="false" collective="false" import="true" type="unit">
@@ -1215,7 +1222,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="bb09-1c83-2cf2-a193" name="God Protects" hidden="false" targetId="381f-68a0-839e-c891" type="rule"/>
+        <infoLink id="bb09-1c83-2cf2-a193" name="Faith" hidden="false" targetId="3f18-d05f-cc90-2583" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a6d6-f69a-7e09-3c9a" name="Ecclesiastic" hidden="false" targetId="3b01-b9c8-17e1-47cd" primary="true"/>
@@ -1773,6 +1780,7 @@
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5e0c-deb3-47b7-a2ec" name="Levy" publicationId="0ef3-a4ac-86f8-fb60" page="60" hidden="false" collective="false" import="true" type="unit">
@@ -2584,7 +2592,7 @@
                 <condition field="selections" scope="5e0c-deb3-47b7-a2ec" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="72de-3258-a056-cab6" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="3.0">
+            <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="1.0">
               <conditions>
                 <condition field="selections" scope="5e0c-deb3-47b7-a2ec" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d83-152e-4c84-5869" type="equalTo"/>
               </conditions>
@@ -2617,6 +2625,7 @@
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e2fd-9732-ab29-d878" name="Spearmen" publicationId="0ef3-a4ac-86f8-fb60" page="58" hidden="false" collective="false" import="true" type="unit">
@@ -3531,6 +3540,7 @@
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="50b9-e9ce-6be2-fa7f" name="Knights" publicationId="0ef3-a4ac-86f8-fb60" page="52, 53" hidden="false" collective="false" import="true" type="unit">
@@ -3933,7 +3943,7 @@ Mounted Knight Minimum 2</comment>
             </modifier>
             <modifier type="increment" field="d448-b12a-6a0a-db0d" value="3">
               <conditions>
-                <condition field="selections" scope="50b9-e9ce-6be2-fa7f" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2c1-d8fe-e46a-5c55" type="equalTo"/>
+                <condition field="selections" scope="50b9-e9ce-6be2-fa7f" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="add" field="category" value="7e6e-9d62-d8f8-d7b6">
@@ -4012,7 +4022,7 @@ Mounted Knight Minimum 2</comment>
                 <modifier type="set" field="d50a-f0ea-3894-8f6d" value="0.0"/>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2c1-d8fe-e46a-5c55" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -4062,20 +4072,18 @@ Mounted Knight Minimum 2</comment>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee53-e9d9-9b1c-eaa1" type="max"/>
               </constraints>
             </entryLink>
-            <entryLink id="1b2f-f278-cfb8-e315" name="Horseman&apos;s Pick" hidden="true" collective="false" import="true" targetId="a550-58ea-0242-c26c" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2c1-d8fe-e46a-5c55" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+            <entryLink id="1b2f-f278-cfb8-e315" name="Horseman&apos;s Pick" publicationId="b41d-1492-89e5-4549" page="5" hidden="false" collective="false" import="true" targetId="a550-58ea-0242-c26c" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6d0-8380-801c-e454" type="max"/>
               </constraints>
               <costs>
-                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="-1.0"/>
+                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="-2.0"/>
               </costs>
+            </entryLink>
+            <entryLink id="bbdd-29c6-dfaa-c08e" name="Battle Axe" publicationId="b41d-1492-89e5-4549" page="5" hidden="false" collective="false" import="true" targetId="5e75-3eb2-fde2-4d90" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f49-86a5-4704-3b8b" type="max"/>
+              </constraints>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -4107,16 +4115,6 @@ Mounted Knight Minimum 2</comment>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b16-9b8e-5d04-98a5" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c8d-171c-1f97-6024" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="c2c1-d8fe-e46a-5c55" name="Foot" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="703a-4035-a8dc-90be" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink id="0e76-7c7e-ba1d-e9c1" name="Barded Horse" hidden="false" collective="false" import="true" targetId="311c-db8c-6fde-0a7e" type="selectionEntry">
               <modifiers>
@@ -4126,7 +4124,7 @@ Mounted Knight Minimum 2</comment>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ecd-e488-e41a-4f2c" type="max"/>
               </constraints>
             </entryLink>
-            <entryLink id="249e-2b1d-e787-0005" name="Barder War Horse" hidden="false" collective="false" import="true" targetId="0b71-8857-d20d-9825" type="selectionEntry">
+            <entryLink id="249e-2b1d-e787-0005" name="Barded War Horse" hidden="false" collective="false" import="true" targetId="0b71-8857-d20d-9825" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="d50a-f0ea-3894-8f6d" value="0.0"/>
               </modifiers>
@@ -4140,6 +4138,11 @@ Mounted Knight Minimum 2</comment>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b6c-fc34-fadc-a815" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="6b61-f6d7-22d3-f94a" name="Foot()" hidden="false" collective="false" import="true" targetId="5d61-332b-8195-4517" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfa8-98b1-ad12-ecb1" type="max"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -4510,11 +4513,6 @@ Mounted Knight Minimum 2</comment>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fb0-405c-c289-b2c4" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="3.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4524-1c3d-5652-3fb4" type="equalTo"/>
-              </conditions>
-            </modifier>
             <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="4.0">
               <conditions>
                 <condition field="selections" scope="50b9-e9ce-6be2-fa7f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="94ff-4166-a505-25b0" type="equalTo"/>
@@ -4529,7 +4527,7 @@ Mounted Knight Minimum 2</comment>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="50b9-e9ce-6be2-fa7f" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2c1-d8fe-e46a-5c55" type="equalTo"/>
+                    <condition field="selections" scope="50b9-e9ce-6be2-fa7f" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
                     <condition field="selections" scope="50b9-e9ce-6be2-fa7f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5efe-56e2-578a-99b4" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
@@ -4542,7 +4540,7 @@ Mounted Knight Minimum 2</comment>
             </modifier>
             <modifier type="set" field="cc7b-9452-8ffb-309f" value="3.0">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2c1-d8fe-e46a-5c55" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="1.0">
@@ -4565,11 +4563,11 @@ Mounted Knight Minimum 2</comment>
                 <condition field="selections" scope="50b9-e9ce-6be2-fa7f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b71f-a549-7698-b19d" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="5.0">
+            <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="4.0">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="50b9-e9ce-6be2-fa7f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2c1-d8fe-e46a-5c55" type="equalTo"/>
+                    <condition field="selections" scope="50b9-e9ce-6be2-fa7f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
                     <condition field="selections" scope="50b9-e9ce-6be2-fa7f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5efe-56e2-578a-99b4" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
@@ -4584,10 +4582,14 @@ Mounted Knight Minimum 2</comment>
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc7b-9452-8ffb-309f" type="min"/>
           </constraints>
+          <costs>
+            <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="17.0"/>
+          </costs>
         </entryLink>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fe82-3eb0-b7e9-77a6" name="Welsh Longbowmen" hidden="false" collective="false" import="true" type="unit">
@@ -5392,6 +5394,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4722-7249-b870-ee4c" name="Cutthroats" publicationId="6c06-f51b-fa39-53d5" page="45" hidden="false" collective="false" import="true" type="unit">
@@ -5764,6 +5767,7 @@ Mounted Knight Minimum 2</comment>
           </constraints>
           <costs>
             <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+            <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -5788,6 +5792,7 @@ Mounted Knight Minimum 2</comment>
               </constraints>
               <costs>
                 <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+                <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -6201,6 +6206,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="90c4-5b76-0469-2764" name="Petty Criminals" publicationId="6c06-f51b-fa39-53d5" page="46" hidden="false" collective="false" import="true" type="unit">
@@ -6649,6 +6655,11 @@ Mounted Knight Minimum 2</comment>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b5f-f68b-3885-b1c2" type="equalTo"/>
               </conditions>
             </modifier>
+            <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="af11-9903-83b2-520c" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="16b7-cd27-3c81-57ae" type="min"/>
@@ -6658,6 +6669,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0fe6-1765-7891-c0ca" name="Crossbowmen" publicationId="0ef3-a4ac-86f8-fb60" page="56" hidden="false" collective="false" import="true" type="unit">
@@ -7478,6 +7490,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f5e3-b554-ade4-845b" name="Forest Slingers" publicationId="6c06-f51b-fa39-53d5" page="47" hidden="false" collective="false" import="true" type="unit">
@@ -7861,6 +7874,7 @@ Mounted Knight Minimum 2</comment>
               </constraints>
               <costs>
                 <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+                <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -8278,6 +8292,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="07ef-9706-3480-ac2a" name="Outlaws" publicationId="f2ed-2a36-d58a-5953" page="16" hidden="false" collective="false" import="true" type="unit">
@@ -9189,6 +9204,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="480b-6b5d-1f23-41bd" name="Outlaw Sergeants" publicationId="6c06-f51b-fa39-53d5" page="54" hidden="false" collective="false" import="true" type="unit">
@@ -9733,21 +9749,11 @@ Mounted Knight Minimum 2</comment>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="81aa-d856-c03a-decc" name="Mode of convayance" hidden="false" collective="false" import="true" defaultSelectionEntryId="9636-c236-7c62-a4ed">
+        <selectionEntryGroup id="81aa-d856-c03a-decc" name="Mode of convayance" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24c4-084a-d91f-872c" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b76-7f84-e083-6aeb" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="9636-c236-7c62-a4ed" name="Foot" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd56-979a-7ad4-063b" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink id="76ff-fc22-f98c-5b94" name="Horse" hidden="false" collective="false" import="true" targetId="03ea-19e6-c1ac-a767" type="selectionEntry">
               <modifiers>
@@ -9755,6 +9761,11 @@ Mounted Knight Minimum 2</comment>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="262b-e00a-5106-2a6c" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="8cf4-1dcf-9af4-8cd7" name="Foot" hidden="false" collective="false" import="true" targetId="5d61-332b-8195-4517" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5310-8644-24e7-1d5b" type="max"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -10167,6 +10178,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="74f9-193f-b750-0df4" name="Sergeants" publicationId="0ef3-a4ac-86f8-fb60" page="54, 55" hidden="false" collective="false" import="true" type="unit">
@@ -10537,7 +10549,7 @@ Mounted Knight Minimum 2</comment>
             </modifier>
             <modifier type="increment" field="d448-b12a-6a0a-db0d" value="3">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c25-893c-c24b-1616" type="equalTo"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="decrement" field="d448-b12a-6a0a-db0d" value="1">
@@ -10622,6 +10634,11 @@ Mounted Knight Minimum 2</comment>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d014-8e74-5ed8-cbe2" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="5410-49f7-22f4-81ac" name="Battle Axe" publicationId="b41d-1492-89e5-4549" page="5" hidden="false" collective="false" import="true" targetId="5e75-3eb2-fde2-4d90" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4b2-6787-b547-e3ec" type="max"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -10710,16 +10727,6 @@ Mounted Knight Minimum 2</comment>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a430-6c7f-37a4-3faa" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="feab-7037-4a04-7377" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="8c25-893c-c24b-1616" name="Foot" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37ac-4549-a9e4-4bb9" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink id="2f82-ba5e-061c-6866" name="Barded Horse" hidden="false" collective="false" import="true" targetId="311c-db8c-6fde-0a7e" type="selectionEntry">
               <modifiers>
@@ -10729,20 +10736,17 @@ Mounted Knight Minimum 2</comment>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bad2-e769-d2b8-71c6" type="max"/>
               </constraints>
             </entryLink>
-            <entryLink id="7b55-32f3-4b4e-5a10" name="Barder War Horse" hidden="false" collective="false" import="true" targetId="0b71-8857-d20d-9825" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="d50a-f0ea-3894-8f6d" value="0.0"/>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81d8-8862-f802-b83a" type="max"/>
-              </constraints>
-            </entryLink>
             <entryLink id="77fe-8e02-346f-2e80" name="Horse" hidden="false" collective="false" import="true" targetId="03ea-19e6-c1ac-a767" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="d50a-f0ea-3894-8f6d" value="0.0"/>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c367-555e-4b47-97c0" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="df94-604d-d077-9441" name="Foot()" hidden="false" collective="false" import="true" targetId="5d61-332b-8195-4517" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24d2-3aa2-5215-0396" type="max"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -11119,7 +11123,7 @@ Mounted Knight Minimum 2</comment>
             </modifier>
             <modifier type="set" field="474c-f22e-b3c4-abb1" value="3.0">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c25-893c-c24b-1616" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="decrement" field="d50a-f0ea-3894-8f6d" value="2.0">
@@ -11142,11 +11146,6 @@ Mounted Knight Minimum 2</comment>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77fe-8e02-346f-2e80" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="13.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7b55-32f3-4b4e-5a10" type="equalTo"/>
-              </conditions>
-            </modifier>
             <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="5.0">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2f82-ba5e-061c-6866" type="equalTo"/>
@@ -11162,12 +11161,13 @@ Mounted Knight Minimum 2</comment>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="474c-f22e-b3c4-abb1" type="min"/>
           </constraints>
           <costs>
-            <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="15.0"/>
+            <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="16.0"/>
           </costs>
         </entryLink>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5b78-7359-f42e-379e" name="Cavalry" hidden="false" collective="false" import="true" type="unit">
@@ -11237,7 +11237,7 @@ Mounted Knight Minimum 2</comment>
                 <modifier type="set" field="d50a-f0ea-3894-8f6d" value="0.0"/>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2c1-d8fe-e46a-5c55" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -11291,7 +11291,7 @@ Mounted Knight Minimum 2</comment>
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2c1-d8fe-e46a-5c55" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -11374,6 +11374,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d49c-9cda-cf15-1b4b" name="Javelin Skirmishers" hidden="false" collective="false" import="true" type="unit">
@@ -11466,6 +11467,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5023-c443-c8eb-20ff" name="Slingers" page="" hidden="false" collective="false" import="true" type="unit">
@@ -11821,6 +11823,7 @@ Mounted Knight Minimum 2</comment>
               </constraints>
               <costs>
                 <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+                <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -12238,6 +12241,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f880-b3d2-6323-f92c" name="Flemish Mounted Sergeants" publicationId="6c06-f51b-fa39-53d5" page="31" hidden="false" collective="false" import="true" type="unit">
@@ -12588,7 +12592,7 @@ Mounted Knight Minimum 2</comment>
             </modifier>
             <modifier type="increment" field="d448-b12a-6a0a-db0d" value="3">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c25-893c-c24b-1616" type="equalTo"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="decrement" field="d448-b12a-6a0a-db0d" value="1">
@@ -13070,11 +13074,6 @@ Mounted Knight Minimum 2</comment>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77fe-8e02-346f-2e80" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="13.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7b55-32f3-4b4e-5a10" type="equalTo"/>
-              </conditions>
-            </modifier>
             <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="5.0">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2f82-ba5e-061c-6866" type="equalTo"/>
@@ -13109,6 +13108,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6d31-bb8f-276d-e54d" name="Knight&apos;s Templar" publicationId="6c06-f51b-fa39-53d5" page="22" hidden="false" collective="false" import="true" type="unit">
@@ -13511,7 +13511,7 @@ Mounted Knight Minimum 2</comment>
                 <modifier type="set" field="d50a-f0ea-3894-8f6d" value="0.0"/>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2c1-d8fe-e46a-5c55" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -13565,7 +13565,7 @@ Mounted Knight Minimum 2</comment>
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2c1-d8fe-e46a-5c55" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -13575,6 +13575,11 @@ Mounted Knight Minimum 2</comment>
               <costs>
                 <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="-1.0"/>
               </costs>
+            </entryLink>
+            <entryLink id="559d-f22e-44e3-a98e" name="Battle Axe" publicationId="b41d-1492-89e5-4549" page="5" hidden="false" collective="false" import="true" targetId="5e75-3eb2-fde2-4d90" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42b9-a18c-63d9-633e" type="max"/>
+              </constraints>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -13613,6 +13618,7 @@ Mounted Knight Minimum 2</comment>
               </constraints>
               <costs>
                 <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+                <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -14036,7 +14042,7 @@ Mounted Knight Minimum 2</comment>
             </modifier>
             <modifier type="decrement" field="d50a-f0ea-3894-8f6d" value="3.0">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2c1-d8fe-e46a-5c55" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="1.0">
@@ -14145,6 +14151,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a5eb-741f-c661-de67" name="Outlawed Knights" publicationId="6c06-f51b-fa39-53d5" page="53" hidden="false" collective="false" import="true" type="unit">
@@ -14527,7 +14534,7 @@ Mounted Knight Minimum 2</comment>
             </modifier>
             <modifier type="increment" field="d448-b12a-6a0a-db0d" value="3">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="471c-76ae-75cf-1102" type="equalTo"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="add" field="category" value="7e6e-9d62-d8f8-d7b6">
@@ -14606,7 +14613,7 @@ Mounted Knight Minimum 2</comment>
                 <modifier type="set" field="d50a-f0ea-3894-8f6d" value="0.0"/>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2c1-d8fe-e46a-5c55" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -14660,7 +14667,7 @@ Mounted Knight Minimum 2</comment>
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2c1-d8fe-e46a-5c55" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -14671,7 +14678,11 @@ Mounted Knight Minimum 2</comment>
                 <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="-1.0"/>
               </costs>
             </entryLink>
-            <entryLink id="505e-e021-a36d-52bd" name="Battle Axe" hidden="false" collective="false" import="true" targetId="5e75-3eb2-fde2-4d90" type="selectionEntry"/>
+            <entryLink id="d2d5-9c0f-f2b6-4abf" name="Battle Axe" publicationId="b41d-1492-89e5-4549" page="5" hidden="false" collective="false" import="true" targetId="5e75-3eb2-fde2-4d90" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d02-5af9-0207-b59f" type="max"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="5afe-5281-4fde-73c9" name="Shield" hidden="false" collective="false" import="true">
@@ -14697,21 +14708,11 @@ Mounted Knight Minimum 2</comment>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="29c2-3416-96e3-1642" name="Mode of convayance" hidden="false" collective="false" import="true" defaultSelectionEntryId="471c-76ae-75cf-1102">
+        <selectionEntryGroup id="29c2-3416-96e3-1642" name="Mode of convayance" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f443-ef29-ff6b-38ad" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3802-26f5-fd00-c54c" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="471c-76ae-75cf-1102" name="Foot" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f1a-3d48-861f-36a3" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink id="6cd9-0a5e-a69a-e082" name="Horse" hidden="false" collective="false" import="true" targetId="03ea-19e6-c1ac-a767" type="selectionEntry">
               <modifiers>
@@ -14719,6 +14720,11 @@ Mounted Knight Minimum 2</comment>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e68f-322b-216d-e7df" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="eac1-bf21-3eb0-e39a" name="Foot" hidden="false" collective="false" import="true" targetId="5d61-332b-8195-4517" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="90b9-62fe-297f-147d" type="max"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -15098,7 +15104,7 @@ Mounted Knight Minimum 2</comment>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="471c-76ae-75cf-1102" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9f6e-ede4-8f05-61a0" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
@@ -15111,7 +15117,7 @@ Mounted Knight Minimum 2</comment>
             </modifier>
             <modifier type="set" field="be14-d9ab-4ff8-a941" value="3.0">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2c1-d8fe-e46a-5c55" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="1.0">
@@ -15133,7 +15139,7 @@ Mounted Knight Minimum 2</comment>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="471c-76ae-75cf-1102" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9f6e-ede4-8f05-61a0" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
@@ -15147,6 +15153,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2708-e098-de80-6893" name="Deserters" hidden="false" collective="false" import="true" type="unit">
@@ -15155,6 +15162,7 @@ Mounted Knight Minimum 2</comment>
       </categoryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e850-5518-a169-9b87" name="NULL" publicationId="0ef3-a4ac-86f8-fb60" page="54, 55" hidden="false" collective="false" import="true" type="unit">
@@ -15526,7 +15534,7 @@ Mounted Knight Minimum 2</comment>
             </modifier>
             <modifier type="increment" field="d448-b12a-6a0a-db0d" value="3">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c25-893c-c24b-1616" type="equalTo"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="decrement" field="d448-b12a-6a0a-db0d" value="1">
@@ -15698,6 +15706,7 @@ Mounted Knight Minimum 2</comment>
               </constraints>
               <costs>
                 <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+                <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -16100,7 +16109,7 @@ Mounted Knight Minimum 2</comment>
             </modifier>
             <modifier type="set" field="7ba2-89bb-3bbe-bf67" value="3.0">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c25-893c-c24b-1616" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="decrement" field="d50a-f0ea-3894-8f6d" value="2.0">
@@ -16121,11 +16130,6 @@ Mounted Knight Minimum 2</comment>
             <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="3.0">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77fe-8e02-346f-2e80" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="13.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7b55-32f3-4b4e-5a10" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="5.0">
@@ -16149,6 +16153,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d0cc-bb50-4bbc-9404" name="Kings Guard" publicationId="a062-c41f-4368-39ae" page="14" hidden="false" collective="false" import="true" type="unit">
@@ -16719,6 +16724,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="83cf-efc8-529a-f6cc" name="Highland Cateran" publicationId="a062-c41f-4368-39ae" page="15" hidden="false" collective="false" import="true" type="unit">
@@ -17591,11 +17597,6 @@ Mounted Knight Minimum 2</comment>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="77fe-8e02-346f-2e80" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="13.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7b55-32f3-4b4e-5a10" type="equalTo"/>
-              </conditions>
-            </modifier>
             <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="5.0">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2f82-ba5e-061c-6866" type="equalTo"/>
@@ -17720,6 +17721,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4f65-2029-852f-cb0f" name="Borderers" publicationId="a062-c41f-4368-39ae" page="16, 17" hidden="false" collective="false" import="true" type="unit">
@@ -18095,7 +18097,7 @@ Mounted Knight Minimum 2</comment>
             </modifier>
             <modifier type="increment" field="d448-b12a-6a0a-db0d" value="3">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c25-893c-c24b-1616" type="equalTo"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d61-332b-8195-4517" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="decrement" field="18fc-193a-b9ef-d0fe" value="3">
@@ -18316,6 +18318,7 @@ Mounted Knight Minimum 2</comment>
               </constraints>
               <costs>
                 <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+                <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -18332,7 +18335,11 @@ Mounted Knight Minimum 2</comment>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="21fd-34c3-f55d-3878" name="Abilities" hidden="false" collective="false" import="true" targetId="5cf3-406c-e5d4-da92" type="selectionEntry"/>
+        <entryLink id="21fd-34c3-f55d-3878" name="Abilities" hidden="false" collective="false" import="true" targetId="5cf3-406c-e5d4-da92" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="21fd-34c3-f55d-3878" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dd48-20c7-472a-7c99" type="max"/>
+          </constraints>
+        </entryLink>
         <entryLink id="c17b-66be-d546-6a82" name="Borderer" hidden="false" collective="false" import="true" targetId="4495-e346-e0de-389f" type="selectionEntry">
           <modifiers>
             <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="2.0">
@@ -18680,11 +18687,6 @@ Mounted Knight Minimum 2</comment>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e4c0-3717-8ba3-23aa" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="13.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7b55-32f3-4b4e-5a10" type="equalTo"/>
-              </conditions>
-            </modifier>
             <modifier type="increment" field="d50a-f0ea-3894-8f6d" value="5.0">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2f82-ba5e-061c-6866" type="equalTo"/>
@@ -18746,6 +18748,7 @@ Mounted Knight Minimum 2</comment>
       </entryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="1.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
