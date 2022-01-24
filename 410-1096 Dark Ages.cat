@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="ab05-cc15-bcd5-c604" name="410-1096 &quot;Dark Ages&quot;" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="64c6-5bda-e428-c44b" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <sharedSelectionEntries>
+    <selectionEntry id="e407-b583-be50-e055" name="&quot;Fighting Man&quot; Bannerman" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="11.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="486b-84a8-45e7-9965" name="Aethelfaed, The Lady of Mercia" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="664f-ccd8-3feb-2b6b" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="bfb5-2501-c901-58a2" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
+        <categoryLink id="8209-77de-a5ce-c84f" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="aedb-f778-edaa-5169" name="Saxon" hidden="false" targetId="3f50-f120-04ed-8d7e" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bf4e-a353-c9c4-f55f" name="Aethelstan" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e37-56af-d765-003f" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="2a77-c3a1-55bf-8c0d" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
+        <categoryLink id="3eac-1e40-0958-aa85" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="b27a-216a-698f-1643" name="Saxon" hidden="false" targetId="3f50-f120-04ed-8d7e" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8729-7284-c3bb-514a" name="Alfred the Great" hidden="false" collective="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink id="b318-bbcf-0b7e-06dc" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
+        <categoryLink id="67fd-7319-dd52-d83d" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="854b-95db-171e-1b0f" name="Saxon" hidden="false" targetId="3f50-f120-04ed-8d7e" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3478-6938-6f5a-9b45" name="Berserker" hidden="false" collective="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink id="fecb-d5ad-b5e6-fe01" name="New CategoryLink" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="true"/>
+        <categoryLink id="95e8-6800-46a2-b481" name="Viking" hidden="false" targetId="3315-b97b-19ee-5aad" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5f97-952a-8d5d-82de" name="Bishop Odo of Bayeux" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="14ee-2241-f0b6-e3c8" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="4ad8-a566-b6fa-2d2d" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
+        <categoryLink id="08a3-ee73-685d-5fe6" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="0e90-cf0d-45fb-4a3e" name="Norman" hidden="false" targetId="2c7e-4e40-c9b6-81aa" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+      </costs>
+    </selectionEntry>
+  </sharedSelectionEntries>
+</catalogue>

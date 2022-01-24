@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="64c6-5bda-e428-c44b" name="Barons&apos; War" revision="1" battleScribeVersion="2.03" authorName="Stephen Trenholme" authorContact="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
-  <readme>First initial version of Barons&apos; War (with FAQ) by Andy Hobday
+<gameSystem id="64c6-5bda-e428-c44b" name="Barons&apos; War" revision="2" battleScribeVersion="2.03" authorName="Stephen Trenholme" authorContact="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+  <readme>First initial version of:
+ Barons&apos; War (with FAQ) by Andy Hobday
+Conquest BW by Andy Hobday
 
-Anarchy files NOT official rules
 
 All Stats and data remain copyright of Andy Hobday and WARHOST
 
@@ -18,10 +19,15 @@ www.warhost.online</readme>
     <publication id="6c06-f51b-fa39-53d5" name="Death &amp; Taxes" shortName="Death &amp; Taxes" publisher="WarHost" publicationDate="2021" publisherUrl="www.warhost.online"/>
     <publication id="a062-c41f-4368-39ae" name="Lackland goes North" shortName="Lackland goes North" publisher="WarHost" publicationDate="Oct 2021" publisherUrl="Footsoreminiatures.co.uk"/>
     <publication id="b41d-1492-89e5-4549" name="BW FAQ Errata-v1.0" shortName="FAQ" publisher="Footsore" publicationDate="21/8/21"/>
+    <publication id="418f-8173-eff1-7be3" name="Conquest BW" shortName="Conquest" publicationDate="Dec 2021"/>
   </publications>
   <costTypes>
     <costType id="d50a-f0ea-3894-8f6d" name="Points" defaultCostLimit="-1.0" hidden="false"/>
     <costType id="490e-5e59-747f-5523" name="Actions" defaultCostLimit="-1.0" hidden="true"/>
+    <costType id="0267-bb02-223a-cc40" name="Stats" defaultCostLimit="-1.0" hidden="true"/>
+    <costType id="db34-0b81-03fe-a16d" name="attack" defaultCostLimit="-1.0" hidden="true"/>
+    <costType id="0896-e87a-3828-2331" name="morale" defaultCostLimit="-1.0" hidden="true"/>
+    <costType id="3268-0a3c-16e6-0f65" name="defence" defaultCostLimit="-1.0" hidden="true"/>
   </costTypes>
   <profileTypes>
     <profileType id="0c26-1375-670a-c493" name="Projectile Weapon">
@@ -82,47 +88,123 @@ www.warhost.online</readme>
     </categoryEntry>
     <categoryEntry id="81a2-d6c9-fc2e-901a" name="Group" hidden="false"/>
     <categoryEntry id="94bf-435a-e8c3-8889" name="Actions" hidden="false"/>
+    <categoryEntry id="c09b-43fa-ba17-ac3c" name="Anglo-Dane" hidden="false"/>
+    <categoryEntry id="ec5f-d6ea-e2f9-f2f7" name="Champion" hidden="false"/>
+    <categoryEntry id="2a1d-0130-805d-a673" name="2 actions" hidden="true"/>
+    <categoryEntry id="bc8c-6188-a680-20ea" name="3 actions" hidden="true"/>
+    <categoryEntry id="a846-c70b-e7db-703a" name="410-1096" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry id="77f9-5063-6abd-711b" name="Army" hidden="false">
+    <forceEntry id="c109-1ade-6a74-ca04" name="1215-1217 Barons&apos; War" hidden="false">
       <categoryLinks>
-        <categoryLink id="05b7-1c65-42c4-c664" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false">
+        <categoryLink id="9542-0ed6-ada2-4b0a" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false">
           <constraints>
-            <constraint field="d50a-f0ea-3894-8f6d" scope="77f9-5063-6abd-711b" value="50.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="0072-f090-7d5d-a563" type="max"/>
+            <constraint field="d50a-f0ea-3894-8f6d" scope="c109-1ade-6a74-ca04" value="50.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="1fc3-002c-468f-96d0" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="f57e-91c9-0357-3255" name="Ecclesiastic" hidden="false" targetId="3b01-b9c8-17e1-47cd" primary="false"/>
-        <categoryLink id="a29c-95ae-5a61-a057" name="Knight" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="false"/>
-        <categoryLink id="36a1-db0b-751a-86e7" name="Levy" hidden="false" targetId="3656-bdc7-111d-9481" primary="false"/>
-        <categoryLink id="9263-8901-3d65-7d45" name="Spearman" hidden="false" targetId="b104-0557-0db2-e2d3" primary="false"/>
-        <categoryLink id="ea2c-e7b8-5882-beff" name="Merry Men" hidden="false" targetId="c26f-c67d-abe6-9a02" primary="false"/>
-        <categoryLink id="34bc-f474-ee83-bc63" name="Baron" hidden="false" targetId="6b00-32e9-def7-2472" primary="false"/>
-        <categoryLink id="20b3-6ed4-8fda-7be3" name="Royal" hidden="false" targetId="6467-f866-66fc-61b2" primary="false"/>
-        <categoryLink id="15bc-d442-2270-de1a" name="green" hidden="false" targetId="0e07-5fca-5909-cb7d" primary="false">
+        <categoryLink id="d4fc-1c17-e82d-b5dd" name="Ecclesiastic" hidden="false" targetId="3b01-b9c8-17e1-47cd" primary="false"/>
+        <categoryLink id="b88d-fbb7-bb35-4147" name="Knight" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="false"/>
+        <categoryLink id="624c-565c-96b8-9b20" name="Levy" hidden="false" targetId="3656-bdc7-111d-9481" primary="false"/>
+        <categoryLink id="fe40-c2d9-b130-7cc7" name="Spearman" hidden="false" targetId="b104-0557-0db2-e2d3" primary="false"/>
+        <categoryLink id="e8d4-13de-3502-10c4" name="Merry Men" hidden="false" targetId="c26f-c67d-abe6-9a02" primary="false"/>
+        <categoryLink id="1ba9-ac4a-d91c-1d1f" name="Baron" hidden="false" targetId="6b00-32e9-def7-2472" primary="false"/>
+        <categoryLink id="30a7-21b7-9323-7f14" name="Royal" hidden="false" targetId="6467-f866-66fc-61b2" primary="false"/>
+        <categoryLink id="533b-1afa-188b-f8ef" name="green" hidden="false" targetId="0e07-5fca-5909-cb7d" primary="false">
           <constraints>
-            <constraint field="selections" scope="77f9-5063-6abd-711b" value="10.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="b5c9-8277-215b-2adc" type="min"/>
+            <constraint field="selections" scope="c109-1ade-6a74-ca04" value="10.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="f079-1661-1f7f-e1ef" type="min"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="776b-c9b9-3523-1709" name="Sergeant" hidden="false" targetId="bdf0-2079-3cba-a3a0" primary="false"/>
-        <categoryLink id="11bd-d6ec-d09b-d88a" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
-        <categoryLink id="836b-5d9b-4edf-9cef" name="Outlaw" hidden="false" targetId="dbc8-d782-a862-9c3d" primary="false"/>
-        <categoryLink id="44fd-d8ea-b459-13a6" name="Cavalry" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="false"/>
-        <categoryLink id="b1f7-0002-d9f3-33be" name="Ranged Troops" hidden="false" targetId="fdd7-aa04-3596-2306" primary="false"/>
-        <categoryLink id="8559-de40-085f-5caf" name="Deserters" hidden="false" targetId="d23e-dea8-8caa-56ab" primary="false">
+        <categoryLink id="610b-867c-dbcb-e5ad" name="Sergeant" hidden="false" targetId="bdf0-2079-3cba-a3a0" primary="false"/>
+        <categoryLink id="9148-ec35-c725-9fae" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
+        <categoryLink id="e6ff-8837-5bf1-6823" name="Outlaw" hidden="false" targetId="dbc8-d782-a862-9c3d" primary="false"/>
+        <categoryLink id="4547-41d0-6d33-8372" name="Ranged Troops" hidden="false" targetId="fdd7-aa04-3596-2306" primary="false"/>
+        <categoryLink id="a391-3750-43e6-6930" name="Deserters" hidden="false" targetId="d23e-dea8-8caa-56ab" primary="false">
           <constraints>
-            <constraint field="selections" scope="77f9-5063-6abd-711b" value="25.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="b54e-328f-0246-fe78" type="max"/>
+            <constraint field="selections" scope="c109-1ade-6a74-ca04" value="25.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="a38d-c699-35a6-87d5" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="a029-3b7d-4d91-f18e" name="Elite" hidden="false" targetId="afa4-eb59-41b5-4dc5" primary="false"/>
-        <categoryLink id="73ec-c2a8-c72c-d050" name="Warriors" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="false"/>
-        <categoryLink id="d0f9-9360-eeb6-460e" name="Actions" hidden="true" targetId="94bf-435a-e8c3-8889" primary="false"/>
+        <categoryLink id="037d-f514-fbfd-9e6b" name="Elite" hidden="false" targetId="afa4-eb59-41b5-4dc5" primary="false"/>
+        <categoryLink id="5973-eeeb-40f7-e1c8" name="Warriors" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="false"/>
+        <categoryLink id="1a66-e128-23be-3b07" name="Actions" hidden="true" targetId="94bf-435a-e8c3-8889" primary="false"/>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry id="fbf1-4ad0-9bd2-1d6a" name="410-1096 &quot;Dark Ages&quot;" hidden="false">
+      <categoryLinks>
+        <categoryLink id="b88b-410e-89ef-85c9" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false">
+          <constraints>
+            <constraint field="d50a-f0ea-3894-8f6d" scope="fbf1-4ad0-9bd2-1d6a" value="50.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="819f-2987-dde6-ea86" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="5fc4-6b23-232b-268c" name="Ecclesiastic" hidden="false" targetId="3b01-b9c8-17e1-47cd" primary="false"/>
+        <categoryLink id="ab0d-da4a-815c-c1a6" name="Levy" hidden="false" targetId="3656-bdc7-111d-9481" primary="false"/>
+        <categoryLink id="258e-22cb-c126-130e" name="Spearman" hidden="false" targetId="b104-0557-0db2-e2d3" primary="false"/>
+        <categoryLink id="0847-f6cd-95f3-299f" name="Royal" hidden="false" targetId="6467-f866-66fc-61b2" primary="false"/>
+        <categoryLink id="5e8a-893e-095b-ff80" name="green" hidden="false" targetId="0e07-5fca-5909-cb7d" primary="false">
+          <constraints>
+            <constraint field="selections" scope="fbf1-4ad0-9bd2-1d6a" value="10.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="030f-e57a-9be0-38e6" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="6ba8-b928-c3c2-c919" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
+        <categoryLink id="1f94-b983-78a0-7671" name="Outlaw" hidden="false" targetId="dbc8-d782-a862-9c3d" primary="false"/>
+        <categoryLink id="67d9-567d-dfd1-9583" name="Cavalry" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="false"/>
+        <categoryLink id="f1e0-5694-8957-4bb5" name="Ranged Troops" hidden="false" targetId="fdd7-aa04-3596-2306" primary="false"/>
+        <categoryLink id="c258-2eb7-2447-0f86" name="Elite" hidden="false" targetId="afa4-eb59-41b5-4dc5" primary="false"/>
+        <categoryLink id="a428-a3ee-4915-81e8" name="Warriors" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="false"/>
+        <categoryLink id="a90a-0155-1e0f-ca98" name="Actions" hidden="true" targetId="94bf-435a-e8c3-8889" primary="false"/>
+        <categoryLink id="536e-22fe-6698-caa1" name="Anglo-Dane" hidden="false" targetId="c09b-43fa-ba17-ac3c" primary="false"/>
+        <categoryLink id="4ab7-10b3-5370-146e" name="Champion" hidden="false" targetId="ec5f-d6ea-e2f9-f2f7" primary="false">
+          <constraints>
+            <constraint field="selections" scope="9390-48c4-3dd4-aa13" value="100.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="44de-6c98-be44-67ed" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="9e39-06a6-c944-7997" name="410-1096" hidden="false" targetId="a846-c70b-e7db-703a" primary="false"/>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry id="54b6-40fc-bedd-1d7f" name="1096-1215 Anarchy" hidden="false">
+      <categoryLinks>
+        <categoryLink id="3320-c41f-5dcc-db61" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false">
+          <constraints>
+            <constraint field="d50a-f0ea-3894-8f6d" scope="54b6-40fc-bedd-1d7f" value="50.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="b9bf-65dd-865f-9499" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="f7dd-9fa3-60ee-a101" name="Ecclesiastic" hidden="false" targetId="3b01-b9c8-17e1-47cd" primary="false"/>
+        <categoryLink id="c410-c0da-e393-232a" name="Knight" hidden="false" targetId="c7a3-5cb6-a44f-2d73" primary="false"/>
+        <categoryLink id="246c-6365-8a01-f7d3" name="Levy" hidden="false" targetId="3656-bdc7-111d-9481" primary="false"/>
+        <categoryLink id="3ff1-3d1a-bbf4-6e85" name="Spearman" hidden="false" targetId="b104-0557-0db2-e2d3" primary="false"/>
+        <categoryLink id="5708-86af-62e8-da2e" name="Merry Men" hidden="false" targetId="c26f-c67d-abe6-9a02" primary="false"/>
+        <categoryLink id="8111-ab51-12e3-b62c" name="Baron" hidden="false" targetId="6b00-32e9-def7-2472" primary="false"/>
+        <categoryLink id="1f74-adac-12ee-2390" name="Royal" hidden="false" targetId="6467-f866-66fc-61b2" primary="false"/>
+        <categoryLink id="7b7a-22e4-7afc-f180" name="green" hidden="false" targetId="0e07-5fca-5909-cb7d" primary="false">
+          <constraints>
+            <constraint field="selections" scope="54b6-40fc-bedd-1d7f" value="10.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="0022-c15f-e44e-dad3" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="1b8f-eb1c-d196-9873" name="Sergeant" hidden="false" targetId="bdf0-2079-3cba-a3a0" primary="false"/>
+        <categoryLink id="79fe-e934-e2f2-644a" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
+        <categoryLink id="ed67-8b62-2a0d-6950" name="Outlaw" hidden="false" targetId="dbc8-d782-a862-9c3d" primary="false"/>
+        <categoryLink id="a660-c9c8-f222-d35f" name="Cavalry" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="false"/>
+        <categoryLink id="1c1b-d4a2-20bc-02c7" name="Ranged Troops" hidden="false" targetId="fdd7-aa04-3596-2306" primary="false"/>
+        <categoryLink id="1ec4-93a2-ed2d-2c85" name="Deserters" hidden="false" targetId="d23e-dea8-8caa-56ab" primary="false">
+          <constraints>
+            <constraint field="selections" scope="54b6-40fc-bedd-1d7f" value="25.0" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="91ce-113b-27bf-16b4" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="764c-3bec-2548-e9ae" name="Elite" hidden="false" targetId="afa4-eb59-41b5-4dc5" primary="false"/>
+        <categoryLink id="8990-0c37-c1f3-4f6b" name="Warriors" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="false"/>
+        <categoryLink id="5532-b07d-d52a-7c80" name="Actions" hidden="true" targetId="94bf-435a-e8c3-8889" primary="false"/>
+        <categoryLink id="345e-4ba5-0abe-be6e" name="Anglo-Dane" hidden="false" targetId="c09b-43fa-ba17-ac3c" primary="false"/>
+        <categoryLink id="5aa4-f7b2-f120-daff" name="Champion" hidden="false" targetId="ec5f-d6ea-e2f9-f2f7" primary="false">
+          <constraints>
+            <constraint field="selections" scope="9390-48c4-3dd4-aa13" value="100.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="2ae3-ad45-5b93-d0d6" type="max"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
   <sharedSelectionEntries>
     <selectionEntry id="b72c-7df4-0ed9-af8b" name="Will Scarlet" publicationId="0ef3-a4ac-86f8-fb60" page="103" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f597-7696-eff2-2302" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f597-7696-eff2-2302" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="7c4e-6599-5bf2-ee02" name="New CategoryLink" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
@@ -151,11 +233,15 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="26.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="515a-bb50-caf6-436e" name="Friar Tuck" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d548-07b5-c6e5-d3cb" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d548-07b5-c6e5-d3cb" type="max"/>
       </constraints>
       <profiles>
         <profile id="f162-3eaf-7710-ac4f" name="Friar Tuck" hidden="false" typeId="cb3d-4828-04fa-4f44" typeName="Unit Profile">
@@ -194,6 +280,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="23.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c8b5-b82a-a4bc-8cb2" name="Bill" hidden="false" collective="false" import="true" type="upgrade">
@@ -206,6 +296,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="12ae-994e-0d31-a13c" name="Leather/Padded Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -215,6 +309,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="92a6-7636-bab5-dfc2" name="Mail" hidden="false" collective="false" import="true" type="upgrade">
@@ -224,6 +322,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="13d2-8c95-f5b7-40c1" name="Small Shield" hidden="false" collective="false" import="true" type="upgrade">
@@ -237,6 +339,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2273-dc65-01be-95ff" name="Medium Shield" hidden="false" collective="false" import="true" type="upgrade">
@@ -253,6 +359,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8fb4-6627-72c8-7a11" name="Green Spearman" hidden="false" collective="false" import="true" type="upgrade">
@@ -262,12 +372,20 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5549-3dfa-b1df-8561" name="Irregular Spearmen" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="26f0-4eca-c3e9-d9ce" name="Regular Spearmen" hidden="false" collective="false" import="true" type="upgrade">
@@ -280,6 +398,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="69fc-3de2-68ac-1bb0" name="Veteran Spearmen" hidden="false" collective="false" import="true" type="upgrade">
@@ -289,12 +411,20 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6739-3684-c13c-a090" name="Irregular Knight" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ca55-9b23-8657-4199" name="Regular Knight" hidden="false" collective="false" import="true" type="upgrade">
@@ -304,12 +434,20 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="5.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="560b-422d-3121-e8b9" name="Regular Knight" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="7.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b92d-dec3-5451-a116" name="Sword" hidden="false" collective="false" import="true" type="upgrade">
@@ -320,11 +458,15 @@ www.warhost.online</readme>
         <infoLink id="1f73-5f86-354e-fa2a" name="Parry" hidden="false" targetId="68ea-13a4-d152-7076" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="b71c-7f99-81c0-c485" name="Sword" hidden="false" targetId="7e6e-9d62-d8f8-d7b6" primary="false"/>
+        <categoryLink id="b71c-7f99-81c0-c485" name="Sword" hidden="false" targetId="7e6e-9d62-d8f8-d7b6" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="-1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="-1.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9a37-33bd-f30f-89b7" name="Mace" hidden="false" collective="false" import="true" type="upgrade">
@@ -337,6 +479,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="-1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bc37-3af1-7bf6-5f3c" name="Falchion" hidden="false" collective="false" import="true" type="upgrade">
@@ -349,6 +495,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="-1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="71dd-669b-9e2e-5d0e" name="Two Handed Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -361,6 +511,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="-2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7afb-a940-1505-1d3d" name="Large Shield" hidden="false" collective="false" import="true" type="upgrade">
@@ -377,12 +531,20 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="5.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a999-7e1f-4ad2-6350" name="Irregular Mounted Knight" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5156-c90f-377e-9da4" name="Lance &amp; Sword" hidden="false" collective="false" import="true" type="upgrade">
@@ -395,6 +557,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a550-58ea-0242-c26c" name="Horseman&apos;s Pick" hidden="false" collective="false" import="true" type="upgrade">
@@ -407,6 +573,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="311c-db8c-6fde-0a7e" name="Barded Horse" hidden="false" collective="false" import="true" type="upgrade">
@@ -416,6 +586,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="5.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0b71-8857-d20d-9825" name="Barded War Horse" hidden="false" collective="false" import="true" type="upgrade">
@@ -425,24 +599,40 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="16.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="03ea-19e6-c1ac-a767" name="Horse" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5eba-b504-4a4b-05df" name="Irregular Veteran Segeant" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c1fd-ea4f-e6af-7469" name="Regular Sergeant" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="adf9-35a9-49b8-5333" name="Regular Veteran Sergeant" hidden="false" collective="false" import="true" type="upgrade">
@@ -452,12 +642,20 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="4.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2d92-dace-2914-caea" name="Veteran Mounted Knight" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="7.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e1d9-4be6-ae3c-aa20" name="Veteran Sergeants (command)" hidden="false" collective="false" import="true" type="upgrade">
@@ -467,6 +665,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="6.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="70b5-31a7-5b85-58e1" name="Bow" publicationId="0ef3-a4ac-86f8-fb60" page="74" hidden="false" collective="false" import="true" type="upgrade">
@@ -489,6 +691,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6de8-256e-5326-f296" name="Crossbow" hidden="false" collective="false" import="true" type="upgrade">
@@ -514,6 +720,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="98e9-902a-1b3a-69c7" name="Green Crossbowmen" hidden="false" collective="false" import="true" type="upgrade">
@@ -523,12 +733,20 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="253d-2825-ae7e-62b4" name="Irregular Crossbowmen" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1096-01bb-9c34-eb54" name="Regular Crossbowmen" hidden="false" collective="false" import="true" type="upgrade">
@@ -538,18 +756,30 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3ba4-94ad-342f-28a0" name="Regular Bowmen" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ebbe-7a2e-d6ed-3e41" name="Veteran Bowmen" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9724-de3f-1924-abe8" name="Green Militant Monks" hidden="false" collective="false" import="true" type="upgrade">
@@ -559,12 +789,20 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="242d-b264-c7f7-d4ce" name="Irregular Militant Monks" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="01e7-ba55-7998-e989" name="Regular Militant Monks" hidden="false" collective="false" import="true" type="upgrade">
@@ -574,6 +812,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a181-a295-57bf-fae0" name="Green Levy" hidden="false" collective="false" import="true" type="upgrade">
@@ -583,12 +825,20 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="39ce-3c19-a615-0acc" name="Irregular Levy" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0548-5157-125a-e206" name="Sling" hidden="false" collective="false" import="true" type="upgrade">
@@ -609,6 +859,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e95d-5e82-94dc-edc5" name="Spear " hidden="false" collective="false" import="true" type="upgrade">
@@ -621,6 +875,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="-2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b499-02c5-e51b-1e90" name="Impovised Two Handed Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -636,14 +894,22 @@ www.warhost.online</readme>
         <infoLink id="afd9-aed2-a09f-e9ac" name="Slow" hidden="false" targetId="0c8a-9d64-f617-3fed" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="-1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d639-2fd5-601d-15c0" name="Irregular Baron" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a566-6046-fe57-6cbb" name="Regular Baron" hidden="false" collective="false" import="true" type="upgrade">
@@ -653,12 +919,20 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5e92-a7b1-5e38-7607" name="Veteran Baron" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="87a6-e185-ca80-0fed" name="Javelin" hidden="false" collective="false" import="true" type="upgrade">
@@ -677,6 +951,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="99c3-16b3-acb9-b537" name="Blood Lust" hidden="false" collective="false" import="true" type="upgrade">
@@ -687,8 +965,12 @@ www.warhost.online</readme>
         <rule id="6665-1607-d4eb-bc49" name="Blood Lust" hidden="false"/>
       </rules>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b491-79c6-654c-b389" name="Brace!" hidden="false" collective="false" import="true" type="upgrade">
@@ -701,6 +983,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0072-cb0f-85b4-8e1a" name="Calming Presence" hidden="false" collective="false" import="true" type="upgrade">
@@ -713,15 +999,23 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a569-0276-5a93-5106" name="King John of England" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="02bb-825e-203f-c31f" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="02bb-825e-203f-c31f" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="51.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d9bc-1d15-8bb5-75c1" name="Bowmen" hidden="false" collective="false" import="true" type="unit">
@@ -738,6 +1032,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="20c1-7dda-fd4d-663f" name="Bowman" hidden="false" collective="false" import="true" type="model">
@@ -748,6 +1046,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="74b2-2c86-2ce5-833a" name="Green Bowmen" hidden="false" collective="false" import="true" type="upgrade">
@@ -757,6 +1059,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bd23-d31e-7c93-e8ce" name="Crossbowman" hidden="false" collective="false" import="true" type="model">
@@ -767,6 +1073,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="11.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7546-f429-6ee3-34e8" name="Crossbowmen" hidden="false" collective="false" import="true" type="unit">
@@ -783,6 +1093,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="afdb-b417-bf5f-ef09" name="Militant Monk" hidden="false" collective="false" import="true" type="model">
@@ -792,6 +1106,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="9.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3a45-ca36-8014-7788" name="Militant Monks" hidden="false" collective="false" import="true" type="unit">
@@ -819,6 +1137,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="92e6-832e-ade2-36be" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -828,24 +1150,40 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dfb7-4fd3-5f6e-a748" name="Bannerman" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="9.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="357d-b3b0-1d7d-9835" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="4.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6b47-7716-7239-05d9" name="Priest" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="5.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9a69-a4e4-b24c-6de8" name="Levyman" hidden="false" collective="false" import="true" type="model">
@@ -855,6 +1193,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="9.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c62d-49b4-8f3c-5080" name="Levy" hidden="false" collective="false" import="true" type="unit">
@@ -879,6 +1221,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="af73-8719-872c-9cfb" name="Baron" hidden="false" collective="false" import="true" type="model">
@@ -888,6 +1234,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="38.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0c72-4863-1f64-e936" name="Retinue" hidden="false" collective="false" import="true" type="upgrade">
@@ -953,6 +1303,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6f70-9c8f-3e66-e4a2" name="Lord" hidden="false" collective="false" import="true" type="model">
@@ -976,35 +1330,55 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="30.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b5e9-d983-262b-a192" name="Irregular Lord" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="14f0-20ae-f095-a4ed" name="Regular Lord" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dbf7-93f3-0f9f-18de" name="Veteran Lord" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="be97-b827-3279-9d4c" name="Pennant" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="984b-ceab-4839-3c12" name="Robin Hood" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5107-413d-84ed-438c" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5107-413d-84ed-438c" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="fb0b-44cf-2468-144f" name="Archer" hidden="false" targetId="bf14-44c5-2361-fcc8" primary="false"/>
@@ -1016,11 +1390,15 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="50.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3099-2e16-8232-035c" name="Maid Marion" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d180-7909-b4ba-852b" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d180-7909-b4ba-852b" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="05d1-eff0-b6d4-8350" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false"/>
@@ -1030,11 +1408,15 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="53.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="33a0-b842-b37a-9c12" name="John Little" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7a3b-da0d-8836-40e4" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7a3b-da0d-8836-40e4" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="95b1-b227-251a-aecf" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
@@ -1057,6 +1439,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="25.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="09ea-6423-22a4-3ac4" name="Stave" hidden="false" collective="false" import="true" type="upgrade">
@@ -1066,6 +1452,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f499-82b5-48ac-e744" name="Spearman" hidden="false" collective="false" import="true" type="model">
@@ -1075,6 +1465,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="9.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e32c-f000-fdef-f9e2" name="Spearmen" hidden="false" collective="false" import="true" type="unit">
@@ -1091,36 +1485,52 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ff81-2a53-bdc7-c726" name="Veteran Sergeant" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ba08-d5b9-ebce-c21c" name="Hubert de Burgh, 1st Earl of Kent" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4d6d-b1bb-69bf-c509" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4d6d-b1bb-69bf-c509" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="52.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d235-63de-8b60-e36d" name="Falkes de Breaute" hidden="false" collective="false" import="true" type="upgrade">
       <comment>Loyal to King John.  Died 1226</comment>
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="44a6-410f-e424-0106" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="44a6-410f-e424-0106" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="51.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1754-4821-f488-0548" name="William Marshal, 1st Earl of Pembroke" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="12a4-8d27-2355-d9e8" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="12a4-8d27-2355-d9e8" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="982d-f161-05fd-23fa" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
@@ -1129,12 +1539,20 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="51.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="928c-d4ea-1b53-5ad7" name="Sergeant" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="15.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b855-cba0-ee00-e69f" name="Sergeants" hidden="false" collective="false" import="true" type="unit">
@@ -1144,60 +1562,100 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="51c0-a762-eafd-30fa" name="Mounted Sergeants" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="51c0-a762-eafd-30fa" name="Mounted Nobles" hidden="false" collective="false" import="true" type="unit">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8f4b-0097-11cc-0bdd" name="Knight" hidden="false" collective="false" import="true" type="unit">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="17.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4183-080f-f103-016c" name="Veteran Knight" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e55d-fcc3-1ee1-63ee" name="Veteran Sergeant (command)" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c170-1c64-bdeb-7c71" name="Veteran Sergeants" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d45e-ac5a-6283-8719" name="Irregular Segeant" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2cd6-d2f7-606b-2416" name="Veteran Veteran Sergeant" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2f4d-e2b1-2b4b-a32b" name="Spearman Warrior" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="9.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9f4d-a869-260e-5902" name="Spearman Warriors" hidden="false" collective="false" import="true" type="unit">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5ab9-2fc5-c688-a59a" name="Agile" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -1205,8 +1663,12 @@ www.warhost.online</readme>
         <infoLink id="faa6-742f-b92b-71a4" name="Agile" hidden="false" targetId="2cae-bbe0-8c98-657e" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="95e3-55e4-b2a3-ccb9" name="Attack Back" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -1214,8 +1676,12 @@ www.warhost.online</readme>
         <infoLink id="1c00-beac-4960-375e" name="Attack Back" hidden="false" targetId="c143-8260-79ba-f286" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b248-1e49-db40-4a0a" name="Blessed" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -1223,8 +1689,12 @@ www.warhost.online</readme>
         <infoLink id="45c6-f47f-6afc-d480" name="Blessed" hidden="false" targetId="bd72-3902-64fc-4493" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4f16-4232-09e0-8eb2" name="Born for War" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -1232,8 +1702,12 @@ www.warhost.online</readme>
         <infoLink id="5e47-a318-c27a-9773" name="Born for war" hidden="false" targetId="f667-33db-20a2-0af6" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3b70-ef6f-03ad-df66" name="Brave" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -1241,8 +1715,12 @@ www.warhost.online</readme>
         <infoLink id="a9e3-6b5d-e15f-3e37" name="Brave" hidden="false" targetId="57a5-4e51-b17b-034c" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cf58-c7e9-f161-5e73" name="Bulwark" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -1250,8 +1728,12 @@ www.warhost.online</readme>
         <infoLink id="c77c-7caa-317f-1193" name="Bulwark" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" targetId="761d-ab88-ea15-f6e7" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ae8f-8f96-e1a7-7e8d" name="Caltrops" hidden="false" collective="false" import="true" type="upgrade">
@@ -1259,17 +1741,42 @@ www.warhost.online</readme>
         <infoLink id="8184-986d-048f-820f" name="Caltrops" hidden="false" targetId="7c9c-3aca-0d48-22ed" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7baf-01ea-a905-1e86" name="Castle Forged" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f741-0416-02ad-ef50" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="acae-9305-5aed-09cd" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be8a-60b5-331d-8ed0" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="9b3b-d0ac-b66e-2f69" name="Castle Forged" hidden="false" targetId="3ece-7622-b827-9d7c" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dde6-5c71-dd91-d333" name="Chosen" hidden="false" collective="false" import="true" type="upgrade">
@@ -1277,8 +1784,12 @@ www.warhost.online</readme>
         <infoLink id="00a1-0af3-6c87-3f80" name="Chosen" hidden="false" targetId="bfca-bfa9-1ed5-3b90" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="103a-68c5-fd3a-bf4a" name="Close Ranks" hidden="false" collective="false" import="true" type="upgrade">
@@ -1286,8 +1797,12 @@ www.warhost.online</readme>
         <infoLink id="379b-6e81-1ccb-d735" name="Close Ranks" hidden="false" targetId="6182-7956-9a52-aa29" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ab25-0f39-eb1e-80f0" name="Welsh Longbowmen" hidden="false" collective="false" import="true" type="unit">
@@ -1312,6 +1827,10 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="21bc-1771-d234-f8a7" name="Welsh Longbowman" hidden="false" collective="false" import="true" type="model">
@@ -1324,18 +1843,30 @@ www.warhost.online</readme>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dec8-ce62-d39b-0bac" name="Irregular Welsh Longbowmen" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cc16-9c9e-30a3-766f" name="Regular Welsh Longbowmen" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b625-53e8-287c-260e" name="Longbow" hidden="false" collective="false" import="true" type="upgrade">
@@ -1354,6 +1885,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="476e-56b4-7c69-0ba2" name="Green Welsh Longbowmen" hidden="false" collective="false" import="true" type="upgrade">
@@ -1363,6 +1898,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cc46-230f-9d43-4cea" name="Counter Charge" hidden="false" collective="false" import="true" type="upgrade">
@@ -1370,8 +1909,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="9b54-6b6f-56d6-9235" name="Counter Charge" hidden="false" targetId="fb74-8159-9cdf-f4ed" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dbcc-8989-3294-5993" name="Courageous" hidden="false" collective="false" import="true" type="upgrade">
@@ -1379,8 +1922,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="ae8a-ac34-1b89-e77f" name="Courageous" hidden="false" targetId="3595-0e6c-7604-fae5" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="252e-0043-be6a-eb75" name="Powerful Charge" hidden="false" collective="false" import="true" type="upgrade">
@@ -1388,26 +1935,79 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="d34e-95f9-6b7c-8f71" name="Power Charge" hidden="false" targetId="e749-553b-ac00-f7f5" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a7fc-2c0b-e9f4-721c" name="Cry Havoc" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="acae-9305-5aed-09cd" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be8a-60b5-331d-8ed0" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f741-0416-02ad-ef50" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="15bf-72ad-311e-1bea" name="Cry Havoc" hidden="false" targetId="cdd4-07fe-bfb0-5d36" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7043-46e9-37d2-b1f4" name="Damascus Steel" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f741-0416-02ad-ef50" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be8a-60b5-331d-8ed0" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="acae-9305-5aed-09cd" type="instanceOf"/>
+          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fe3c-c0b9-6db1-a965" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="15ce-7824-dfab-a924" name="Damascus Steel" hidden="false" targetId="fb26-0969-df7d-f00a" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8a79-1816-8afb-3632" name="Drilled" hidden="false" collective="false" import="true" type="upgrade">
@@ -1415,17 +2015,28 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="ee27-42a1-5813-c2fe" name="Drilled" hidden="false" targetId="eab7-5792-f95b-e7f6" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="02d7-bcb5-90ad-57c8" name="Evade" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="06a2-34db-4c65-e1dc" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="e3a1-4e34-2f02-ba94" name="Evade" hidden="false" targetId="f114-aed2-3f61-6ef3" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="259b-b4f1-c741-e109" name="Experienced Tactician" hidden="false" collective="false" import="true" type="upgrade">
@@ -1433,8 +2044,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="f3be-a834-7654-137a" name="Experienced Tactician" hidden="false" targetId="2207-d6c3-c146-3778" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0e87-e1ed-d919-e4e7" name="Fast" hidden="false" collective="false" import="true" type="upgrade">
@@ -1442,8 +2057,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="db1f-6577-1de0-ee9b" name="Fast" hidden="false" targetId="87de-5b45-bb44-0194" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0073-4bbd-3d59-b4ce" name="Faithful" hidden="false" collective="false" import="true" type="upgrade">
@@ -1451,8 +2070,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="19b3-da75-e712-6e1d" name="Faithful" hidden="false" targetId="c39b-558e-dc9d-beed" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4998-4e99-f171-b6c1" name="Fealty" hidden="false" collective="false" import="true" type="upgrade">
@@ -1460,8 +2083,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="4467-9e99-0ae4-d700" name="Fealty" hidden="false" targetId="448f-2953-e356-41b9" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bae5-52f0-7585-8780" name="Fear" hidden="false" collective="false" import="true" type="upgrade">
@@ -1469,8 +2096,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="e617-124a-a729-ef24" name="Fear" hidden="false" targetId="edd8-4048-2855-e864" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0856-4816-7413-775d" name="Fearless" hidden="false" collective="false" import="true" type="upgrade">
@@ -1478,8 +2109,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="8fb8-463a-fa68-9257" name="Fearless" hidden="false" targetId="c442-048b-fefe-e9ae" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5cf3-406c-e5d4-da92" name="Abilities" hidden="false" collective="false" import="true" type="upgrade">
@@ -1488,6 +2123,18 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       </constraints>
       <selectionEntryGroups>
         <selectionEntryGroup id="9bc9-0a1d-621c-ca81" name="Ability" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="6c8b-11c8-aabe-5d19" value="2.0">
+              <conditions>
+                <condition field="490e-5e59-747f-5523" scope="ancestor" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2a1d-0130-805d-a673" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="6c8b-11c8-aabe-5d19" value="3.0">
+              <conditions>
+                <condition field="490e-5e59-747f-5523" scope="ancestor" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bc8c-6188-a680-20ea" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c8b-11c8-aabe-5d19" type="max"/>
           </constraints>
@@ -1495,7 +2142,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
             <infoLink id="4119-ddb0-386a-9da5" name="Masters of the wild" hidden="false" targetId="d292-9e9c-4d8e-a531" type="rule"/>
           </infoLinks>
           <entryLinks>
-            <entryLink id="794e-117a-acd2-a655" name="Finishing Blow" hidden="false" collective="false" import="true" targetId="444e-497b-8cf4-f2dc" type="selectionEntry">
+            <entryLink id="794e-117a-acd2-a655" name="Finishing Blow" publicationId="0ef3-a4ac-86f8-fb60" page="81" hidden="false" collective="false" import="true" targetId="444e-497b-8cf4-f2dc" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13b7-c7ef-ff9e-8658" type="max"/>
               </constraints>
@@ -1503,7 +2150,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="6163-ec2d-864e-3bc2" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="9300-db4c-1df1-4399" name="Blessed" hidden="false" collective="false" import="true" targetId="b248-1e49-db40-4a0a" type="selectionEntry">
+            <entryLink id="9300-db4c-1df1-4399" name="Blessed" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" targetId="b248-1e49-db40-4a0a" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1c4-e105-cf32-c87e" type="max"/>
               </constraints>
@@ -1511,7 +2158,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="b7e9-c260-64e9-0b36" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="8afd-fe0a-d2b4-69e8" name="Attack Back" hidden="false" collective="false" import="true" targetId="95e3-55e4-b2a3-ccb9" type="selectionEntry">
+            <entryLink id="8afd-fe0a-d2b4-69e8" name="Attack Back" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" targetId="95e3-55e4-b2a3-ccb9" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="485b-3abe-da64-547a" type="max"/>
               </constraints>
@@ -1519,7 +2166,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="7d95-5268-0160-8bf2" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="217c-dde4-2730-6fc5" name="Born for War" hidden="false" collective="false" import="true" targetId="4f16-4232-09e0-8eb2" type="selectionEntry">
+            <entryLink id="217c-dde4-2730-6fc5" name="Born for War" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" targetId="4f16-4232-09e0-8eb2" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a8d-8e2f-72b5-6e5a" type="max"/>
               </constraints>
@@ -1527,7 +2174,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="b628-a638-fbc3-a2f4" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="443d-4cf7-0101-3977" name="Brave" hidden="false" collective="false" import="true" targetId="3b70-ef6f-03ad-df66" type="selectionEntry">
+            <entryLink id="443d-4cf7-0101-3977" name="Brave" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" targetId="3b70-ef6f-03ad-df66" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba0c-b3c0-4d66-54b1" type="max"/>
               </constraints>
@@ -1535,7 +2182,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="e928-ef18-5978-17b2" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="137b-077a-dd52-a3c6" name="Bulwark" hidden="false" collective="false" import="true" targetId="cf58-c7e9-f161-5e73" type="selectionEntry">
+            <entryLink id="137b-077a-dd52-a3c6" name="Bulwark" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" targetId="cf58-c7e9-f161-5e73" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4de3-7692-d0ae-50f3" type="max"/>
               </constraints>
@@ -1543,7 +2190,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="4c64-f9b3-ed62-7cb4" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="61e4-3b01-0768-affe" name="Caltrops" hidden="false" collective="false" import="true" targetId="ae8f-8f96-e1a7-7e8d" type="selectionEntry">
+            <entryLink id="61e4-3b01-0768-affe" name="Caltrops" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" targetId="ae8f-8f96-e1a7-7e8d" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f237-4a35-9835-72e6" type="max"/>
               </constraints>
@@ -1551,7 +2198,19 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="1d32-9e69-8b25-0cc4" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="db8c-1e11-9216-08e4" name="Castle Forged" hidden="false" collective="false" import="true" targetId="7baf-01ea-a905-1e86" type="selectionEntry">
+            <entryLink id="db8c-1e11-9216-08e4" name="Castle Forged" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" targetId="7baf-01ea-a905-1e86" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f277-863b-c80a-158e" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ff0-5f37-126a-9f63" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8eed-ae62-1121-b964" type="max"/>
               </constraints>
@@ -1559,7 +2218,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="28e4-7aae-c4b0-d463" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="5462-5bed-7967-bb97" name="Chosen" hidden="false" collective="false" import="true" targetId="dde6-5c71-dd91-d333" type="selectionEntry">
+            <entryLink id="5462-5bed-7967-bb97" name="Chosen" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" targetId="dde6-5c71-dd91-d333" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="00d2-9500-a087-b73d" type="max"/>
               </constraints>
@@ -1567,7 +2226,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="6797-3aab-3490-4fda" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="9c6d-1a06-4a5e-9169" name="Close Ranks" hidden="false" collective="false" import="true" targetId="103a-68c5-fd3a-bf4a" type="selectionEntry">
+            <entryLink id="9c6d-1a06-4a5e-9169" name="Close Ranks" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" targetId="103a-68c5-fd3a-bf4a" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d77-b2db-3fb2-290d" type="max"/>
               </constraints>
@@ -1575,7 +2234,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="9dab-4d79-5ea6-4df6" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="e345-0c79-c851-f30f" name="Counter Charge" hidden="false" collective="false" import="true" targetId="cc46-230f-9d43-4cea" type="selectionEntry">
+            <entryLink id="e345-0c79-c851-f30f" name="Counter Charge" publicationId="0ef3-a4ac-86f8-fb60" page="80" hidden="false" collective="false" import="true" targetId="cc46-230f-9d43-4cea" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03c9-be70-256a-b072" type="max"/>
               </constraints>
@@ -1583,7 +2242,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="7923-d656-8aa0-de4b" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="a73f-00ac-ab5a-5d29" name="Courageous" hidden="false" collective="false" import="true" targetId="dbcc-8989-3294-5993" type="selectionEntry">
+            <entryLink id="a73f-00ac-ab5a-5d29" name="Courageous" publicationId="0ef3-a4ac-86f8-fb60" page="80" hidden="false" collective="false" import="true" targetId="dbcc-8989-3294-5993" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7886-e892-d275-1e4b" type="max"/>
               </constraints>
@@ -1607,7 +2266,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="8952-c241-1f30-99e1" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="3b0b-0fc6-1225-ada1" name="Cruelty" hidden="false" collective="false" import="true" targetId="f737-dca7-f2d9-772a" type="selectionEntry">
+            <entryLink id="3b0b-0fc6-1225-ada1" name="Cruelty" publicationId="0ef3-a4ac-86f8-fb60" page="80" hidden="false" collective="false" import="true" targetId="f737-dca7-f2d9-772a" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -1623,7 +2282,21 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="5f58-b499-d879-e8b0" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="c752-2a86-1d36-ac9c" name="Damascus Steel" hidden="false" collective="false" import="true" targetId="7043-46e9-37d2-b1f4" type="selectionEntry">
+            <entryLink id="c752-2a86-1d36-ac9c" name="Damascus Steel" publicationId="0ef3-a4ac-86f8-fb60" page="80" hidden="false" collective="false" import="true" targetId="7043-46e9-37d2-b1f4" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-category" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3315-b97b-19ee-5aad" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="5cf3-406c-e5d4-da92" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe3c-c0b9-6db1-a965" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b9a-cca1-04f6-7eb1" type="max"/>
               </constraints>
@@ -1631,7 +2304,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="5aa0-4244-e490-bbc6" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="f093-87e0-61d3-96f6" name="Drilled" hidden="false" collective="false" import="true" targetId="8a79-1816-8afb-3632" type="selectionEntry">
+            <entryLink id="f093-87e0-61d3-96f6" name="Drilled" publicationId="0ef3-a4ac-86f8-fb60" page="80" hidden="false" collective="false" import="true" targetId="8a79-1816-8afb-3632" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2389-cb9f-4704-caac" type="max"/>
               </constraints>
@@ -1639,7 +2312,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="9685-c45c-65f5-4162" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="5fb0-405c-c289-b2c4" name="Evade" hidden="false" collective="false" import="true" targetId="02d7-bcb5-90ad-57c8" type="selectionEntry">
+            <entryLink id="5fb0-405c-c289-b2c4" name="Evade" publicationId="0ef3-a4ac-86f8-fb60" page="80" hidden="false" collective="false" import="true" targetId="02d7-bcb5-90ad-57c8" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9ad-714b-d55d-f32a" type="max"/>
               </constraints>
@@ -1647,7 +2320,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="311a-5b56-4fbc-5f54" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="16c4-42da-4e0b-f955" name="Experienced Tactician" hidden="false" collective="false" import="true" targetId="259b-b4f1-c741-e109" type="selectionEntry">
+            <entryLink id="16c4-42da-4e0b-f955" name="Experienced Tactician" publicationId="0ef3-a4ac-86f8-fb60" page="80" hidden="false" collective="false" import="true" targetId="259b-b4f1-c741-e109" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -1663,7 +2336,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="56dd-9d19-6ffc-82a9" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="24b0-689e-2b65-b1af" name="Fast" hidden="false" collective="false" import="true" targetId="0e87-e1ed-d919-e4e7" type="selectionEntry">
+            <entryLink id="24b0-689e-2b65-b1af" name="Fast" publicationId="0ef3-a4ac-86f8-fb60" page="80" hidden="false" collective="false" import="true" targetId="0e87-e1ed-d919-e4e7" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="89d0-f229-43cf-86fa" type="max"/>
               </constraints>
@@ -1671,7 +2344,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="a98e-d92d-0fd9-b8e3" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="1a60-daf7-871e-c562" name="Faithful" hidden="false" collective="false" import="true" targetId="0073-4bbd-3d59-b4ce" type="selectionEntry">
+            <entryLink id="1a60-daf7-871e-c562" name="Faithful" publicationId="0ef3-a4ac-86f8-fb60" page="80" hidden="false" collective="false" import="true" targetId="0073-4bbd-3d59-b4ce" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c36-4229-8dfc-6271" type="max"/>
               </constraints>
@@ -1679,7 +2352,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="5732-5212-7bd6-65df" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="813e-30c9-6ceb-4fde" name="Fealty" hidden="false" collective="false" import="true" targetId="4998-4e99-f171-b6c1" type="selectionEntry">
+            <entryLink id="813e-30c9-6ceb-4fde" name="Fealty" publicationId="0ef3-a4ac-86f8-fb60" page="80" hidden="false" collective="false" import="true" targetId="4998-4e99-f171-b6c1" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab94-e2b4-feb1-c745" type="max"/>
               </constraints>
@@ -1687,7 +2360,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="666d-80d4-7cd5-a91e" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="861d-60cd-817b-2341" name="Fear" hidden="false" collective="false" import="true" targetId="bae5-52f0-7585-8780" type="selectionEntry">
+            <entryLink id="861d-60cd-817b-2341" name="Fear" publicationId="0ef3-a4ac-86f8-fb60" page="80" hidden="false" collective="false" import="true" targetId="bae5-52f0-7585-8780" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ff4-bf6c-c31c-624f" type="max"/>
               </constraints>
@@ -1695,7 +2368,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="7133-7fb0-a5b8-9cb4" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="b00b-b341-3e9f-51f2" name="Fearless" hidden="false" collective="false" import="true" targetId="0856-4816-7413-775d" type="selectionEntry">
+            <entryLink id="b00b-b341-3e9f-51f2" name="Fearless" publicationId="0ef3-a4ac-86f8-fb60" page="80" hidden="false" collective="false" import="true" targetId="0856-4816-7413-775d" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="adc8-4e8d-20e8-304f" type="max"/>
               </constraints>
@@ -1703,7 +2376,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="a5f9-71f4-7c4b-ae3d" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="dcf8-7f8b-17c8-592c" name="Follow Me" hidden="false" collective="false" import="true" targetId="e560-d087-193c-e6bb" type="selectionEntry">
+            <entryLink id="dcf8-7f8b-17c8-592c" name="Follow Me" publicationId="0ef3-a4ac-86f8-fb60" page="81" hidden="false" collective="false" import="true" targetId="e560-d087-193c-e6bb" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66c9-24a1-1039-7195" type="max"/>
               </constraints>
@@ -1711,7 +2384,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="8c7f-aed4-6587-e3d3" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="2547-2d33-90bd-5928" name="Frightening" hidden="false" collective="false" import="true" targetId="3427-f33b-d2ff-41f8" type="selectionEntry">
+            <entryLink id="2547-2d33-90bd-5928" name="Frightening" publicationId="0ef3-a4ac-86f8-fb60" page="81" hidden="false" collective="false" import="true" targetId="3427-f33b-d2ff-41f8" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a31d-589c-cc45-0b87" type="max"/>
               </constraints>
@@ -1719,7 +2392,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="4b43-bfb4-2ce4-bd0e" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="7fd6-9bec-d90d-dcd0" name="Glory Seeker" hidden="false" collective="false" import="true" targetId="f7b4-f360-8269-e52c" type="selectionEntry">
+            <entryLink id="7fd6-9bec-d90d-dcd0" name="Glory Seeker" publicationId="0ef3-a4ac-86f8-fb60" page="81" hidden="false" collective="false" import="true" targetId="f7b4-f360-8269-e52c" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="20ce-9a60-bd0a-5844" type="max"/>
               </constraints>
@@ -1727,7 +2400,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="9787-2d20-4a58-eb0c" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="bff5-5ae1-88b2-c899" name="Gutter Thug" hidden="false" collective="false" import="true" targetId="acd5-6ef9-52a3-2b8d" type="selectionEntry">
+            <entryLink id="bff5-5ae1-88b2-c899" name="Gutter Thug" publicationId="0ef3-a4ac-86f8-fb60" page="81" hidden="false" collective="false" import="true" targetId="acd5-6ef9-52a3-2b8d" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2e0-c39c-6ffd-1940" type="max"/>
               </constraints>
@@ -1735,7 +2408,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="0272-2668-b12a-99a1" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="8d41-f783-ec7c-45c8" name="Hardened" hidden="false" collective="false" import="true" targetId="c1c2-f853-f9c7-c130" type="selectionEntry">
+            <entryLink id="8d41-f783-ec7c-45c8" name="Hardened" publicationId="0ef3-a4ac-86f8-fb60" page="81" hidden="false" collective="false" import="true" targetId="c1c2-f853-f9c7-c130" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0df3-c297-69cc-f833" type="max"/>
               </constraints>
@@ -1743,7 +2416,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="6cfe-fdde-538d-9bcb" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="c8fd-3c47-13b6-453e" name="Hearth Guard" hidden="false" collective="false" import="true" targetId="9e75-dc53-bdd2-d464" type="selectionEntry">
+            <entryLink id="c8fd-3c47-13b6-453e" name="Hearth Guard" publicationId="0ef3-a4ac-86f8-fb60" page="81" hidden="false" collective="false" import="true" targetId="9e75-dc53-bdd2-d464" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f0e-103d-22ae-b812" type="max"/>
               </constraints>
@@ -1751,7 +2424,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="f19a-7ba4-800e-74fa" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="6f71-1ce3-53ba-14f9" name="Heroic" hidden="false" collective="false" import="true" targetId="4aca-6543-ea2b-f055" type="selectionEntry">
+            <entryLink id="6f71-1ce3-53ba-14f9" name="Heroic" publicationId="0ef3-a4ac-86f8-fb60" page="81" hidden="false" collective="false" import="true" targetId="4aca-6543-ea2b-f055" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -1767,7 +2440,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="e91a-c61e-2739-bbc3" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="d31a-edf0-1d2d-a0b8" name="Hold Ground" hidden="false" collective="false" import="true" targetId="4ee7-7999-2c39-4e05" type="selectionEntry">
+            <entryLink id="d31a-edf0-1d2d-a0b8" name="Hold Ground" publicationId="0ef3-a4ac-86f8-fb60" page="81" hidden="false" collective="false" import="true" targetId="4ee7-7999-2c39-4e05" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbaf-667d-5168-71c0" type="max"/>
               </constraints>
@@ -1775,7 +2448,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="9610-3d0d-34b7-636d" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="99a7-f083-6b9b-e1e0" name="Holy Relic" hidden="false" collective="false" import="true" targetId="74f8-7e91-6ace-3821" type="selectionEntry">
+            <entryLink id="99a7-f083-6b9b-e1e0" name="Holy Relic" publicationId="0ef3-a4ac-86f8-fb60" page="81" hidden="false" collective="false" import="true" targetId="74f8-7e91-6ace-3821" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a2e-84fa-6c9e-151e" type="max"/>
               </constraints>
@@ -1783,7 +2456,14 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="b35d-f246-26f3-e8b9" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="9050-883f-9fea-f04d" name="Horseman" hidden="false" collective="false" import="true" targetId="3171-c7b5-9476-8141" type="selectionEntry">
+            <entryLink id="9050-883f-9fea-f04d" name="Horseman" publicationId="0ef3-a4ac-86f8-fb60" page="81" hidden="false" collective="false" import="true" targetId="3171-c7b5-9476-8141" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f741-0416-02ad-ef50" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="555b-420b-75db-a98f" type="max"/>
               </constraints>
@@ -1791,7 +2471,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="f934-1ddf-ab7a-3cc2" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="01e5-1a97-0cfa-0852" name="Hunters" hidden="false" collective="false" import="true" targetId="1d72-25a9-9113-978a" type="selectionEntry">
+            <entryLink id="01e5-1a97-0cfa-0852" name="Hunters" publicationId="0ef3-a4ac-86f8-fb60" page="81" hidden="false" collective="false" import="true" targetId="1d72-25a9-9113-978a" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b559-5d33-0511-833a" type="max"/>
               </constraints>
@@ -1799,7 +2479,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="726b-2f16-7314-0ec1" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="c0aa-4ffb-6969-5ac7" name="Ice Hardened Mail" hidden="false" collective="false" import="true" targetId="1cef-57df-fb37-73de" type="selectionEntry">
+            <entryLink id="c0aa-4ffb-6969-5ac7" name="Ice Hardened Mail" publicationId="0ef3-a4ac-86f8-fb60" page="81" hidden="false" collective="false" import="true" targetId="1cef-57df-fb37-73de" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70b6-5d55-1479-eaee" type="max"/>
               </constraints>
@@ -1807,7 +2487,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="576e-893f-127f-ee17" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="e958-4ebd-6c71-0018" name="Immovable" hidden="false" collective="false" import="true" targetId="1cc8-0448-64e0-bcfb" type="selectionEntry">
+            <entryLink id="e958-4ebd-6c71-0018" name="Immovable" publicationId="0ef3-a4ac-86f8-fb60" page="82" hidden="false" collective="false" import="true" targetId="1cc8-0448-64e0-bcfb" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c0d-5d1f-1b96-1642" type="max"/>
               </constraints>
@@ -1815,7 +2495,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="8725-4995-8f1c-f5f7" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="b4a0-2738-6719-49ff" name="Infiltrate" hidden="false" collective="false" import="true" targetId="37f0-4930-9705-4f6b" type="selectionEntry">
+            <entryLink id="b4a0-2738-6719-49ff" name="Infiltrate" publicationId="0ef3-a4ac-86f8-fb60" page="82" hidden="false" collective="false" import="true" targetId="37f0-4930-9705-4f6b" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9af-6598-3f15-80e5" type="max"/>
               </constraints>
@@ -1823,7 +2503,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="1f53-3108-de28-ff96" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="e81b-fb4a-ffba-3306" name="Agile" hidden="false" collective="false" import="true" targetId="5ab9-2fc5-c688-a59a" type="selectionEntry">
+            <entryLink id="e81b-fb4a-ffba-3306" name="Agile" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" targetId="5ab9-2fc5-c688-a59a" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="686c-a229-a608-cf76" type="max"/>
               </constraints>
@@ -1831,7 +2511,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="291f-d57f-ca08-4347" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="7acb-995c-666c-1f7a" name="Last Stand" hidden="false" collective="false" import="true" targetId="b810-5354-38a1-9d7c" type="selectionEntry">
+            <entryLink id="7acb-995c-666c-1f7a" name="Last Stand" publicationId="0ef3-a4ac-86f8-fb60" page="82" hidden="false" collective="false" import="true" targetId="b810-5354-38a1-9d7c" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ed3-c3e3-c7ae-956a" type="max"/>
               </constraints>
@@ -1839,7 +2519,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="ba1c-3d40-cea3-1faf" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="4933-d32d-08ff-fb51" name="Loyal Retainer" hidden="false" collective="false" import="true" targetId="5baf-6639-1f2f-a078" type="selectionEntry">
+            <entryLink id="4933-d32d-08ff-fb51" name="Loyal Retainer" publicationId="0ef3-a4ac-86f8-fb60" page="82" hidden="false" collective="false" import="true" targetId="5baf-6639-1f2f-a078" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d968-f521-9e5e-9584" type="max"/>
               </constraints>
@@ -1847,7 +2527,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="d295-a482-022f-0c67" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="a27e-0a0d-1025-115b" name="Martial Training" hidden="false" collective="false" import="true" targetId="e664-a1c0-8706-2de2" type="selectionEntry">
+            <entryLink id="a27e-0a0d-1025-115b" name="Martial Training" publicationId="0ef3-a4ac-86f8-fb60" page="82" hidden="false" collective="false" import="true" targetId="e664-a1c0-8706-2de2" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="917b-645a-fef9-7af3" type="max"/>
               </constraints>
@@ -1855,7 +2535,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="050a-5a82-5a6c-8a39" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="ce95-e550-26a7-5782" name="Master Fletcher" hidden="true" collective="false" import="true" targetId="3d43-e78d-930d-da8b" type="selectionEntry">
+            <entryLink id="ce95-e550-26a7-5782" name="Master Fletcher" publicationId="0ef3-a4ac-86f8-fb60" page="82" hidden="true" collective="false" import="true" targetId="3d43-e78d-930d-da8b" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
@@ -1870,11 +2550,11 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="82fc-d4a7-1f1e-e731" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="acdf-c506-d0db-0a8e" name="Master Swordsman" hidden="true" collective="false" import="true" targetId="8f97-fbf6-f23c-6f27" type="selectionEntry">
+            <entryLink id="acdf-c506-d0db-0a8e" name="Master Swordsman" publicationId="0ef3-a4ac-86f8-fb60" page="82" hidden="false" collective="false" import="true" targetId="8f97-fbf6-f23c-6f27" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
-                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7e6e-9d62-d8f8-d7b6" type="equalTo"/>
+                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7e6e-9d62-d8f8-d7b6" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1885,7 +2565,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="298c-c93d-4791-d27f" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="7ed5-7963-d07c-db6f" name="Measured Shot" hidden="true" collective="false" import="true" targetId="f7c0-6e3e-f751-ba2b" type="selectionEntry">
+            <entryLink id="7ed5-7963-d07c-db6f" name="Measured Shot" publicationId="0ef3-a4ac-86f8-fb60" page="82" hidden="true" collective="false" import="true" targetId="f7c0-6e3e-f751-ba2b" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
@@ -1944,7 +2624,22 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="acae-9305-5aed-09cd" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
                     <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f741-0416-02ad-ef50" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be8a-60b5-331d-8ed0" type="instanceOf"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1980,7 +2675,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="8b81-1a2c-e68c-1d39" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="bac8-c113-2ea0-5f4b" name="Reassuring" hidden="false" collective="false" import="true" targetId="984d-2a57-0d33-9139" type="selectionEntry">
+            <entryLink id="bac8-c113-2ea0-5f4b" name="Reassuring" publicationId="0ef3-a4ac-86f8-fb60" page="83" hidden="false" collective="false" import="true" targetId="984d-2a57-0d33-9139" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -2020,7 +2715,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="9d31-f4ea-bf16-f650" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="a91c-8364-1796-4e1a" name="Robust" hidden="false" collective="false" import="true" targetId="c75c-8b37-5d57-3e8d" type="selectionEntry">
+            <entryLink id="a91c-8364-1796-4e1a" name="Robust" publicationId="0ef3-a4ac-86f8-fb60" page="83" hidden="false" collective="false" import="true" targetId="c75c-8b37-5d57-3e8d" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -2084,7 +2779,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="bbfa-6982-e0d1-c12a" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="2a9c-0d1e-cf2a-2b31" name="Strong" hidden="false" collective="false" import="true" targetId="1d13-9e0b-c4a7-e98c" type="selectionEntry">
+            <entryLink id="2a9c-0d1e-cf2a-2b31" name="Strong" publicationId="0ef3-a4ac-86f8-fb60" page="84" hidden="false" collective="false" import="true" targetId="1d13-9e0b-c4a7-e98c" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -2123,11 +2818,26 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="de69-7228-c0e9-c131" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="cb6f-fe79-b133-a100" name="Veteran Crusader" hidden="false" collective="false" import="true" targetId="0ecd-02ab-bbe7-ecf1" type="selectionEntry">
+            <entryLink id="cb6f-fe79-b133-a100" name="Veteran Crusader" publicationId="0ef3-a4ac-86f8-fb60" page="84" hidden="false" collective="false" import="true" targetId="0ecd-02ab-bbe7-ecf1" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
                     <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="acae-9305-5aed-09cd" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f741-0416-02ad-ef50" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be8a-60b5-331d-8ed0" type="instanceOf"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -2139,7 +2849,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="4358-508c-9e7f-3546" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="2b94-07a0-ecbb-e6be" name="War Cry" hidden="false" collective="false" import="true" targetId="cfb7-5c08-da96-7a58" type="selectionEntry">
+            <entryLink id="2b94-07a0-ecbb-e6be" name="War Cry" publicationId="0ef3-a4ac-86f8-fb60" page="84" hidden="false" collective="false" import="true" targetId="cfb7-5c08-da96-7a58" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -2156,6 +2866,23 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
               </categoryLinks>
             </entryLink>
             <entryLink id="e1bf-3ed4-8fb2-97fe" name="Warriors of God" hidden="false" collective="false" import="true" targetId="7cfa-6c38-6acb-6c0d" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f741-0416-02ad-ef50" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="acae-9305-5aed-09cd" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be8a-60b5-331d-8ed0" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e547-0f91-ce3e-b6b2" type="max"/>
               </constraints>
@@ -2171,14 +2898,6 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="6c64-e376-dab7-6c5e" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="ba22-b75a-4a89-4b05" name="Weapon Choice" hidden="false" collective="false" import="true" targetId="fe8a-a288-1785-e33f" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e1d-5374-6d4b-cbe5" type="max"/>
-              </constraints>
-              <categoryLinks>
-                <categoryLink id="e8d1-6877-68a4-79a8" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
-              </categoryLinks>
-            </entryLink>
             <entryLink id="3a29-e02e-f58f-9a80" name="Wolfhound" hidden="false" collective="false" import="true" targetId="11f2-1ceb-4dd9-ca96" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a681-25fd-f175-9ddc" type="max"/>
@@ -2187,7 +2906,7 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <categoryLink id="4e27-8101-66d1-6a8e" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
               </categoryLinks>
             </entryLink>
-            <entryLink id="9ffc-5c4e-065f-87b9" name="Formidable" hidden="false" collective="false" import="true" targetId="712b-4168-1c17-52ac" type="selectionEntry">
+            <entryLink id="9ffc-5c4e-065f-87b9" name="Formidable" publicationId="0ef3-a4ac-86f8-fb60" page="81" hidden="false" collective="false" import="true" targetId="712b-4168-1c17-52ac" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -2215,12 +2934,22 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a57-c693-deec-427c" type="max"/>
               </constraints>
             </entryLink>
-            <entryLink id="c2d0-4972-ab48-b174" name="Crack Shot" hidden="false" collective="false" import="true" targetId="e0a0-c79c-364e-9060" type="selectionEntry">
+            <entryLink id="c2d0-4972-ab48-b174" name="Crack Shot" publicationId="6c06-f51b-fa39-53d5" page="60" hidden="false" collective="false" import="true" targetId="e0a0-c79c-364e-9060" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dbc8-d782-a862-9c3d" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ec4-a1ee-a3be-fddc" type="max"/>
               </constraints>
+              <categoryLinks>
+                <categoryLink id="4db1-2c6f-2f8e-9061" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
+              </categoryLinks>
             </entryLink>
-            <entryLink id="38df-2585-7a14-3354" name="Dagger in the Dark" hidden="false" collective="false" import="true" targetId="8e29-3a32-b6fd-8733" type="selectionEntry">
+            <entryLink id="38df-2585-7a14-3354" name="Dagger in the Dark" publicationId="6c06-f51b-fa39-53d5" page="60" hidden="false" collective="false" import="true" targetId="8e29-3a32-b6fd-8733" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -2237,7 +2966,14 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7282-1985-a24f-4f97" type="max"/>
               </constraints>
             </entryLink>
-            <entryLink id="87c1-5061-5006-8bf4" name="Dirty Fighters" hidden="false" collective="false" import="true" targetId="e059-7c01-3e05-77e4" type="selectionEntry">
+            <entryLink id="87c1-5061-5006-8bf4" name="Dirty Fighters" publicationId="6c06-f51b-fa39-53d5" page="60" hidden="true" collective="false" import="true" targetId="e059-7c01-3e05-77e4" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="primary-category" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dbc8-d782-a862-9c3d" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a32-603f-db9e-efe7" type="max"/>
               </constraints>
@@ -2249,22 +2985,72 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                     <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f741-0416-02ad-ef50" type="instanceOf"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95f5-887b-e4aa-dd7a" type="max"/>
               </constraints>
             </entryLink>
-            <entryLink id="2049-2f50-be00-101b" name="Live for the Hunt" hidden="false" collective="false" import="true" targetId="bfb1-1fea-85ba-e162" type="selectionEntry">
+            <entryLink id="2049-2f50-be00-101b" name="Live for the Hunt" publicationId="6c06-f51b-fa39-53d5" page="60" hidden="true" collective="false" import="true" targetId="bfb1-1fea-85ba-e162" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="68d6-3356-373a-6e5c" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c55-2038-1ef2-a279" type="max"/>
               </constraints>
             </entryLink>
-            <entryLink id="9e7e-f14a-6ea4-cca3" name="Every Bloody Sunday" hidden="false" collective="false" import="true" targetId="c773-1592-496a-f1d9" type="selectionEntry">
+            <entryLink id="9e7e-f14a-6ea4-cca3" name="Every Bloody Sunday" publicationId="0ef3-a4ac-86f8-fb60" page="86" hidden="true" collective="false" import="true" targetId="c773-1592-496a-f1d9" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bf14-44c5-2361-fcc8" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a533-d35f-2f6c-5c90" type="max"/>
               </constraints>
             </entryLink>
-            <entryLink id="5265-e143-adc9-7411" name="Followed into Exile" hidden="false" collective="false" import="true" targetId="2b36-28cf-7b74-9eb5" type="selectionEntry">
+            <entryLink id="5265-e143-adc9-7411" name="Followed into Exile" publicationId="6c06-f51b-fa39-53d5" page="60" hidden="true" collective="false" import="true" targetId="2b36-28cf-7b74-9eb5" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="primary-category" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="primary-category" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dbc8-d782-a862-9c3d" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bec-c2b8-cbab-8c1c" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="fee8-ca09-0a64-d214" name="Melt Away" hidden="true" collective="false" import="true" targetId="ec52-fdb2-c3d3-27a3" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3ba-4572-8ac5-e966" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="289d-623e-3314-943e" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="a4db-c1f8-15f0-dd8f" name="Poacher" hidden="false" collective="false" import="true" targetId="2baa-9a2b-8dd2-4e9d" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -2278,27 +3064,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bec-c2b8-cbab-8c1c" type="max"/>
-              </constraints>
-            </entryLink>
-            <entryLink id="fee8-ca09-0a64-d214" name="Melt Away" hidden="false" collective="false" import="true" targetId="ec52-fdb2-c3d3-27a3" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="289d-623e-3314-943e" type="max"/>
-              </constraints>
-            </entryLink>
-            <entryLink id="a4db-c1f8-15f0-dd8f" name="Poacher" hidden="false" collective="false" import="true" targetId="2baa-9a2b-8dd2-4e9d" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aabf-284f-a208-fc19" type="max"/>
               </constraints>
             </entryLink>
-            <entryLink id="8f72-5efa-92ed-6987" name="Cry Havoc" hidden="false" collective="false" import="true" targetId="a7fc-2c0b-e9f4-721c" type="selectionEntry">
+            <entryLink id="8f72-5efa-92ed-6987" name="Cry Havoc" publicationId="0ef3-a4ac-86f8-fb60" page="80" hidden="false" collective="false" import="true" targetId="a7fc-2c0b-e9f4-721c" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -2315,11 +3084,136 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
               </categoryLinks>
             </entryLink>
             <entryLink id="40c0-99a6-5e8e-41cc" name="Watchers in the Woods" hidden="false" collective="false" import="true" targetId="caa1-fa3a-59d6-27ad" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f741-0416-02ad-ef50" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="acae-9305-5aed-09cd" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be8a-60b5-331d-8ed0" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="999d-66e5-15ac-c307" type="max"/>
               </constraints>
+              <categoryLinks>
+                <categoryLink id="76a5-f14f-c765-8375" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
+              </categoryLinks>
             </entryLink>
-            <entryLink id="8a1f-d4b5-f250-3e0d" name="Signallers" hidden="false" collective="false" import="true" targetId="d52c-3bab-7e15-9e19" type="selectionEntry">
+            <entryLink id="8a1f-d4b5-f250-3e0d" name="Signallers" hidden="true" collective="false" import="true" targetId="d52c-3bab-7e15-9e19" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dbc8-d782-a862-9c3d" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1076-a677-d8ef-2f62" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="8231-d2b6-8462-a4b5" name="Terrifying" hidden="true" collective="false" import="true" targetId="94ad-67b5-9bbc-d19b" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="acae-9305-5aed-09cd" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e74-0a4b-f1fe-fe28" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="466b-d2ac-d933-5777" name="Vast Network" hidden="true" collective="false" import="true" targetId="dcff-cb23-b8cc-e491" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="acae-9305-5aed-09cd" type="instanceOf"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="primary-category" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1331-beda-c8a8-7a1d" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="9c4a-eee0-b7d0-c6cd" name="Trained from Childhood" publicationId="418f-8173-eff1-7be3" page="43" hidden="true" collective="false" import="true" targetId="1942-1215-7e04-6c65" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="primary-category" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2c7e-4e40-c9b6-81aa" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0fa4-844f-f6b1-02dc" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="9d41-597b-b0ab-5c47" name="Planned Attack" hidden="true" collective="false" import="true" targetId="5600-9059-b59f-a0c4" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="acae-9305-5aed-09cd" type="instanceOf"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="primary-category" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0531-1f17-ee81-926f" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="92a2-c169-f8c5-be54" name="Shield Brothers" hidden="true" collective="false" import="true" targetId="79b7-3e59-657a-79a5" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="acae-9305-5aed-09cd" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="790a-dfe0-003e-61fe" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="b0af-89fd-8690-f95f" name="Calming Presence" publicationId="0ef3-a4ac-86f8-fb60" page="85" hidden="false" collective="false" import="true" targetId="0072-cb0f-85b4-8e1a" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -2328,8 +3222,291 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1076-a677-d8ef-2f62" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51d9-6d07-3ef3-f983" type="max"/>
               </constraints>
+              <categoryLinks>
+                <categoryLink id="f11d-0e14-b9d1-328f" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="2847-fe65-9e9a-b7ee" name="Cunning Tactician" publicationId="0ef3-a4ac-86f8-fb60" page="85" hidden="false" collective="false" import="true" targetId="5450-6397-6daf-c478" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9470-a876-9f3d-f155" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="896f-26bd-8388-76eb" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="8b8a-e4ef-0cf6-483a" name="Blood Lust" publicationId="0ef3-a4ac-86f8-fb60" page="85" hidden="false" collective="false" import="true" targetId="99c3-16b3-acb9-b537" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="b4d0-023c-a882-d4bd" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="cb80-c169-e4c7-dd07" name="Charasmatic Leader" publicationId="0ef3-a4ac-86f8-fb60" page="85" hidden="false" collective="false" import="true" targetId="8244-f37e-6102-bdd4" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d168-3fe7-cec1-0f8e" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="eb72-875e-ae85-96ef" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="b1a3-d2f2-2f6d-d76d" name="Inspired Leader" publicationId="0ef3-a4ac-86f8-fb60" page="82" hidden="false" collective="false" import="true" targetId="6b27-9ca9-0294-a9e0" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4b4-b7de-76be-ee7e" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="ddf2-993e-88d2-dba3" name="Inspiring Presence" publicationId="0ef3-a4ac-86f8-fb60" page="86" hidden="false" collective="false" import="true" targetId="7051-ad9c-c8b6-05b5" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aeef-7cd9-e863-9a8e" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="9e8c-b0fc-15dc-1332" name="Resolute Defender" hidden="false" collective="false" import="true" targetId="3c6d-2526-0850-3deb" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e920-4f7a-a4b5-af00" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="0678-219d-b14f-2601" name="Within Reach" hidden="false" collective="false" import="true" targetId="0983-a9e2-551f-afa7" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70eb-6165-7160-7cb0" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="dfc3-27dd-a35d-b2d8" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="c351-d96c-c3ea-97b6" name="Weapons Master" hidden="false" collective="false" import="true" targetId="c80b-5168-695b-738b" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8469-36ef-7636-7519" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="9669-8cd1-f4f6-9697" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="1e01-57a7-3297-21cc" name="To the King!" hidden="false" collective="false" import="true" targetId="9225-2f26-d71e-31db" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25d9-c303-4eca-198f" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="007b-465f-1f47-35ce" name="Revered Heirloom Sword" publicationId="b41d-1492-89e5-4549" hidden="false" collective="false" import="true" targetId="f6d6-9229-a221-a800" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b287-4a3a-1cc4-8f66" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="e694-eae3-d3b0-4710" name="Lucky" publicationId="418f-8173-eff1-7be3" page="43" hidden="true" collective="false" import="true" targetId="2eda-73bf-d21d-6a2f" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="primary-category" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                        <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f741-0416-02ad-ef50" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4921-7ffb-3bed-07af" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="f7c1-a83e-2822-37be" name="Opportunist" hidden="true" collective="false" import="true" targetId="4ae3-3eda-80a4-b2b7" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f741-0416-02ad-ef50" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9dc2-9b18-f9c3-7273" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="5ad8-84f2-4665-1bb1" name="Decisive" hidden="true" collective="false" import="true" targetId="9177-f7e8-1f8e-c549" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f741-0416-02ad-ef50" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28dc-46d9-9064-45d1" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="a72b-bc11-4207-7df7" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="9a51-d664-1665-bccf" name="Weapon Choice - Free" hidden="false" collective="false" import="true" targetId="fe8a-a288-1785-e33f" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="31d8-b1c1-9f95-1442" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="f1ab-ad53-d155-f620" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="598a-57b3-baed-0adf" name="Feigned Attack" hidden="true" collective="false" import="true" targetId="ebdc-e8f8-51dc-246f" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f741-0416-02ad-ef50" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eee5-7ce8-eefd-0aee" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="8b00-5b16-9cce-9afd" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="a0bf-0673-18f4-c661" name="Eastern Contacts - Free" hidden="false" collective="false" import="true" targetId="fe3c-c0b9-6db1-a965" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="acae-9305-5aed-09cd" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6d0-6de5-bc09-42da" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="502f-930d-6e6a-2380" name="Runic Inscription" hidden="true" collective="false" import="true" targetId="c5f6-3b2d-ea1a-4894" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be8a-60b5-331d-8ed0" type="instanceOf"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="primary-category" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="1c6c-db35-df9a-1d76" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="false"/>
+                <categoryLink id="7ed5-0dc7-83dd-34d3" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="7829-7c33-877f-d161" name="Emboldened" hidden="false" collective="false" import="true" targetId="0a71-83bf-7a28-b281" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be8a-60b5-331d-8ed0" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="e100-081c-ad1b-b96b" name="Shield Strike" hidden="false" collective="false" import="true" targetId="d184-793b-6d16-a15d" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be8a-60b5-331d-8ed0" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="58b9-e7b1-3afb-e6a1" name="Angons" hidden="false" collective="false" import="true" targetId="876e-8cde-ef5d-b08d" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be8a-60b5-331d-8ed0" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="9dc7-a9cf-2b91-6ce7" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="ae72-3923-e369-42dc" name="Battle Cry" hidden="true" collective="false" import="true" targetId="d9b2-45dc-6daf-435e" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be8a-60b5-331d-8ed0" type="instanceOf"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="primary-category" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="7915-6eda-f9e4-fe85" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="false"/>
+              </categoryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -2337,6 +3514,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="444e-497b-8cf4-f2dc" name="Finishing Blow" hidden="false" collective="false" import="true" type="upgrade">
@@ -2344,8 +3525,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="5ed1-0219-ce4b-f1d4" name="Finishing Blow" hidden="false" targetId="9d4d-a094-9041-05b1" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e560-d087-193c-e6bb" name="Follow Me" hidden="false" collective="false" import="true" type="upgrade">
@@ -2353,8 +3538,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="47fe-26b7-9631-3e88" name="Follow Me" hidden="false" targetId="64de-d3ac-f72f-b5d5" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="712b-4168-1c17-52ac" name="Formidable" hidden="false" collective="false" import="true" type="upgrade">
@@ -2362,8 +3551,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="0fb4-ddf5-232d-2b8c" name="Formidable" hidden="false" targetId="195c-8c55-eb88-482c" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3427-f33b-d2ff-41f8" name="Frightening" hidden="false" collective="false" import="true" type="upgrade">
@@ -2371,8 +3564,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="6474-c8e5-b52b-efb8" name="Frightening" hidden="false" targetId="2be6-2c29-3c4c-5e4a" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f7b4-f360-8269-e52c" name="Glory Seeker" hidden="false" collective="false" import="true" type="upgrade">
@@ -2380,8 +3577,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="2153-2c18-6937-ad5d" name="Glory Seaker" hidden="false" targetId="4527-e8c0-6218-5e19" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="acd5-6ef9-52a3-2b8d" name="Gutter Thug" hidden="false" collective="false" import="true" type="upgrade">
@@ -2389,8 +3590,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="197c-c26b-cd25-a4cd" name="Gutter Thug" hidden="false" targetId="1e98-4d08-31b5-00e7" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c1c2-f853-f9c7-c130" name="Hardened" hidden="false" collective="false" import="true" type="upgrade">
@@ -2398,8 +3603,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="d829-8506-f209-d503" name="Hardened" hidden="false" targetId="6218-350e-c372-ba85" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9e75-dc53-bdd2-d464" name="Hearth Guard" hidden="false" collective="false" import="true" type="upgrade">
@@ -2407,8 +3616,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="f763-cfa7-7521-c7e7" name="Hearth Guard" hidden="false" targetId="b1ad-94c3-7e06-3a12" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4aca-6543-ea2b-f055" name="Heroic" hidden="false" collective="false" import="true" type="upgrade">
@@ -2416,8 +3629,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="6abb-e9f7-6ca6-d126" name="Heroic" hidden="false" targetId="9ad7-efa8-94ef-ce4e" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4ee7-7999-2c39-4e05" name="Hold Ground" hidden="false" collective="false" import="true" type="upgrade">
@@ -2425,8 +3642,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="4f01-af30-10ef-72c4" name="Hold Ground" hidden="false" targetId="74d0-c803-1b0c-1286" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="74f8-7e91-6ace-3821" name="Holy Relic" hidden="false" collective="false" import="true" type="upgrade">
@@ -2434,17 +3655,32 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="ca1e-86e8-3bec-5397" name="Holy Relic" hidden="false" targetId="4aa7-9522-fea2-772b" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3171-c7b5-9476-8141" name="Horseman" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="acae-9305-5aed-09cd" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="ae3f-89f0-8246-c914" name="Horseman" hidden="false" targetId="a6c2-b2b0-d4a9-2c7a" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1d72-25a9-9113-978a" name="Hunters" hidden="false" collective="false" import="true" type="upgrade">
@@ -2452,8 +3688,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="039f-3262-fdd2-f736" name="Hunters" hidden="false" targetId="afb8-bc7a-81d4-d634" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1cef-57df-fb37-73de" name="Ice Hardened Mail" hidden="false" collective="false" import="true" type="upgrade">
@@ -2461,8 +3701,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="4ac1-af1c-615e-117d" name="Ice Hardened Mail" hidden="false" targetId="bccb-836b-514e-97f6" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1cc8-0448-64e0-bcfb" name="Immovable" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -2470,8 +3714,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="1cd3-2746-dd90-b05a" name="Immovable" hidden="false" targetId="80d0-51bf-addb-3d0b" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="37f0-4930-9705-4f6b" name="Infiltrate" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -2479,20 +3727,28 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="2d43-54bf-ad95-a61f" name="Infiltrate" hidden="false" targetId="de65-a7be-1012-87dd" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6b27-9ca9-0294-a9e0" name="Inspired Leader" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
-        <infoLink id="04a9-20d0-3c62-9512" name="Agile" hidden="false" targetId="2cae-bbe0-8c98-657e" type="rule"/>
+        <infoLink id="04a9-20d0-3c62-9512" name="Inspired Leader" hidden="false" targetId="e525-7c33-898d-0ab6" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="c0d0-a1c6-46d0-e207" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b810-5354-38a1-9d7c" name="Last Stand" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -2500,17 +3756,25 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="39da-9a38-8904-876f" name="Last Stand" hidden="false" targetId="230b-b1f4-8a9c-db77" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5baf-6639-1f2f-a078" name="Loyal Retainer" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
-        <infoLink id="68ae-8a3b-a872-7a74" name="Agile" hidden="false" targetId="2cae-bbe0-8c98-657e" type="rule"/>
+        <infoLink id="68ae-8a3b-a872-7a74" name="Loyal Retainer" hidden="false" targetId="8a2a-1e2a-1e9e-47a8" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e664-a1c0-8706-2de2" name="Martial Training" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -2518,8 +3782,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="ad6c-34ea-d7e4-4826" name="Martial Training" hidden="false" targetId="bc83-42e4-9960-c704" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3d43-e78d-930d-da8b" name="Master Fletcher" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -2527,8 +3795,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="2d99-334d-dbde-5946" name="Master Fletcher" hidden="false" targetId="7e76-7f91-88c3-28bc" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f7c0-6e3e-f751-ba2b" name="Measured Shot" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -2536,8 +3808,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="0e5f-97b8-da59-d398" name="Measured Shot" hidden="false" targetId="629c-9131-4c8e-ef7d" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ab01-91ae-0b5f-b18d" name="Momentum" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -2545,8 +3821,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="773e-3f5d-6921-ca88" name="Momentum" hidden="false" targetId="2112-b97c-b4fe-acae" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0de9-83a0-bd25-0b46" name="Nimble" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -2554,8 +3834,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="d4fb-70d3-ae28-3c13" name="Nimble" hidden="false" targetId="67cb-b776-2a55-3402" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e06f-95ce-eba6-e83d" name="Old Soldiers" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -2563,8 +3847,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="d614-840c-8746-7817" name="Old Soldiers" hidden="false" targetId="4e17-d841-0119-b917" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="36f6-4a5a-df46-0c2c" name="Protector" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -2572,8 +3860,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="8108-6968-9fa4-5f89" name="Protector" hidden="false" targetId="d644-a072-9e62-161b" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="41bf-15cf-b6b0-a260" name="Outflank" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -2581,8 +3873,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="8a94-1aa9-e9ad-6d28" name="Outflank" hidden="false" targetId="179a-efae-a932-c042" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="de5a-7b0d-6f41-0de9" name="Open Up" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -2590,8 +3886,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="b71e-d255-9d9b-ab4d" name="Open Up" hidden="false" targetId="71fe-7247-73c9-6ec6" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8f97-fbf6-f23c-6f27" name="Master Swordsman" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -2599,8 +3899,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="3e07-9cdc-8bf2-d01e" name="Master Swordsman" hidden="false" targetId="9a14-1097-ba9b-c9bf" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fe8a-a288-1785-e33f" name="Weapon Choice - Free" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false" collective="false" import="true" type="upgrade">
@@ -2610,6 +3914,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="11f2-1ceb-4dd9-ca96" name="Wolfhound" hidden="false" collective="false" import="true" type="upgrade">
@@ -2617,8 +3925,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="c7d1-2b51-b6dc-8388" name="Wolfhound" hidden="false" targetId="bba3-721b-dc13-9eb3" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b106-124b-e96e-2246" name="Pushed Back" hidden="false" collective="false" import="true" type="upgrade">
@@ -2626,8 +3938,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="ad8e-fcbd-c40c-3a79" name="Pushed Back" hidden="false" targetId="5a5e-e795-e68b-0e84" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c3a9-c6c8-7a6f-d545" name="Rage" hidden="false" collective="false" import="true" type="upgrade">
@@ -2635,8 +3951,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="ed15-6a64-e1b1-5d8c" name="Rage" hidden="false" targetId="7d25-7297-2e8a-c7e3" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a1fa-86e7-045a-4f9b" name="Raise Shields" hidden="false" collective="false" import="true" type="upgrade">
@@ -2644,8 +3964,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="ab6a-d1d0-bec8-38c8" name="Raise Shields" hidden="false" targetId="65e3-74b0-989d-a898" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="984d-2a57-0d33-9139" name="Reassuring" hidden="false" collective="false" import="true" type="upgrade">
@@ -2653,8 +3977,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="f849-750c-8e28-9509" name="Reassuring" hidden="false" targetId="2254-bb91-a4a5-a287" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3d5e-62b9-57fb-2802" name="Relentless" hidden="false" collective="false" import="true" type="upgrade">
@@ -2662,8 +3990,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="e0dd-565f-2fe4-9700" name="Relentless" hidden="false" targetId="e2a6-fee3-011c-4c6c" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c7b4-b8df-b432-45a1" name="Reputation" hidden="false" collective="false" import="true" type="upgrade">
@@ -2671,8 +4003,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="dc29-6980-1c58-6e45" name="Reputation" hidden="false" targetId="b190-9d26-0138-27d2" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1be6-b9bd-5214-f738" name="resilient" hidden="false" collective="false" import="true" type="upgrade">
@@ -2680,8 +4016,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="4f4a-dddf-967f-25bb" name="Resilient" hidden="false" targetId="995d-4064-ea5b-09db" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c75c-8b37-5d57-3e8d" name="Robust" hidden="false" collective="false" import="true" type="upgrade">
@@ -2689,8 +4029,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="dbae-64ed-8a57-8201" name="Robust" hidden="false" targetId="4f38-2782-78fd-e284" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5e8b-e3f8-c6d0-046f" name="Savagery" hidden="false" collective="false" import="true" type="upgrade">
@@ -2698,8 +4042,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="feb0-3772-7844-095c" name="Savagery" hidden="false" targetId="0dda-c1b7-1eb4-99cb" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ac4d-5df5-c7e5-7952" name="Sidestep" hidden="false" collective="false" import="true" type="upgrade">
@@ -2707,8 +4055,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="9687-3b36-d1aa-d1fc" name="Sidestep" hidden="false" targetId="7e62-65f9-30f8-38f4" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1c89-d697-057d-a3ca" name="Skirmisher" hidden="false" collective="false" import="true" type="upgrade">
@@ -2716,8 +4068,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="09bf-8d25-8a57-946e" name="Skirmisher" hidden="false" targetId="7f9f-20d2-c6e3-af03" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f35b-17c6-c467-9892" name="Spite" hidden="false" collective="false" import="true" type="upgrade">
@@ -2725,8 +4081,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="caaf-4fb6-8964-66b8" name="Spite" hidden="false" targetId="f51c-475e-a216-25c8" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8124-b3bd-7158-9097" name="Steadfast" hidden="false" collective="false" import="true" type="upgrade">
@@ -2734,8 +4094,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="0509-b196-d8c2-2ad6" name="Steadfast" hidden="false" targetId="b990-e3d4-9fb2-aa63" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6b89-873d-0e13-3ba5" name="Stealth" hidden="false" collective="false" import="true" type="upgrade">
@@ -2743,8 +4107,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="34df-6dd1-93cf-0bc9" name="Stealth" hidden="false" targetId="9483-a109-fcf9-510f" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1d13-9e0b-c4a7-e98c" name="Strong" hidden="false" collective="false" import="true" type="upgrade">
@@ -2752,8 +4120,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="68df-130b-db37-338e" name="Strong" hidden="false" targetId="c32a-db5c-58ca-3d1a" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6f51-3bea-1507-3a96" name="Superior Shot" hidden="false" collective="false" import="true" type="upgrade">
@@ -2761,8 +4133,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="1c48-78c6-1342-9450" name="Superior Shot" hidden="false" targetId="48a5-42d7-736c-b59c" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b05e-c055-8534-b200" name="Surefooted" hidden="false" collective="false" import="true" type="upgrade">
@@ -2770,14 +4146,22 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="9b9b-bed0-7d6e-475a" name="Sure Footed" hidden="false" targetId="d451-4629-481d-44fc" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0ecd-02ab-bbe7-ecf1" name="Veteran Crusader" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cfb7-5c08-da96-7a58" name="War Cry" hidden="false" collective="false" import="true" type="upgrade">
@@ -2785,8 +4169,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="e75e-fe9c-0523-608e" name="War Cry" hidden="false" targetId="efa5-baec-6c50-ea65" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7cfa-6c38-6acb-6c0d" name="Warriors of God" hidden="false" collective="false" import="true" type="upgrade">
@@ -2794,8 +4182,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="98e5-d2bd-be91-5ef2" name="Warriors of God" hidden="false" targetId="040c-a9dc-f627-62e6" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1115-d46a-e3ea-826b" name="War Wise" hidden="false" collective="false" import="true" type="upgrade">
@@ -2803,40 +4195,56 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="c52a-506f-88b6-a610" name="War Wise" hidden="false" targetId="a681-2228-180b-cdf6" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fa0f-606c-1fa5-b5eb" name="Stephen Langton, Archbishop of Canterbury" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6869-fe46-716e-2ff7" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6869-fe46-716e-2ff7" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="53.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0de2-1aad-d7fd-3c45" name="Prince Louis of France, The Lion" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="11d7-8565-3811-05a5" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="11d7-8565-3811-05a5" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f193-0cce-dabd-7f81" name="Robert Fitzwalter, Marshal of the Army of God" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f63e-2602-0c9b-40d8" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f63e-2602-0c9b-40d8" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dc0d-0753-99b8-4241" name="King Stephen, Stephen of Blois" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9a4b-18e1-c820-d87a" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9a4b-18e1-c820-d87a" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="918f-3934-2171-887a" name="Usurper" hidden="false" targetId="232d-335e-61d1-ac09" type="rule"/>
@@ -2846,20 +4254,28 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b36f-590a-fbd8-660d" name="Matilda of Boulogne" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8e31-2c2a-8364-fbc4" type="max"/>
+        <constraint field="selections" scope="54b6-40fc-bedd-1d7f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8e31-2c2a-8364-fbc4" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cf44-f36c-2ef5-ab46" name="Empress Matilda" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1aeb-55af-8e82-78ce" type="max"/>
+        <constraint field="selections" scope="54b6-40fc-bedd-1d7f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1aeb-55af-8e82-78ce" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="6475-4e8b-5ba5-9b0c" name="Woman at War" hidden="false" targetId="73ad-b9b8-2945-fd04" type="rule"/>
@@ -2870,13 +4286,17 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5784-2be2-41fc-ee81" name="Baldwin of Clare" hidden="false" collective="false" import="true" type="upgrade">
       <comment>Spoke for Stephen at Lincoln c.1141
 </comment>
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1cd6-7c5b-c47d-5c6e" type="max"/>
+        <constraint field="selections" scope="54b6-40fc-bedd-1d7f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1cd6-7c5b-c47d-5c6e" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="8213-26e6-8d15-21e0" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
@@ -2886,40 +4306,60 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9879-a6d2-9742-d71a" name="King David I of Scotland" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="75b5-7ec7-ca38-5fdd" type="max"/>
+        <constraint field="selections" scope="54b6-40fc-bedd-1d7f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="75b5-7ec7-ca38-5fdd" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d533-7696-84ab-0cc0" name="Geoffrey de Mandeville, Earl of Essex" hidden="false" collective="false" import="true" type="model">
       <comment>Initially Stephen&apos;s man.  After Lincoln acknowledged Matilda.  On Stephen&apos;s release returned allegence.  Outlaw from abt.1143</comment>
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7efe-bb1c-8fd2-0454" type="max"/>
+        <constraint field="selections" scope="54b6-40fc-bedd-1d7f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7efe-bb1c-8fd2-0454" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ce9a-48dc-1d01-07e9" name="Henry of Anjou" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b944-2fa6-5dc9-c85f" type="max"/>
+        <constraint field="selections" scope="54b6-40fc-bedd-1d7f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b944-2fa6-5dc9-c85f" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="145d-f178-0f7c-b20e" name="Usurper" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1aa2-cb4b-92ff-bdb5" name="Blows with the winds of war" hidden="false" collective="false" import="true" type="upgrade">
@@ -2927,8 +4367,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="66ac-50c0-8363-b8dd" name="Blows with the Winds of War" hidden="false" targetId="8cfd-b007-28f3-9be5" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="75ad-1633-97fb-da3e" name="Woman at War" hidden="false" collective="false" import="true" type="upgrade">
@@ -2936,8 +4380,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="a183-2115-4e77-fcbc" name="Woman at War" hidden="false" targetId="73ad-b9b8-2945-fd04" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="013e-82cd-1f7d-ba36" name="Escape Artist" hidden="false" collective="false" import="true" type="upgrade">
@@ -2947,13 +4395,17 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="3.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b22b-888d-c595-3939" name="Alan of Brittany, 1st Earl of Richmond" hidden="false" collective="false" import="true" type="model">
       <comment>Fought for Stephen.  bef 1100-1146
 </comment>
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b1b1-41d1-717d-aa63" type="max"/>
+        <constraint field="selections" scope="54b6-40fc-bedd-1d7f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b1b1-41d1-717d-aa63" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="239e-cf6f-b99d-90d8" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false"/>
@@ -2962,11 +4414,15 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="45.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fc42-17e8-9fda-e8ad" name="Robert FitzRoy, 1st Earl of Gloucester" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c4d-a25e-fce4-d105" type="max"/>
+        <constraint field="selections" scope="54b6-40fc-bedd-1d7f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c4d-a25e-fce4-d105" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="be24-4af2-90f3-ddcc" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false"/>
@@ -2975,12 +4431,16 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="50.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f28d-9abb-8a3e-b6a5" name="William le Gros, of Aumale, Earl of York" hidden="false" collective="false" import="true" type="model">
       <comment>died 1179.  witness to 2 charters of King Stephen</comment>
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="448d-9775-83d3-a8a9" type="max"/>
+        <constraint field="selections" scope="54b6-40fc-bedd-1d7f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="448d-9775-83d3-a8a9" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="dc21-7998-7c00-bcda" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false"/>
@@ -2989,12 +4449,16 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="46.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e256-9a97-b82a-24f6" name="William of Ypres" hidden="false" collective="false" import="true" type="model">
       <comment>King Stephen&apos;s chief lieutenant</comment>
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="deb3-c84f-961d-7055" type="max"/>
+        <constraint field="selections" scope="54b6-40fc-bedd-1d7f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="deb3-c84f-961d-7055" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="9d58-a761-afde-9770" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false"/>
@@ -3002,11 +4466,15 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="50.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cf03-63a7-b0c2-1fd3" name="William de Warenne" publicationId="e1aa-2e67-412d-f39f" page="3" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1cda-8112-9599-f33e" type="max"/>
+        <constraint field="selections" scope="54b6-40fc-bedd-1d7f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1cda-8112-9599-f33e" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="2711-e4cc-1871-7ec7" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
@@ -3015,12 +4483,16 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="53.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2913-e5ed-a95b-b91d" name="Gerard de Furnival" publicationId="e1aa-2e67-412d-f39f" page="3" hidden="false" collective="false" import="true" type="model">
       <comment>Norman knight.  1175-1219.</comment>
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3151-3c2d-1ef6-4869" type="max"/>
+        <constraint field="selections" scope="54b6-40fc-bedd-1d7f" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3151-3c2d-1ef6-4869" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="239d-1764-e797-9a0d" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
@@ -3029,6 +4501,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="46.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4c2b-2b15-145d-450d" name="Outlawed Noble" publicationId="f2ed-2a36-d58a-5953" page="15" hidden="false" collective="false" import="true" type="model">
@@ -3058,6 +4534,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="37.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6dc3-6c36-6a99-3bfc" name="Outlaw" publicationId="f2ed-2a36-d58a-5953" page="16" hidden="false" collective="false" import="true" type="model">
@@ -3067,6 +4547,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="8.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5c89-7dc2-bab8-f82d" name="Outlaws" hidden="false" collective="false" import="true" type="unit">
@@ -3097,12 +4581,20 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0010-7986-96fd-70c1" name="Forest Slinger" publicationId="f2ed-2a36-d58a-5953" page="17" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="14.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="aab5-c990-8f1e-1728" name="Forest Slingers" hidden="false" collective="false" import="true" type="unit">
@@ -3134,6 +4626,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="69d1-1d37-08ad-fb96" name="Green Outlawed Noble" hidden="false" collective="false" import="true" type="upgrade">
@@ -3143,24 +4639,40 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0140-d39b-e031-f363" name="Irregular Outlawed Noble" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cc47-b86c-9ba1-debb" name="Regular Outlawed Noble" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="92dc-e244-4257-63a0" name="Veteran Outlawed Noble" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a4e5-f9e6-2555-46af" name="Green Outlaws" hidden="false" collective="false" import="true" type="upgrade">
@@ -3170,54 +4682,90 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8c9d-8c51-8cea-ed76" name="Irregular Outlaws" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3b14-ae13-d961-05df" name="Regular Outlaws" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9f93-9ec3-be35-7aec" name="Veteran Outlaws" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c22f-c0df-6f3f-eea4" name="Irregular Forest Slingers" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9ac8-197c-ac20-4dc7" name="Regular Forest Slingers" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="91bf-6db3-5e5d-41c4" name="Irregular Cutthrouts" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e1ac-41d6-fa2b-3cb6" name="Regular Cutthrouts" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="eaf3-863c-e477-e8c9" name="Veteran Cutthroats" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7f8e-4475-6f6b-6f3e" name="Green Petty Criminal" hidden="false" collective="false" import="true" type="upgrade">
@@ -3227,18 +4775,30 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a95e-56aa-211f-6e2c" name="irregular Petty Criminal" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3709-f350-fb2a-4a49" name="Petty Criminal" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="9.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f01c-8590-2a1d-f754" name="Petty Criminals" hidden="false" collective="false" import="true" type="unit">
@@ -3255,36 +4815,60 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="93a0-df22-0c9f-85fb" name="Cutthroat" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="15.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5ca4-b705-0796-dbe0" name="Outlawed Foot Sergeant" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="15.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="63aa-a673-2e46-f077" name="Irregular Outlawed Foot Sergeant" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e7e0-524e-c0ce-7491" name="Regular Outlawed Foot Sergeant" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1abc-01e1-1a59-38f4" name="Veteran Outlawed Foot Sergeant" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d9bf-eb80-7152-ffa5" name="Outlawed Foot Sergeants" hidden="false" collective="false" import="true" type="unit">
@@ -3301,12 +4885,20 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d9ae-d698-974e-91e3" name="Signalman" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="9.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e6f2-2414-a6c7-3aa9" name="Veteran Forest Slingers" hidden="false" collective="false" import="true" type="unit">
@@ -3316,6 +4908,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e223-5545-e885-52c4" name="Cutthroats" hidden="false" collective="false" import="true" type="unit">
@@ -3346,25 +4942,37 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f52e-4396-ad1e-23ec" name="William of Cassingham" hidden="false" collective="false" import="true" type="model">
       <comment>May give upto 3 group in your retinue Ambush at the cost of 1 point per member</comment>
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1ae8-0391-b29e-5ea6" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1ae8-0391-b29e-5ea6" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="48.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8ed9-3b44-a6ed-d156" name="Thomas, Count of Perche" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ac76-d5e5-65c1-c544" type="max"/>
+        <constraint field="selections" scope="54b6-40fc-bedd-1d7f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ac76-d5e5-65c1-c544" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="35.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2baa-9a2b-8dd2-4e9d" name="Poacher" hidden="false" collective="false" import="true" type="upgrade">
@@ -3372,8 +4980,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="a082-4f88-6b97-39a7" name="Poacher" hidden="false" targetId="c4ad-4b51-0fbf-8b4a" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f737-dca7-f2d9-772a" name="Cruelty" hidden="false" collective="false" import="true" type="upgrade">
@@ -3381,8 +4993,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="bd3b-616f-fffa-b4d0" name="Cruelty" hidden="false" targetId="c27c-6ca5-29c2-e183" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="325b-1f1e-b93f-3371" name="Bishop" hidden="false" collective="false" import="true" type="model">
@@ -3392,11 +5008,15 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f13a-3c51-796c-6126" name="Peter Des Roches, Bishop of Winchester" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3aa4-435b-7dd9-4906" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3aa4-435b-7dd9-4906" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="8c7a-3500-48d0-66b8" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
@@ -3405,12 +5025,20 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="55.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="997b-637a-0647-7554" name="Poor Warrior" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d14a-1d68-a3d3-9145" name="Poor Warriors" hidden="false" collective="false" import="true" type="unit">
@@ -3424,12 +5052,20 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7b2e-2e60-5b5e-d74f" name="Slinger" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7132-dcaa-1b1f-a6b7" name="Slingers" hidden="false" collective="false" import="true" type="unit">
@@ -3442,6 +5078,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f98d-1aca-6398-94fc" name="Hearthguards" hidden="false" collective="false" import="true" type="model">
@@ -3455,12 +5095,20 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="05d3-3816-c709-0388" name="Javelin Skirmisher" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="33cb-b599-c13b-6e1d" name="Javelin Skirmishers" hidden="false" collective="false" import="true" type="unit">
@@ -3477,12 +5125,20 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4074-9080-d006-2798" name="Hermit Priest" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c1ac-b0c6-cd06-5ece" name="Coracle" hidden="false" collective="false" import="true" type="upgrade">
@@ -3492,6 +5148,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0836-f68a-05a4-269f" name="Bard" hidden="false" collective="false" import="true" type="model">
@@ -3501,12 +5161,20 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3b20-33a2-4333-dd29" name="Knifeman" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="625d-6b29-a716-fea2" name="Knifemen" hidden="false" collective="false" import="true" type="unit">
@@ -3520,18 +5188,33 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d81a-9222-ec2f-dc53" name="Knife" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fc04-b437-46f7-d09c" name="Dane Axe" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="1631-0f3c-150d-1bb5" name="Slow" hidden="false" targetId="0c8a-9d64-f617-3fed" type="rule"/>
+      </infoLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cb5d-4a82-5d11-73c2" name="Commander" hidden="false" collective="false" import="true" type="upgrade">
@@ -3544,11 +5227,15 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="11d2-bb4d-8052-ff9b" name="Llywelyn ap Gruffudd" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8072-9197-d843-e35d" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8072-9197-d843-e35d" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="0c17-7205-e9e4-2779" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
@@ -3558,15 +5245,26 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="320d-f249-240c-0360" name="Pony" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3e7-e7ae-1d3b-5c76" type="max"/>
       </constraints>
+      <infoLinks>
+        <infoLink id="b1c2-b98d-ca64-2474" name="Pony" hidden="false" targetId="3bff-c73b-e565-bc54" type="rule"/>
+      </infoLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5e62-790c-6a40-6854" name="Cavalryman" hidden="false" collective="false" import="true" type="model">
@@ -3576,111 +5274,175 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d635-73e7-c719-0ffb" name="Cavalry" hidden="false" collective="false" import="true" type="unit">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8ad0-016a-7bc9-e754" name="Green Cavalry" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5515-9b1d-8848-aeb0" name="Iregular Cavalry" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fe7c-91f6-531d-4199" name="Regular Cavalry" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4b59-8bbc-b890-083e" name="Veteran Cavalry" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0f39-0f7b-0d6c-5527" name="Green Javelin Skirmishers" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ed76-a71e-d302-bc76" name="Irregular Javelin Skirmishers" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="58a5-4b21-b8fa-f159" name="Regular Javelin Skirmishers" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ba06-4979-a73c-d394" name="Veteran Javelin Skirmishers" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d387-0718-313c-1fbf" name="Philippe Marc, High Sheriff of Nottinghamshire" publicationId="6c06-f51b-fa39-53d5" page="13" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4bc8-3895-d0a4-dd07" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4bc8-3895-d0a4-dd07" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="194c-f7eb-14d7-958f" name="Eustace de Lowdham, The Undersheriff" publicationId="6c06-f51b-fa39-53d5" page="14" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7713-139b-758c-9022" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7713-139b-758c-9022" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d6d7-e79d-90f8-c069" name="Walter de Gray, Archbishop of York" publicationId="6c06-f51b-fa39-53d5" page="16" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55f8-f0ab-8874-5b55" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55f8-f0ab-8874-5b55" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4a16-efbe-6968-50bf" name="Priest of Wimentum" publicationId="6c06-f51b-fa39-53d5" page="19" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f4e-6acd-f622-8e5a" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f4e-6acd-f622-8e5a" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ff17-741e-86fd-3158" name="Blacksmith of Wimentun" publicationId="6c06-f51b-fa39-53d5" page="20" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2647-01fc-438c-620c" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2647-01fc-438c-620c" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="86eb-0b41-ecfb-cf58" name="Templar" publicationId="6c06-f51b-fa39-53d5" page="22" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="133b-968c-f022-62a9" name="Templars" publicationId="6c06-f51b-fa39-53d5" page="22" hidden="false" collective="false" import="true" type="unit">
@@ -3694,12 +5456,20 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bf80-48b3-4af9-6842" name="Flemish Mounted Sergeant" publicationId="6c06-f51b-fa39-53d5" page="31" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="22d9-b708-52f5-86d5" name="Flemish Mounted Sergeants" publicationId="6c06-f51b-fa39-53d5" page="31" hidden="false" collective="false" import="true" type="model">
@@ -3709,18 +5479,30 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3d8d-3858-84b8-8949" name="Irregular Deserter Kapitan" publicationId="6c06-f51b-fa39-53d5" page="56" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a2c4-150e-f204-33ca" name="Deserter" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0049-e3ef-d16e-75b3" name="Deserters" hidden="false" collective="false" import="true" type="unit">
@@ -3741,12 +5523,20 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="282e-e5f7-7402-acc5" name="Poacher (Deserter)" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="5.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4559-0a26-ba8e-f790" name="Cornered Dogs" publicationId="6c06-f51b-fa39-53d5" page="60" hidden="false" collective="false" import="true" type="upgrade">
@@ -3754,8 +5544,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="e302-9b0e-a8a9-00ac" name="Cornered Dogs" hidden="false" targetId="00a2-dc68-bf44-190a" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e0a0-c79c-364e-9060" name="Crack Shot" hidden="false" collective="false" import="true" type="upgrade">
@@ -3763,8 +5557,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="3c82-fd80-98a0-153e" name="Crack Shot" hidden="false" targetId="f5c6-5238-92c1-00d2" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8e29-3a32-b6fd-8733" name="Dagger in the Dark" publicationId="6c06-f51b-fa39-53d5" page="60" hidden="false" collective="false" import="true" type="upgrade">
@@ -3772,8 +5570,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="c2ba-a68a-23e0-7454" name="Dagger in the Dark" hidden="false" targetId="d3b4-a880-9969-d261" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e059-7c01-3e05-77e4" name="Dirty Fighters" publicationId="6c06-f51b-fa39-53d5" page="60" hidden="false" collective="false" import="true" type="upgrade">
@@ -3781,17 +5583,32 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="631d-c2c6-fe64-dc7b" name="Dirty Fighters" hidden="false" targetId="b1df-f8b5-deaf-a9e7" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2a7c-13be-fad4-8542" name="Hunting Hound" publicationId="6c06-f51b-fa39-53d5" page="60" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="acae-9305-5aed-09cd" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="be2c-a828-4a75-2b52" name="Hunting Hound" hidden="false" targetId="c4a8-13ce-0805-60ee" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bfb1-1fea-85ba-e162" name="Live for the Hunt" publicationId="6c06-f51b-fa39-53d5" hidden="false" collective="false" import="true" type="upgrade">
@@ -3799,8 +5616,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="61ee-b2cc-9fad-c23c" name="Live for the Hunt" hidden="false" targetId="e161-799d-6ae1-4ed2" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c773-1592-496a-f1d9" name="Every Bloody Sunday" hidden="false" collective="false" import="true" type="upgrade">
@@ -3808,8 +5629,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="758c-bff7-071e-a9ca" name="Every Bloody Sunday" hidden="false" targetId="14a1-9f0e-d652-ad89" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2b36-28cf-7b74-9eb5" name="Followed into Exile" hidden="false" collective="false" import="true" type="upgrade">
@@ -3817,8 +5642,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="f1c5-482b-ab23-50fa" name="Followed into Exile" hidden="false" targetId="038c-48ce-df69-05e0" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ec52-fdb2-c3d3-27a3" name="Melt Away" hidden="false" collective="false" import="true" type="upgrade">
@@ -3826,26 +5655,38 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="67b8-3350-199a-ba77" name="Melt Away" hidden="false" targetId="af99-486c-d118-81d8" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5270-937d-86f4-c02b" name="Eustace the Monk" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e72-639b-c977-37bf" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e72-639b-c977-37bf" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="066b-6b4a-1167-d9a9" name="Fulk Fitz Warin" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96e3-158d-d9fb-62fb" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96e3-158d-d9fb-62fb" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8ea6-41eb-8903-65f6" name="Outlaw Commander" hidden="false" collective="false" import="true" type="upgrade">
@@ -3859,6 +5700,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5e75-3eb2-fde2-4d90" name="Battle Axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -3873,60 +5718,100 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c0ad-c1a5-c813-5fe3" name="Green Outlaw Commander" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3b60-c0b3-5bb8-941e" name="Irregular Outlaw Commander" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="827a-ea8c-689b-f007" name="Regular Outlaw Commander" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7d1a-383a-8afe-66ee" name="Veteran Outlaw Commander" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8835-a831-83c5-ea70" name="Regular Deserter Kapitan" publicationId="6c06-f51b-fa39-53d5" page="56" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="747d-0432-e29f-4a1c" name="Veteran Deserter Kapitan" publicationId="6c06-f51b-fa39-53d5" page="56" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e1e8-f301-f13b-1989" name="Deserter Kapitan" publicationId="6c06-f51b-fa39-53d5" page="56" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3d11-9edc-8fb7-7f6a" name="Regular Knight Templar" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2b47-7a6b-2e7d-7a0f" name="Veteran Knight Templar" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="29e4-4f50-32d4-f4a1" name="Green Outlaw Assassin" hidden="false" collective="false" import="true" type="upgrade">
@@ -3938,6 +5823,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9398-ec81-ebed-b827" name="Duel Daggers" hidden="false" collective="false" import="true" type="upgrade">
@@ -3950,6 +5839,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="134f-718e-1924-5bd2" name="Irregular Outlaw Assassin" hidden="false" collective="false" import="true" type="upgrade">
@@ -3961,6 +5854,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c9a8-618c-5d92-f6fd" name="Regular Outlaw Assassin" hidden="false" collective="false" import="true" type="upgrade">
@@ -3972,6 +5869,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="be29-0e9b-d825-fe0c" name="Veteran Outlaw Assassin" hidden="false" collective="false" import="true" type="upgrade">
@@ -3983,6 +5884,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0a92-40ee-c410-add0" name="Outlaw Assassin" hidden="false" collective="false" import="true" type="model">
@@ -3994,39 +5899,63 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="925f-3547-0f95-ca0c" name="Irregular Poacher" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5f15-62db-302a-dcf8" name="Veteran Poacher" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9e46-fec2-319e-4972" name="Regular Poacher" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3988-c5ec-e8ba-eda2" name="William the Rough, King of Scotland" publicationId="a062-c41f-4368-39ae" page="5" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d522-bd57-34fd-ad5b" type="max"/>
+        <constraint field="selections" scope="c109-1ade-6a74-ca04" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d522-bd57-34fd-ad5b" type="max"/>
       </constraints>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e218-3358-4f4d-a7e5" name="Kings Guard" publicationId="a062-c41f-4368-39ae" page="14" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4d68-f73d-6e8e-5f10" name="Kings Guards" publicationId="a062-c41f-4368-39ae" page="14" hidden="false" collective="false" import="true" type="model">
@@ -4048,24 +5977,40 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c847-26ee-5feb-b219" name="Irregular Kings Guard" publicationId="a062-c41f-4368-39ae" page="14" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1667-2866-7431-792c" name="Regular Kings Guard" publicationId="a062-c41f-4368-39ae" page="14" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="86b6-fca0-0a59-df1c" name="Veteran Kings Guard" publicationId="a062-c41f-4368-39ae" page="14" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d05f-0551-9cb8-61bc" name="Ceathairne" hidden="false" collective="false" import="true" type="model">
@@ -4075,6 +6020,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9dca-9262-3374-d3fb" name="Green Cateran" publicationId="a062-c41f-4368-39ae" page="15" hidden="false" collective="false" import="true" type="upgrade">
@@ -4084,30 +6033,50 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="edaa-5c0b-ddaf-8f42" name="Irregular Cateran" publicationId="a062-c41f-4368-39ae" page="15" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0209-8534-1f09-4e56" name="Regular Cateran" publicationId="a062-c41f-4368-39ae" page="15" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="103f-3cab-ca59-5cb5" name="Veteran Cateran" publicationId="a062-c41f-4368-39ae" page="15" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4495-e346-e0de-389f" name="Borderer" publicationId="a062-c41f-4368-39ae" page="16, 17" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5ba3-7577-a4c7-421c" name="Veteran Borderer" hidden="false" collective="false" import="true" type="model">
@@ -4117,6 +6086,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5b75-b064-5d0c-36f7" name="Green Borderer" hidden="false" collective="false" import="true" type="model">
@@ -4126,23 +6099,35 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="716e-dc2b-7124-8287" name="Irregular Borderer" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d192-5cb5-ea31-58e5" name="Regular Borderer" hidden="false" collective="false" import="true" type="model">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6104-ef29-a8e5-ca5c" name="Duke William of Normandy" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d94-f791-c37e-18ca" type="max"/>
+        <constraint field="selections" scope="fbf1-4ad0-9bd2-1d6a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d94-f791-c37e-18ca" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="0fe8-89ad-1dbb-a9b6" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
@@ -4152,11 +6137,15 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ed1f-3241-e88b-d268" name="Tustin fitz Rolf" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da64-65e1-3a42-82d3" type="max"/>
+        <constraint field="selections" scope="fbf1-4ad0-9bd2-1d6a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da64-65e1-3a42-82d3" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="1ec1-7b1d-4e19-5c1b" name="Norman" hidden="false" targetId="2c7e-4e40-c9b6-81aa" primary="false"/>
@@ -4166,11 +6155,15 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="10c0-5c2d-d68c-dd1a" name="Bishop Odo of Bayeux" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c3d-26c5-9749-f2ca" type="max"/>
+        <constraint field="selections" scope="fbf1-4ad0-9bd2-1d6a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c3d-26c5-9749-f2ca" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="e3a9-d212-0759-94c5" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
@@ -4180,6 +6173,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bf01-03c6-ed17-1893" name="Norman Warlord" hidden="false" collective="false" import="true" type="model">
@@ -4190,6 +6187,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fcb9-9dab-7131-4bfe" name="Norman Heavy Cavalryman" hidden="false" collective="false" import="true" type="model">
@@ -4203,6 +6204,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9d5a-222c-4a83-5e48" name="Breton Cavalryman" hidden="false" collective="false" import="true" type="model">
@@ -4210,12 +6215,17 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="885a-fa0e-ac7f-8c6f" type="min"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="7fae-dd1c-3c9c-0387" name="Cavalry" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="true"/>
+        <categoryLink id="7fae-dd1c-3c9c-0387" name="Cavalry" hidden="false" targetId="a0c2-2394-b0d0-848a" primary="false"/>
         <categoryLink id="b1c7-cae4-b6a4-7507" name="Norman" hidden="false" targetId="2c7e-4e40-c9b6-81aa" primary="false"/>
+        <categoryLink id="fe8b-6b84-5c44-c0ee" name="New CategoryLink" hidden="false" targetId="a846-c70b-e7db-703a" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d174-efba-ffe7-83f2" name="Norman Cavalryman" hidden="false" collective="false" import="true" type="model">
@@ -4226,6 +6236,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4026-e167-5ab7-65a8" name="Norman Infantry" hidden="false" collective="false" import="true" type="model">
@@ -4236,6 +6250,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ff38-52d0-1c5b-b9d9" name="Scots Noble Cavalry" hidden="false" collective="false" import="true" type="model">
@@ -4247,6 +6265,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8e32-0f81-62a9-d777" name="Scots Chieftain" hidden="false" collective="false" import="true" type="model">
@@ -4257,6 +6279,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3c07-7788-458d-d2c5" name="Scots Noble" hidden="false" collective="false" import="true" type="model">
@@ -4267,6 +6293,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0147-d13b-d686-1f4d" name="Scots Warrior" hidden="false" collective="false" import="true" type="model">
@@ -4277,11 +6307,15 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c06c-c2e4-dc9e-d37c" name="Ragnar Lodbrok" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad0f-6b04-5471-28bd" type="max"/>
+        <constraint field="selections" scope="fbf1-4ad0-9bd2-1d6a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad0f-6b04-5471-28bd" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="98a6-6fb9-181b-638d" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
@@ -4291,11 +6325,15 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5b1c-cb18-4104-27c9" name="Harald Hardrada, King of Norway" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e35-53ca-30d9-5cbd" type="max"/>
+        <constraint field="selections" scope="fbf1-4ad0-9bd2-1d6a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e35-53ca-30d9-5cbd" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="074f-3021-faf9-3783" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
@@ -4305,11 +6343,15 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d59a-1964-d70b-a668" name="Rolf the Jolly" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1abc-0941-ac98-0634" type="max"/>
+        <constraint field="selections" scope="fbf1-4ad0-9bd2-1d6a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1abc-0941-ac98-0634" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="ce6f-038b-7a5e-1137" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
@@ -4319,11 +6361,15 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="84c9-1c67-a64b-3f83" name="Gunnolf Wolfbane" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9390-8fc1-d4ba-8fa8" type="max"/>
+        <constraint field="selections" scope="fbf1-4ad0-9bd2-1d6a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9390-8fc1-d4ba-8fa8" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="82d6-c5b7-e2cf-3932" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
@@ -4333,6 +6379,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3a54-fae5-f9c5-3b71" name="Berserker" hidden="false" collective="false" import="true" type="model">
@@ -4343,6 +6393,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8695-f0a1-61f4-5856" name="Viking Warlord" hidden="false" collective="false" import="true" type="model">
@@ -4353,6 +6407,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ead2-4631-6377-7a63" name="Bondi" hidden="false" collective="false" import="true" type="model">
@@ -4363,6 +6421,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0a73-af6a-338d-f7dc" name="Hirdman" hidden="false" collective="false" import="true" type="model">
@@ -4373,9 +6435,16 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6358-e46e-19c9-60fb" name="Valkyrie" hidden="false" collective="false" import="true" type="model">
+      <infoLinks>
+        <infoLink id="d712-77d4-94cb-1274" name="Valkyrie" hidden="false" targetId="8294-fdd9-aefd-0838" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="4284-70bf-3d06-2c8d" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
         <categoryLink id="bd02-fa33-2a5f-eed0" name="Viking" hidden="false" targetId="3315-b97b-19ee-5aad" primary="false"/>
@@ -4383,6 +6452,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2607-261d-332e-d268" name="Shieldmaiden" hidden="false" collective="false" import="true" type="model">
@@ -4393,11 +6466,15 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f8ea-aef1-722a-d623" name="King Harold Godwinson" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f92-4d18-f18d-bd22" type="max"/>
+        <constraint field="selections" scope="fbf1-4ad0-9bd2-1d6a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f92-4d18-f18d-bd22" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="616c-ead8-2f66-b418" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
@@ -4407,26 +6484,23 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="fa24-a7c3-f55e-20d1" name="Huscarl Commander" hidden="false" collective="false" import="true" type="model">
-      <categoryLinks>
-        <categoryLink id="1bf2-1ac6-f1fc-0da1" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
-        <categoryLink id="3878-afbc-f42b-b2dc" name="Saxon" hidden="false" targetId="3f50-f120-04ed-8d7e" primary="false"/>
-      </categoryLinks>
-      <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
-        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9fce-2a75-969f-b5d5" name="Huscarl" hidden="false" collective="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink id="af16-b430-3518-52a1" name="Saxon" hidden="false" targetId="3f50-f120-04ed-8d7e" primary="false"/>
         <categoryLink id="68ef-b1ca-77a8-a70a" name="New CategoryLink" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="96af-c3b8-1b58-4a06" name="Saxon Lord" hidden="false" collective="false" import="true" type="model">
@@ -4437,6 +6511,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dffe-3e8b-7b2a-2fc8" name="Saxon Champion" hidden="false" collective="false" import="true" type="model">
@@ -4446,20 +6524,29 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="afa2-6339-d035-8a81" name="Aethelfaed, The Lady of Mercia" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="348a-abf0-17c2-f868" type="max"/>
+        <constraint field="selections" scope="fbf1-4ad0-9bd2-1d6a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="348a-abf0-17c2-f868" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="4a33-0f17-c683-64eb" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
-        <categoryLink id="7a96-8104-53b1-bc33" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="7a96-8104-53b1-bc33" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false"/>
         <categoryLink id="ee70-f902-2a78-9ceb" name="Saxon" hidden="false" targetId="3f50-f120-04ed-8d7e" primary="false"/>
+        <categoryLink id="24ea-1f6b-5dee-8c3b" name="New CategoryLink" hidden="false" targetId="a846-c70b-e7db-703a" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b6c3-a6cc-39e3-5eb3" name="Saxon Earl" hidden="false" collective="false" import="true" type="model">
@@ -4470,20 +6557,29 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3445-221c-3109-fa88" name="Aethelstan" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="77f9-5063-6abd-711b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="429c-e279-4967-4c16" type="max"/>
+        <constraint field="selections" scope="fbf1-4ad0-9bd2-1d6a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="429c-e279-4967-4c16" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="4ff3-ffe5-9ec6-d606" name="Character" hidden="false" targetId="3edd-da00-b5b5-a048" primary="false"/>
-        <categoryLink id="6f5e-04af-223d-cf04" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+        <categoryLink id="6f5e-04af-223d-cf04" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false"/>
         <categoryLink id="e6e1-7bee-0d3b-16ac" name="Saxon" hidden="false" targetId="3f50-f120-04ed-8d7e" primary="false"/>
+        <categoryLink id="3d03-a34f-f4a2-4b9b" name="New CategoryLink" hidden="false" targetId="a846-c70b-e7db-703a" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a845-884a-2ea4-6ebe" name="Alfred the Great" hidden="false" collective="false" import="true" type="model">
@@ -4495,6 +6591,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2bcd-d7d5-0110-e7aa" name="Thegn" hidden="false" collective="false" import="true" type="model">
@@ -4505,6 +6605,10 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8520-5ce9-dacd-ee47" name="Fyrd" hidden="false" collective="false" import="true" type="model">
@@ -4515,12 +6619,20 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5d61-332b-8195-4517" name="Foot()" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c341-7e1e-a586-ca4a" name="Masters of the Wild" publicationId="6c06-f51b-fa39-53d5" page="60" hidden="false" collective="false" import="true" type="upgrade">
@@ -4528,8 +6640,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="779e-2c53-27a1-5555" name="Masters of the wild" hidden="false" targetId="d292-9e9c-4d8e-a531" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d52c-3bab-7e15-9e19" name="Signallers" hidden="false" collective="false" import="true" type="upgrade">
@@ -4537,8 +6653,12 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="faad-bd84-e539-d5ad" name="Signaller" hidden="false" targetId="2151-afdf-c9be-b28e" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="1.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="caa1-fa3a-59d6-27ad" name="Watchers in the Woods" hidden="false" collective="false" import="true" type="upgrade">
@@ -4546,8 +6666,984 @@ Short upto 8&quot;, causes shock if 25% casualties caused</characteristic>
         <infoLink id="2b06-a6bd-b66d-c238" name="Watchers in the Woods" hidden="false" targetId="20da-03f8-98aa-50b2" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="2.0"/>
         <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1f15-43d9-45bb-d8cb" name="Jarl" hidden="false" collective="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink id="003d-ebbc-cda0-8e1b" name="New CategoryLink" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1d25-e97b-5d7c-1a3e" name="Green Jarl" hidden="false" collective="false" import="true" type="unit">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cf92-b790-9986-8e80" name="Irregular Jarl" hidden="false" collective="false" import="true" type="unit">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2f53-0ea3-1749-ee7d" name="Regular Jarl" hidden="false" collective="false" import="true" type="unit">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f66f-912e-caee-af8f" name="Veteran Jarl" hidden="false" collective="false" import="true" type="unit">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7f04-4c9d-bdb4-e16a" name="Raider" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0704-2266-7fa8-a536" name="Green Raider" hidden="false" collective="false" import="true" type="unit">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9bd3-ab54-835b-605d" name="Irregular Raider" hidden="false" collective="false" import="true" type="unit">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6dc4-81af-9af8-173a" name="Regular Raider" hidden="false" collective="false" import="true" type="unit">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4f6d-7a53-458c-4505" name="Veteran Raider" hidden="false" collective="false" import="true" type="unit">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="be70-f2e5-c1b8-c9d2" name="Mounted Sergeants" hidden="false" collective="false" import="true" type="unit">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="97d7-1070-6f4b-6514" name="Varangian Guard" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="419a-6236-ed4d-c082" name="Cataphract" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e2d4-9f6c-bda0-afc8" name="Horse Archer" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="976e-3e8f-98c3-08bd" name="Hersir" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="99bc-20e5-915a-928c" name="Green Hersir" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ba0f-5954-905f-60ad" name="Irregular Hersir" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b3f5-2c5e-e32f-0f19" name="Regular Hersir" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="26fa-7baf-7112-8ae1" name="Veteran Hersir" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ae3c-83c1-9442-7922" name="Irregular Hirdman" hidden="false" collective="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink id="4277-b795-c9a1-204d" name="Viking" hidden="false" targetId="3315-b97b-19ee-5aad" primary="false"/>
+        <categoryLink id="3150-4a0e-1770-0d9d" name="New CategoryLink" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4b2e-e8e0-92a3-4eeb" name="Regular Hirdman" hidden="false" collective="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink id="9e2f-f9f1-1f1f-1363" name="Viking" hidden="false" targetId="3315-b97b-19ee-5aad" primary="false"/>
+        <categoryLink id="c24b-114d-c3b2-35fc" name="New CategoryLink" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4d5b-d7d9-7ebe-596d" name="Veteran Hirdman" hidden="false" collective="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="ff26-c21f-f773-38c4" name="Viking" hidden="false" targetId="3315-b97b-19ee-5aad" primary="false"/>
+        <categoryLink id="ea9f-8ed8-2825-e81d" name="New CategoryLink" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bbce-deb7-dc51-6070" name="Green Shieldmaiden" hidden="false" collective="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink id="f661-66b7-b75a-a654" name="Viking" hidden="false" targetId="3315-b97b-19ee-5aad" primary="false"/>
+        <categoryLink id="f90a-5bad-4319-97ff" name="New CategoryLink" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="dab0-1df1-0682-4958" name="Irregular Shieldmaiden" hidden="false" collective="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink id="11b0-be49-d7e4-4751" name="Viking" hidden="false" targetId="3315-b97b-19ee-5aad" primary="false"/>
+        <categoryLink id="cf86-5687-f30a-04c8" name="New CategoryLink" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3669-0867-f4f6-94bf" name="Regular Shieldmaiden" hidden="false" collective="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink id="ff00-b0e7-d458-1620" name="Viking" hidden="false" targetId="3315-b97b-19ee-5aad" primary="false"/>
+        <categoryLink id="d439-6d13-8a7e-5ee7" name="New CategoryLink" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f786-2448-2384-759a" name="Veteran Shieldmaiden" hidden="false" collective="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink id="996e-a278-c95c-d276" name="Viking" hidden="false" targetId="3315-b97b-19ee-5aad" primary="false"/>
+        <categoryLink id="7f10-e03d-7ae7-ac5e" name="New CategoryLink" hidden="false" targetId="fd0b-e1aa-8b33-68fd" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e5c4-e5ef-1a60-5a33" name="Eorl" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="74d7-05a8-b8ae-2348" name="Seidhr" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="a71d-c356-fa94-0d35" name="Seidhr" hidden="false" targetId="3c16-d0ca-5bad-e78f" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="5.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3c35-e676-7916-ad6d" name="Mounted Raider" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="be8b-879c-c2d3-fc5c" name="King&apos;s Thegn" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9c41-fce5-e5fc-8362" name="Youngling" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7411-8d64-d6f7-d0e5" name="Mounted Scout" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="33c2-b4e4-14d5-17fd" name="Count" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="366e-dfa2-8c4c-b557" name="Milites Commander" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c830-1ba5-5e5b-7371" name="Death Squad" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f1a2-c7a9-6f7f-c33b" name="Milites" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="94ad-67b5-9bbc-d19b" name="Terrifying" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="3762-5199-372f-f15f" name="Terrifying" hidden="false" targetId="66c7-e6eb-a769-65d9" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="dcff-cb23-b8cc-e491" name="Vast Network" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="8c4f-10e6-4b72-ebf6" name="Vast Network" hidden="false" targetId="223d-c685-c957-5672" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fe3c-c0b9-6db1-a965" name="Eastern Contacts - Free" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="5a0e-2acd-de9f-2fcc" name="Eastern Contacts" hidden="false" targetId="c196-eb67-f11a-6ff3" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5600-9059-b59f-a0c4" name="Planned Attack" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="9541-b37a-4245-f6c8" name="Planned Attack" hidden="false" targetId="7959-73c0-8b8f-68bd" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="79b7-3e59-657a-79a5" name="Shield Brothers" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="c1b8-01e7-2f77-cc32" name="Shield Brothers" hidden="false" targetId="fd2a-0870-45d7-f0f3" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="83de-c211-906a-4a34" name="Raven Banner" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="515e-34d3-5f7b-ad60" name="Raven Banner" hidden="false" targetId="f3ed-d1d9-5723-538f" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bca3-a08d-5eaa-5b6f" name="Valhalla" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="dc27-ddbf-c775-2e97" name="Valhalla" hidden="false" targetId="c293-f1ee-eca3-75b8" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7dda-efa7-f29c-f332" name="Tostig Godwinson" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f7ea-8f04-ff45-6c4b" name="Magnus Haraldsson" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="dc4b-131c-0b2d-4eca" name="Olaf Kyrre" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3e3d-f9c4-9490-3060" name="Huscarl Commander" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d9b2-45dc-6daf-435e" name="Battle Cry" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ab5-cbdb-a868-a7b6" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="823a-4666-a827-0669" name="Battle Cry" hidden="false" targetId="a5ed-54d1-b76d-6523" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="a0fc-243f-5117-5c42" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0a71-83bf-7a28-b281" name="Emboldened" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41ae-0e9b-7d39-de01" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="fe9a-4baa-9771-3cb9" name="Emboldened" hidden="false" targetId="2d5a-6da6-31f3-cbbc" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d184-793b-6d16-a15d" name="Shield Strike" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="937b-5ed6-1fa4-7a63" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="0368-e04e-65dc-79b5" name="Shield Strike" hidden="false" targetId="fedd-01aa-05af-3caa" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="876e-8cde-ef5d-b08d" name="Angons" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd90-374f-8db4-9f24" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="8ca0-ba76-ceaf-2258" name="Angons" hidden="false" targetId="f667-d4bc-241d-9629" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c5f6-3b2d-ea1a-4894" name="Runic Inscription" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ba5-992d-cc63-2efc" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="05d7-d0c9-e1d7-60cf" name="Runic Inscriptions" hidden="false" targetId="7c4f-51df-ef3a-2388" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="052a-a47c-a9de-ab70" name="&quot;Fighting Man&quot; Bannerman" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be8a-60b5-331d-8ed0" type="instanceOf"/>
+          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f8ea-aef1-722a-d623" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="11.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="953d-7512-f520-c1cc" name="Edwin, Earl of Mercia" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3d1a-55d6-f02e-803b" name="Hereward the Wake" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f742-4fd7-0df0-3d0b" name="Leofric the Deacon" hidden="false" collective="false" import="true" type="model">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f441-db94-4fb2-e3c3" name="Able Commander" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="2bfc-c5bc-5e61-d76a" name="Able Commander" hidden="false" targetId="8144-e9c2-1c7e-fc4f" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4ae3-3eda-80a4-b2b7" name="Opportunist" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="4cb2-d82a-fc02-0697" name="Opportunist" hidden="false" targetId="4549-2844-a416-a960" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1942-1215-7e04-6c65" name="Trained from Childhood" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="8d4e-d9ed-27f0-e8db" name="Trained from Childhood" hidden="false" targetId="2c9e-07e5-4e4d-a2a3" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2eda-73bf-d21d-6a2f" name="Lucky" publicationId="418f-8173-eff1-7be3" page="43" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="0004-fc79-a857-effa" name="Lucky" hidden="false" targetId="28ed-41cc-489a-727b" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="96c1-728d-46e8-80e9" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9177-f7e8-1f8e-c549" name="Decisive" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="9734-e990-fbed-a988" name="Decisive" hidden="false" targetId="3b74-37fb-fbcd-3116" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ebdc-e8f8-51dc-246f" name="Feigned Attack" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="b7ec-b12b-1a30-1521" name="Feigned Attack" hidden="false" targetId="9503-c05c-cf13-4c86" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="22d6-e0b0-dbaf-c067" name="Crouched Spear" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="c026-bf37-d186-8712" name="Crouched Spear" hidden="false" targetId="28a2-3642-4496-4fc7" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ffac-573d-8749-634a" name="All or Nothing" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="2e66-7c5c-ca7d-fbef" name="All or Nothing" hidden="false" targetId="f371-e26b-7048-6e88" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8244-f37e-6102-bdd4" name="Charasmatic Leader" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="d654-c605-a9d5-d1d8" name="Charismatic Leader" hidden="false" targetId="8eaa-f4c1-b534-6397" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="9532-03d5-f9ec-7f02" name="Command Ability" hidden="false" targetId="9570-b725-99c0-9229" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5450-6397-6daf-c478" name="Cunning Tactician" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-category" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9390-48c4-3dd4-aa13" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink id="c63a-4aad-3eb8-401a" name="Cunning Tactician" hidden="false" targetId="d2cd-a659-9e86-ee0e" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4498-510f-9efa-ee71" name="Glancing Attack" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="ba3c-e338-9295-e1ef" name="Glancing Attack" hidden="false" targetId="f759-dbcc-c86e-3a11" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="aa3a-7ea4-087a-fd19" name="Morcar, Earl of Northumbria" hidden="false" collective="false" import="true" type="unit">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d90a-11f4-6d7f-5224" name="Command Abilities" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7051-ad9c-c8b6-05b5" name="Inspiring Presence" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="c75c-40f5-2bd3-f584" name="Inspiring Presence" hidden="false" targetId="0101-af79-3c31-02d5" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3c6d-2526-0850-3deb" name="Resolute Defender" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="a417-10b1-16ca-9bcc" name="Resolute Defender" hidden="false" targetId="c650-a63b-9677-3c4a" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f6d6-9229-a221-a800" name="Revered Heirloom Sword" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="cb4c-0947-b940-2a34" name="Revered Heirloom Sword" hidden="false" targetId="3dbf-04de-bf9e-de41" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9225-2f26-d71e-31db" name="To the King!" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="0b4b-b6df-f45d-dd08" name="To the King!" hidden="false" targetId="b633-4996-0fc4-85de" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c80b-5168-695b-738b" name="Weapons Master" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="b478-77ec-c95c-d441" name="Weapons Master" hidden="false" targetId="320b-0e53-0502-09d7" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0983-a9e2-551f-afa7" name="Within Reach" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="4d1a-b411-c825-06e6" name="Within Reach" hidden="false" targetId="2562-ce4a-0dc2-d5c6" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="02c3-103e-2486-8901" name="Custom Champion" publicationId="418f-8173-eff1-7be3" page="88" hidden="false" collective="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink id="0eb4-db30-b99a-5849" name="New CategoryLink" hidden="false" targetId="a846-c70b-e7db-703a" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="7.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7521-a291-f41a-7081" name="Champion Random Ability" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="4fb5-1d9b-3c95-7ffc" name="Champion Random Ability" hidden="false" targetId="acf4-5681-62cc-77ee" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="fd2e-a67d-734b-28f9" name="Ability" hidden="false" targetId="243c-1778-1eea-17a3" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cf42-48d3-093f-04d5" name="Custom Noble" hidden="false" collective="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="6464-c1da-5d14-6835" name="Command" hidden="false" targetId="9390-48c4-3dd4-aa13" primary="false"/>
+        <categoryLink id="b33f-51d3-6864-c773" name="New CategoryLink" hidden="false" targetId="a846-c70b-e7db-703a" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="178c-7623-2fc5-60e0" name="Custom Warlord" hidden="false" collective="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="fb6c-a59a-66ae-a790" name="New CategoryLink" hidden="false" targetId="a846-c70b-e7db-703a" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="d50a-f0ea-3894-8f6d" value="0.0"/>
+        <cost name="Actions" typeId="490e-5e59-747f-5523" value="0.0"/>
+        <cost name="Stats" typeId="0267-bb02-223a-cc40" value="0.0"/>
+        <cost name="attack" typeId="db34-0b81-03fe-a16d" value="0.0"/>
+        <cost name="morale" typeId="0896-e87a-3828-2331" value="0.0"/>
+        <cost name="defence" typeId="3268-0a3c-16e6-0f65" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -4598,7 +7694,7 @@ Friendly Groups within 6&quot; gain +1 Attack Dice and +1 Defence Dice</descript
 
 Can move and shoot even if at long range</description>
     </rule>
-    <rule id="f055-ed26-92e0-730e" name="Calming Presence" publicationId="0ef3-a4ac-86f8-fb60" page="85" hidden="false">
+    <rule id="f055-ed26-92e0-730e" name="Calming Presence" publicationId="0ef3-a4ac-86f8-fb60" page="85" hidden="true">
       <description>A calming beacon in the storm of war.
 
 During the housekeeping phase anyone within 6&quot; automatically reduces their morale dice by 2 if eligable.</description>
@@ -4643,7 +7739,7 @@ Opponents must pass a Morale Check to charge you.</description>
 
 Any &apos;0&apos; scored for Attack Rolls cause two successes regardless of weapon.</description>
     </rule>
-    <rule id="2bf1-c8b3-c5c8-875d" name="Blood Lust" publicationId="0ef3-a4ac-86f8-fb60" page="85" hidden="false">
+    <rule id="2bf1-c8b3-c5c8-875d" name="Bloodlust" publicationId="0ef3-a4ac-86f8-fb60" page="85" hidden="false">
       <description>The thirst for blood is never sated.
 
 Roll 2D6 for charge range and use the highest result for this Commander and their Command Group</description>
@@ -4790,7 +7886,7 @@ If this group is charged and wins the combat action by using a reaction, after e
 
 A single Defence Roll can be rerolled once per game the result of the second roll stands.  This takes place before any Shield Roll.</description>
     </rule>
-    <rule id="f667-33db-20a2-0af6" name="Born for war" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false">
+    <rule id="f667-33db-20a2-0af6" name="Born for War" publicationId="0ef3-a4ac-86f8-fb60" page="79" hidden="false">
       <description>Natural fighters who enjoy the thrill of melee.
 
 Choose a Defence or Attack Reaction when charged as a free Action but only if they have no Action, it must be used first.</description>
@@ -5264,6 +8360,185 @@ Any warriors who serve Eustance gain +1 to Morale Checks when testing to recieve
     </rule>
     <rule id="7af1-2107-21a4-9e53" name="For the Family" publicationId="6c06-f51b-fa39-53d5" page="20" hidden="false">
       <description>The Blacksmith Gains an extra defence dice if his group has not suffered any casualties</description>
+    </rule>
+    <rule id="3bff-c73b-e565-bc54" name="Pony" hidden="false">
+      <description>Increase javelin range by 2&quot;.  
+Can move through woods at the usual penalties.</description>
+    </rule>
+    <rule id="66c7-e6eb-a769-65d9" name="Terrifying" hidden="false">
+      <description>Any enemy group must pass a Moral Check with -2 to the roll result to charge this group</description>
+    </rule>
+    <rule id="223d-c685-c957-5672" name="Vast Network" publicationId="418f-8173-eff1-7be3" page="17" hidden="false">
+      <description>A groupwithin command range may use one of the Commander&apos;s Actions to make a reaction (this is NOT an order action)</description>
+    </rule>
+    <rule id="c196-eb67-f11a-6ff3" name="Eastern Contacts" publicationId="418f-8173-eff1-7be3" page="17" hidden="false">
+      <description>Vikings have access to Damascus steel ability from The Barons&apos; War rulebook</description>
+    </rule>
+    <rule id="7959-73c0-8b8f-68bd" name="Planned Attack" publicationId="418f-8173-eff1-7be3" page="17" hidden="false">
+      <description>The commander may roll 2 initiative dice in the first initiative phase without spending an Action</description>
+    </rule>
+    <rule id="fd2a-0870-45d7-f0f3" name="Shield Brothers" publicationId="418f-8173-eff1-7be3" page="17" hidden="false">
+      <description>This group gains +2 to Morale checks</description>
+    </rule>
+    <rule id="f3ed-d1d9-5723-538f" name="Raven Banner" publicationId="418f-8173-eff1-7be3" page="17" hidden="false">
+      <description>A defining feature of the invading Vikings, other than their renowned longships, is their rampant use of banners.  These warflags had fantastical depictions ranging from winged monsters to serpents.  However, the most widely recorded of all Viking standards pertains to their bearing of some raven device.  Known as Reafan ( or Raven), they were given a special status within the pagan Scandinavian religion. The Vikings believed the raven standard had the ‘power’ to impart victory as long as it fluttered above the battlefield. 
+
+All Viking groups with line of sight to your retinue Commander’s bannerman ignore the first casualty caused (Morale Dice, p45 of the main rulebook).Therefore, a Morale Dice is only added when a group loses its second warrior.  If the bannerman is removed as a casualty, all groups with line of sight to the command group gain +1 to their Morale Dice.</description>
+    </rule>
+    <rule id="c293-f1ee-eca3-75b8" name="Valhalla" publicationId="418f-8173-eff1-7be3" page="17" hidden="false">
+      <description>Viking religion promised warriors who fell in battle a place in Valhalla, where they would feast and fight among friends until the end of time.  Valhalla in Norse mythology is the resting place of the slain, a majestic, enormous hall whose ceiling is thatched with golden shields located in Asgard and ruled over by the god Odin. The dead warriors join the masses of those who have already died in combat, known as the Einherjar, as they prepare to aid Odin during the cataclysmic events of Ragnarök. 
+
+Vikings do not take a Morale Check when a friendly Group within 6” is removed completely, instead they give praise to the fallen on their way to Valhalla. (WhentoTest,p45mainrulebook)</description>
+    </rule>
+    <rule id="8294-fdd9-aefd-0838" name="Valkyrie" publicationId="418f-8173-eff1-7be3" page="69" hidden="false">
+      <description>Shield Maidens do not fear death, ignore the Morale Dice when making any Morale Checks.</description>
+    </rule>
+    <rule id="6c1f-9e8a-7a57-2593" name="Treasure Seeker" publicationId="418f-8173-eff1-7be3" page="69" hidden="false">
+      <description>Any objective captured or achieved by Magnus&apos; Command Group is worth double victory points.</description>
+    </rule>
+    <rule id="2184-5aef-757c-b702" name="The Old Gods" publicationId="418f-8173-eff1-7be3" page="68" hidden="false">
+      <description>Command Groups in Olaf&apos;s retinue cannot take Priest Upgrade.</description>
+    </rule>
+    <rule id="f220-3ca8-570e-a814" name="Sweyn&apos;s Danes" publicationId="418f-8173-eff1-7be3" page="68" hidden="false">
+      <description>May take a Command Group from the Viking army list.</description>
+    </rule>
+    <rule id="4fdb-9f3e-743e-3bee" name="Surprise Raid" publicationId="418f-8173-eff1-7be3" page="68" hidden="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c09b-43fa-ba17-ac3c" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>During deployment you may keep back 25% of your Retinue. When they activate during Round One, they may enter play from any table edge as long as the point of entry is 8&quot; away from an enemy and continue their action as normal.</description>
+    </rule>
+    <rule id="947e-3f13-1ac3-62b7" name="Shield Training" publicationId="418f-8173-eff1-7be3" page="68" hidden="false">
+      <description>May equip a Dane Axe and Shield gaining the benefit of both.</description>
+    </rule>
+    <rule id="4db2-2ead-c1ee-0a1e" name="Ruthless Tyranny" publicationId="418f-8173-eff1-7be3" page="68" hidden="false">
+      <description>Groups under Tostig&apos;s command do not need to test to receive an Order Action from him, instead their Morale Dice increases by one each time.</description>
+    </rule>
+    <rule id="e8af-a315-ed71-2a2f" name="Rousing Presence" hidden="false">
+      <description>May take one &apos;Settled&apos; Group and enable them to Surprise Raid.</description>
+    </rule>
+    <rule id="91d0-75cc-e53a-e665" name="Rebelious Spirit" publicationId="418f-8173-eff1-7be3" page="68" hidden="false">
+      <description>Reposition one of your objectives after deployment, keeping within the rules for objective placement for that scenario.</description>
+    </rule>
+    <rule id="d035-91e6-23d5-b43c" name="Picked Men" publicationId="418f-8173-eff1-7be3" page="68" hidden="false">
+      <description>Can only take 1 Death Squad per retinue.</description>
+    </rule>
+    <rule id="066d-a477-eaa1-d168" name="Papal Banner" publicationId="418f-8173-eff1-7be3" page="68" hidden="false">
+      <description>Fleeing Groups will automatically rally during the Compulsory Action Phase when within Turstin Fitz Rolf&apos;s command area.</description>
+    </rule>
+    <rule id="c727-ee27-2cfe-8883" name="Noble Warriors" publicationId="418f-8173-eff1-7be3" page="68" hidden="false">
+      <description>You can only take one Group of Thegns per retinue.</description>
+    </rule>
+    <rule id="26b3-c6cb-0914-778e" name="Loyalty" hidden="false">
+      <description>If in Saxon Shield Wall, any Command Group or Group of Thegns within 3&quot; takes a casualty you can choose to remove a casualty from this Group instead.</description>
+    </rule>
+    <rule id="4cbe-413b-0964-2e87" name="Local Knowledge" hidden="false">
+      <description>Hereward and his Command Group have Infiltrate.</description>
+    </rule>
+    <rule id="5a0c-448c-642b-0bf3" name="Imposing Presence" hidden="false">
+      <description>Harold Hardrada takes two casualties to kill.</description>
+    </rule>
+    <rule id="3c16-d0ca-5bad-e78f" name="Seidhr" hidden="false">
+      <description>Once per round, a group in command range may make a free reaction</description>
+    </rule>
+    <rule id="7ba5-ef25-00ba-71ce" name="Saxon Shield Wall" hidden="false">
+      <description>Warriors trained through drills and experience to create a&quot;wall of shields&quot; standing shoulder to shoulder, with shield overlapping shield. Each soldier benefits from the protection and security of their neighbours&apos; shield as well as his own.   Saxons may spend an action to form a Saxon Shield wall, the group must move into base contact with each other and may make a move of up to 4&quot; as part of this action. Whilst in Shield Wall formation the group gains +2 to all shield rolls. During the housekeeping phase you can choose to break formation or maintain the shield wall. If you maintain shield wall leave their action token in place as a predetermined action for the following round. When it is their turn to be activated,they may still be moved upto 4”.Any other action carried out by a group in shield wall will break the formation and will no longer receive the shield roll bonus.</description>
+    </rule>
+    <rule id="558e-390d-0ca3-27b7" name="Settled" publicationId="418f-8173-eff1-7be3" page="68" hidden="false">
+      <description>These are warriors settled in the Danelaw; if they are included in your Retinue you can not use Surprise Raid</description>
+    </rule>
+    <rule id="2d22-521e-889b-a9db" name="Ferocious Assualt" hidden="false"/>
+    <rule id="51c9-7a77-702c-24b1" name="Berserk" hidden="false"/>
+    <rule id="a5ed-54d1-b76d-6523" name="Battle Cry" hidden="false">
+      <description>Once per game, at the start of a Round, make a Morale Check and if sucessful all groups within command range ignore their Morale Dice until the Housekeeping Phase.</description>
+    </rule>
+    <rule id="2d5a-6da6-31f3-cbbc" name="Emboldened" hidden="false">
+      <description>In melee combat, if this group successfully defends all attacks resulting in no casualties they can immediately make an Attack Action against their engaged opponent for free.</description>
+    </rule>
+    <rule id="fedd-01aa-05af-3caa" name="Shield Strike" hidden="false">
+      <description>Make a free Attack Roll for every successful Shield Roll.</description>
+    </rule>
+    <rule id="f667-d4bc-241d-9629" name="Angons" hidden="false">
+      <description>May throw spears up to a range of 12&quot; if stationary. Once used the warriors revert to using hand weapons.</description>
+    </rule>
+    <rule id="7c4f-51df-ef3a-2388" name="Runic Inscriptions" hidden="false">
+      <description>May reroll a single Attack Dice once per Round but must keep the second result.</description>
+    </rule>
+    <rule id="6cc0-8bbc-cb27-831c" name="Duty" hidden="false">
+      <description>As conscripted men with a common goal to defend both their homes and each other the Late Saxon warrior carried with them a duty to stand and fight. The men who tasted battle together fought based on their blood ties and familiarity with each other. 
+
+The Anglo-Saxon Warrior held a sense of loyalty to their fellow warriors in high esteem. When one of your groups is subjected to a Morale Check and fails, reroll the test again. If passed your warriors sense of duty remains, they fall back but do not break and you may continue to reroll any failed Morale Checks during the battle. If unsuccessful your warriors’sense of duty fails them, they become Broken and all Groups lose this reroll trait for the rest of the battle.The result of the second roll is final.</description>
+    </rule>
+    <rule id="8ca6-17c3-8a48-ddca" name="Forced March" hidden="false">
+      <description>Any Run Action a Group takes as a result of an order does not cause them to become weary.</description>
+    </rule>
+    <rule id="35fc-29d4-d618-541c" name="Chain of Command" hidden="false">
+      <description>If there is a Group of Thegns within command range, you may choose to use those as the point of origin for the order instead of Harold (they do not receive any bonus for a banner).</description>
+    </rule>
+    <rule id="ece8-8a95-2d8f-0959" name="Dual Commanders" hidden="false">
+      <description>If Edwin and Morcar are taken as part of the same retinue,they both count as the retinue Commander and may issue orders. Between them, they cannot exceed 2 Order Actions per round.</description>
+    </rule>
+    <rule id="4549-2844-a416-a960" name="Opportunist" hidden="false">
+      <description>Can choose to target any Group in line of sight even if they are not the closest without making a Morale Check.</description>
+    </rule>
+    <rule id="2c9e-07e5-4e4d-a2a3" name="Trained from Childhood" hidden="false">
+      <description>Gain +2 to Morale Checks when recieving an Order Action.</description>
+    </rule>
+    <rule id="28ed-41cc-489a-727b" name="Lucky" hidden="false">
+      <description>May choose to reroll 1s for any roll, however, you may not reroll the results of a reroll.</description>
+    </rule>
+    <rule id="3b74-37fb-fbcd-3116" name="Decisive" hidden="false">
+      <description>May declare a reaction after an attacker has made their Attack Roll.</description>
+    </rule>
+    <rule id="9503-c05c-cf13-4c86" name="Feigned Attack" hidden="false">
+      <description>If initiated the attack, may choose instead to immediately fall back from the melee after Attack Dice have been rolled instead of applying the result of the attack roll. The group is not broken they have chosen to withdraw instead.</description>
+    </rule>
+    <rule id="28a2-3642-4496-4fc7" name="Crouched Spear" hidden="false">
+      <description>By couching their spear, the rider lays it at rest, held between the upper arm and the body, can make at their foe, delivering a blow not using muscles but with the combined weight of the rider and charging horse. With a high-backed saddle to help absorb the impact and spurs to guide their mount, the Norman Cavalry could deliver a devastating charge.
+
+Normans trained to fight from horseback specialising in the use of the couched spear. Norman cavalry armed with spear gain +1 to their Attack Dice.</description>
+    </rule>
+    <rule id="8144-e9c2-1c7e-fc4f" name="Able Commander" hidden="false">
+      <description>Norman society was built around the concept of warfare, with their elite picturing themselves as a warrior society, born to command. Respected by their retinue, these commanders were comfortable giving decisive orders when needed in the heat of battle. 
+
+Known to produce outstandingly able and ruthless rulers, at the beginning of the game select a second Commander who can also issue one Order Action each round in addition to any Order Actions made by your chosen Retinue Commander, at the cost of one of their actions. A group can still only receive one order action as normal.</description>
+    </rule>
+    <rule id="f1a8-183c-0f23-1fba" name="Head Hunter" hidden="false">
+      <description>Can charge an enemy Command Group even if it is not the closest enemy without making a Morale Check. Gains +2&quot; to their charge range if charging an enemy Command Group.</description>
+    </rule>
+    <rule id="f371-e26b-7048-6e88" name="All or Nothing" hidden="false">
+      <description>Groups within command range will not Break whilst holding an objective but can still be pushed back.</description>
+    </rule>
+    <rule id="f759-dbcc-c86e-3a11" name="Glancing Attack" hidden="false"/>
+    <rule id="feb8-e69a-dc45-a49e" name="Evade 4&quot;" hidden="false">
+      <description>Quick wits or skill allow these warriors to dodge an incoming charge.
+
+May use an unused action to move 4&quot; away from an Attacker after they have been charged</description>
+    </rule>
+    <rule id="6540-d394-b92d-63ff" name="Hot Headed" hidden="false">
+      <description>Morcar must charge an enemy in range, unless he makes a successful Morale Check.</description>
+    </rule>
+    <rule id="3249-8714-8ea2-4ca5" name="Hidden Causeway" hidden="false">
+      <description>Once per game Hereward&apos;s Command Group may make a Move Action as a reaction to a charge. Make the move before any charging models are moved but after the distance is rolled. The charging Group makes its full charge move and will successfully charge if Hereward is still within range.</description>
+    </rule>
+    <rule id="3666-c284-fce5-5a8b" name="Hero&apos;s Chronicler" hidden="false">
+      <description>Leofric’s Morale Dice is reduced by 1 when a Group in his retinue is removed from play instead of increased by 1.</description>
+    </rule>
+    <rule id="f271-8fcf-41b0-cf87" name="Champion" publicationId="418f-8173-eff1-7be3" page="90" hidden="false">
+      <description>Role a dice and add relevant Champion Abilities from P.90 of Conquest book</description>
+    </rule>
+    <rule id="b029-7fed-0101-3e40" name="Christian" hidden="false">
+      <description>Command Groups in Olaf&apos;s retinue cannot take Seidr Upgrade.</description>
+    </rule>
+    <rule id="956d-547f-4e07-d4e6" name="Diplomacy" hidden="false">
+      <description>Any ties (combat resolution, roll offs, initiative) are counted as a win by any Group in Olaf&apos;s Retinue.</description>
+    </rule>
+    <rule id="acf4-5681-62cc-77ee" name="Champion Random Ability" publicationId="418f-8173-eff1-7be3" page="90" hidden="false">
+      <description>Roll a dice and apply revelant Ability from Conquest BW list</description>
     </rule>
   </sharedRules>
 </gameSystem>
